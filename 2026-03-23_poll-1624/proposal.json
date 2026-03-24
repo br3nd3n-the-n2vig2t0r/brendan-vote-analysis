@@ -1,0 +1,22 @@
+{
+  "id": "poll-1624",
+  "type": "poll",
+  "poll": {
+    "pollId": 1624,
+    "title": "Atlas Edit Weekly Cycle Proposal - March 23, 2026",
+    "summary": "This Atlas edit proposal 1) removes Governance poll requirement for SparkLend parameter changes, 2) removes Signal Requests and Non-Standard Weekly Polls from the Atlas, 3) clarifies Facilitator authority to update Atlas after spell execution, 4) adds Spark Foundation Grant Authorization for Q2 2026, 5) updates Spark Prime Arkis deployment parameters, 6) fixes Sentora RLUSD Morpho Vault V2 MaxExchangeRate precision.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1774281600,
+    "endDate": 1774540800,
+    "url": "https://vote.sky.money/polling/QmVbqw1G",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-03-23-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-03-23/27781",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-03-24T17:42:22.678Z"
+}

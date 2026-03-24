@@ -1,0 +1,22 @@
+{
+  "id": "poll-1625",
+  "type": "poll",
+  "poll": {
+    "pollId": 1625,
+    "title": "SparkLend Mainnet - Reactivate WBTC - March 23, 2026",
+    "summary": "Signal your support or opposition to reactivating WBTC with the listed parameters on SparkLend Mainnet.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1774281600,
+    "endDate": 1774540800,
+    "url": "https://vote.sky.money/polling/QmX7MC2S",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-03-23-sparklend-reactivate-wbtc.md",
+    "discussionLink": "https://forum.skyeco.com/t/march-26-2026-proposed-changes-to-spark-for-upcoming-spell/27770",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-03-24T22:24:31.926Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "exec-0x415396",
+  "type": "exec",
+  "executive": {
+    "address": "0x415396C98A5B42C0D97E4E80cB5C9079369Ea4D8",
+    "title": "Ozone Onboarding, Amatsu Onboarding, Genesis Funding Transfers, February 2026 Monthly Settlement Cycle, Safe Harbor Update, Prime Agent Proxy Spells - March 26, 2026",
+    "date": "2026-03-26T00:00:00.000Z",
+    "proposalBlurb": "Onboard Ozone StarGuard, onboard Amatsu StarGuard, transfer Genesis Capital to Amatsu; Ozone; Keel; and Prysm, execute Monthly Settlement Cycle and Treasury Management Function for February 2026, update Safe Harbor Agreement, whitelist proxy spells for Spark and Grove.",
+    "proposalLink": "https://raw.githubusercontent.com/sky-ecosystem/executive-votes/main/2026/executive-vote-2026-03-26-agent-onboardings-genesis-funding.md",
+    "about": "",
+    "content": "",
+    "spellData": {
+      "hasBeenCast": false,
+      "hasBeenScheduled": false,
+      "mkrSupport": "0",
+      "executiveHash": "0x3e4c6cf37f0dce0f43c977873275e7b6a1016a0f032bb32093f041e85d234437",
+      "officeHours": true
+    }
+  },
+  "fetchedAt": "2026-03-26T16:25:27.322Z"
+}

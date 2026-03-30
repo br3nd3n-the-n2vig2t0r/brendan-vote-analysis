@@ -1,0 +1,131 @@
+{
+  "proposalId": "poll-1626",
+  "proposalTitle": "Atlas Edit Weekly Cycle Proposal - March 30, 2026",
+  "summary": "This Atlas Edit Weekly Cycle Proposal (PR #217) contains 10 edits:\n- **Emergency Response & Emergency Spells/Protego updates** — Transitions these documents from legacy Scope/Support/Governance Facilitator roles to the Agent Framework (Core Facilitator and Core GovOps), including updated authorized representatives for standby spell and Protego authenticity validation.\n- **Demand Side Buffer** — Creates a new standalone multisig-controlled account for Distribution Reward and Integration Boost payments, simplifies expense recognition, removes legacy wallet references, and adds auxiliary account capability.\n- **Keel Pioneer transition** — Moves Keel from Pre-Pioneer to Pioneer Incentive Pool (with 100% fund retention), replaces Matariki Labs with Elodin as development company, and activates Keel's Pioneer status.\n- **Grove Artifact updates** — Onboards Maple syrupUSDC (50M deposit limit), increases JTRSY deposit limit to 500M USDC, increases PSM USDS/USDC swap limit to 500M USDC, adds Centrifuge ACRDX instance on Plume, and corrects/adds ALM Controller contract versions and addresses.\n- **Keeper provider changes** — Adds TechOps Services as a keeper provider, removes deactivated Gelato Network and Keep3r Network.\n- **Launch Agent 6** — Adds Stablewatch as development company and Launch Agent 6 Foundation.\n- **Minor fix** — Corrects punctuation in the MaxAmount document.",
+  "atlasAlignment": {
+    "assessment": "aligned",
+    "reasoning": "This proposal aligns with the Atlas Edit Weekly Cycle process and the Spirit of the Atlas:\n\n- **Process compliance (A.1.10.2.2):** The proposal follows the correct Weekly Cycle procedure — posted to the Forum, triggered by Ranked Delegate Cloaky, published as a binary Governance Poll running Monday–Thursday with the correct 480,000,000 SKY Minimum Positive Participation threshold (A.1.10.2.4).\n\n- **Agent Framework transition (edits 1–2):** Updating Emergency Response, Emergency Spells, and Protego to assign roles to Core Facilitator and Core GovOps (replacing legacy Scope/Support/Governance Facilitator roles) is a natural evolution consistent with the ongoing Agent Framework transition across the Atlas. The updated authorized representative list (Le Bateleur, Adam Fraser, Lex on behalf of Atlas Axis) reflects the new organizational structure.\n\n- **Demand Side Buffer (edit 3):** Creating a dedicated financial infrastructure account for Demand Side Stablecoin Primitive payments with proper multisig controls (2/3, Operational GovOps Soter Labs), simplifying expense recognition, and consolidating legacy wallets improves financial management and operational clarity.\n\n- **Keel Pioneer transition (edit 4):** Moving Keel to the Pioneer Incentive Pool with 100% retention of Pioneer funds and updating the development company reflects Prime Agent lifecycle management consistent with Atlas structures.\n\n- **Grove/Spark Artifact updates (edits 5, 7, 8):** Onboarding new instances, increasing rate limits, and correcting contract addresses/versions are routine operational parameter updates within the Spark/Grove framework.\n\n- **Keeper management (edit 6):** Adding TechOps Services and removing deactivated providers maintains protocol infrastructure reliability.\n\n- **Launch Agent 6 (edit 9) and punctuation fix (edit 10):** Adding a development company and correcting punctuation are minor administrative updates.\n\nAll edits adhere to the Spirit of the Atlas and remain within the bounds of Universal Alignment per A.1.10.2.1.1.",
+    "relevantSections": [
+      "A.1.10.2",
+      "A.1.10.2.1.1",
+      "A.1.10.2.2",
+      "A.1.10.2.4"
+    ]
+  },
+  "riskAssessment": {
+    "level": "low",
+    "factors": [
+      "All changes are organizational/operational updates within established Atlas frameworks.",
+      "The Demand Side Buffer introduces a new multisig-controlled account (2/3 signing, Soter Labs), which is a standard pattern already used elsewhere in the Atlas.",
+      "Emergency response role changes concentrate authority in fewer actors (Core Facilitator + Core GovOps vs. multiple Facilitator teams), but this is consistent with the Agent Framework consolidation.",
+      "Keel's 100% retention of Pioneer Incentive funds and removal of transfer restrictions is an economic change, but it is explicitly disclosed and consistent with Pioneer-tier incentive structures.",
+      "Grove parameter changes (increased rate limits, new instances) carry normal DeFi allocation risk, managed through the established RRC Framework.",
+      "Authorized representative changes for Standby Spell/Protego validation introduce new personnel, but the requirement for two representatives from Core GovOps maintains dual-validation safeguards."
+    ]
+  },
+  "recommendation": {
+    "position": "YES",
+    "assessment": "high",
+    "reasoning": "- The proposal follows the correct Atlas Edit Weekly Cycle process with proper triggering by Ranked Delegate Cloaky.\n- All 10 edits are clearly described in both the portal summary and canonical proposal text, with an accurate PR diff supporting each change.\n- The changes are operational, organizational, and infrastructure improvements consistent with the Spirit of the Atlas.\n- No material omissions were found between the portal summary and the PR diff — all supporting implementation details (renumbering, cross-reference updates, legacy cleanup) are derivative of the disclosed top-line changes.\n- Risk is low, with standard governance safeguards maintained throughout.\n- Voting NO or ABSTAIN on an aligned Atlas Edit proposal has no Atlas basis and would not serve governance interests."
+  },
+  "proxySpellReview": {
+    "required": false,
+    "status": "not_required",
+    "detectedAddresses": [],
+    "reviewedAddresses": [],
+    "missingAddresses": [],
+    "details": "Proxy-spell review enforcement applies only to executive analyses."
+  },
+  "requiresHumanReview": false,
+  "humanReviewReasons": [],
+  "validationChecks": [
+    {
+      "name": "Atlas Scope Loaded",
+      "status": "OK",
+      "details": "Loaded the following Atlas sections for alignment analysis:\n- A.1.10.2 — Atlas Edit Weekly Cycle (full section including subsections)\n- A.1.10.2.1.1 — Proposals In General\n- A.1.10.2.2 — Preparation And Publication of Governance Poll\n- A.1.10.2.4 — Minimum Positive Participation (480M SKY)",
+      "evidence": [
+        "Tool `read_atlas_section` [tool-0004] with args sectionId='A.1.10.2' returned the full Weekly Cycle process definition including subsections A.1.10.2.1 through A.1.10.2.5, covering Cycle Breakdown, Poll Preparation, Rejection for Misalignment, Minimum Positive Participation, and Reconciliation Process.",
+        "Tool `read_atlas_section` [tool-0003] with args sectionId='A.1.10.2.2' returned: 'The Polls run for three days. Successful polls trigger direct edits to the Atlas.'",
+        "Tool `read_atlas_section` [tool-0005] with args sectionId='A.1.10.2.1.1' returned: 'Atlas Edits must always adhere to the Spirit of the Atlas and remain within the bounds of Universal Alignment.' (output length 1042, not truncated)"
+      ],
+      "evidenceLogRefs": [
+        "tool-0003",
+        "tool-0004",
+        "tool-0005"
+      ]
+    },
+    {
+      "name": "Portal Summary vs Canonical Text",
+      "status": "OK",
+      "details": "The portal summary on vote.sky.money is identical to the canonical proposal text fetched from the proposal source URL. Both list the same 10 edits with identical descriptions. The proposal correctly references:\n- Atlas Edit PR #217\n- Forum discussion thread at `/t/atlas-edit-weekly-cycle-proposal-week-of-2026-03-30/27810`\n- Binary vote format with Yes/No/Abstain\n- 480M SKY Minimum Positive Participation\n- 3-day poll duration (March 30–April 2, 2026)",
+      "evidence": [
+        "Tool `fetch_proposal` [tool-0001] with args pollId=1626 returned both a `Summary` field and a `Full Proposal Text` field. The Summary field lists all 10 edits numbered 1–10. The Full Proposal Text contains the identical 10-item summary under the YAML frontmatter `summary:` key, plus the full markdown body referencing PR #217 and forum discussion link.",
+        "Tool `fetch_proposal` [tool-0001] confirmed poll type is 'single-choice', start '2026-03-30T16:00:00.000Z', end '2026-04-02T16:00:00.000Z', options {0: Abstain, 1: Yes, 2: No}.",
+        "Tool `fetch_proposal` [tool-0001] confirmed victory_conditions include a comparison '>=480000000' matching the Atlas requirement in A.1.10.2.4.",
+        "Tool `fetch_proposal` [tool-0001] confirmed the proposal source URL is `https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-03-30-Atlas-edit-weekly-cycle-proposal.md` and the discussion link is `https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-03-30/27810`."
+      ],
+      "evidenceLogRefs": [
+        "tool-0001"
+      ]
+    },
+    {
+      "name": "Portal Summary vs PR Diff",
+      "status": "OK",
+      "details": "Reviewed the full diff of Atlas PR #217 (438 additions, 202 deletions, 1 file changed) against the 10 items disclosed in the portal summary. All changes in the diff are accounted for by the disclosed top-line edits or are derivative implementation details:\n\n- **Emergency Response & Spells/Protego Agent Framework update:** All role replacements (Scope Facilitators → Core GovOps, Support Facilitators → Core Facilitator, Governance Facilitators → Core Facilitator/Core GovOps), heading renames, authorized representative list updates, and minor text simplifications are disclosed.\n- **Demand Side Buffer:** New section A.2.2.8.1.2.1.4 with multisig address `0x5e2fEc3a3C4E63A422e45C1BB83EdB3a5aD0543B`, signing requirements, auxiliary accounts, and Solana address. Modifies Near-Term Process references, expense recognition basis, legacy account definitions, and removes interim reimbursement provision — all disclosed under 'simplifies expense recognition' and 'removes references to legacy roles.'\n- **Keel Pioneer transition:** Pre-Pioneer → Pioneer, 100% retention, Matariki Labs → Elodin, formula change to 'Unrewarded USDS', activation status Inactive → Active, removal of fund transfer restrictions — all supporting the disclosed transition.\n- **Grove updates:** Maple syrupUSDC onboarding, JTRSY and PSM limit increases, Centrifuge ACRDX Plume instance, ALM Controller version additions and Avalanche address correction — all disclosed.\n- **Keeper changes:** Gelato/Keep3r removal, TechOps Services addition, parent document update — all disclosed.\n- **Section renumbering:** ~30+ cross-reference updates from A.2.2.8.1.2.1.4.x → A.2.2.8.1.2.1.5.x etc. are required sync edits caused by the Demand Side Buffer insertion. These are not independent changes.\n- **Routine Protocol references in ~15 Instance documents:** Updated from A.2.2.8.1.2.1.4.3.1 to A.2.2.8.1.2.1.5.3.1 — purely renumbering sync.\n\nNo material omissions found. All implementation details serve disclosed top-line changes.",
+      "evidence": [
+        "Tool `fetch_atlas_pr_diff` [tool-0002] with args prNumber=217 returned PR metadata: state 'open', not merged, author 'adamgfraser', created '2026-03-30T03:49:57Z', 1 file changed, 438 additions, 202 deletions.",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] diff shows Emergency Response sections (A.1.8.1.x) replacing 'Scope Facilitators' → 'Core GovOps', 'Support Facilitators' → 'Core Facilitator', 'Governance Facilitators' → 'Core Facilitator'/'Core GovOps' across ~20 diff hunks.",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] diff shows new Demand Side Buffer section A.2.2.8.1.2.1.4 with multisig address `0x5e2fEc3a3C4E63A422e45C1BB83EdB3a5aD0543B`, 2/3 signing requirement, Soter Labs as signer controller, auxiliary account on Solana at `7Gf8AqAtmYkkVhQbbJr18RxVUuoGjA8ZEw3Af4NauyaY`.",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] diff shows authorized representative changes: old list (JanSky, VoteWizard, LDR, CivicSage for JanSky/Endgame Edge teams) → new list (Le Bateleur, Adam Fraser, Lex for Atlas Axis team), with validation requirement changed from 'One Authorized Representative from each Governance Facilitator' to 'Two Authorized Representatives from Core GovOps'.",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] diff shows Keel A.2.8.2.3.2.2 renamed from 'Pre-Pioneer Incentive Pool' to 'Pioneer Incentive Pool', adds '100%' retention language, replaces 'Matariki Labs' with 'Elodin' in A.2.8.2.3.1.1.2, and changes A.6.1.1.3.2.5.3.1.1 Global Activation Status from 'Inactive' to 'Active'.",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] diff shows Grove changes: JTRSY inflow maxAmount/slope 50M→500M (A.6.1.1.2.2.6.1.3.1.1.1.2.4.1), PSM USDS/USDC swap maxAmount 100M→500M and slope 50M→500M (A.6.1.1.2.2.6.1.2.1.1.3.1.3), new Maple syrupUSDC instance (A.6.1.1.2.2.6.1.3.1.13.1), new Centrifuge ACRDX Plume instance (A.6.1.1.2.2.6.1.3.5.1.1), Avalanche ALM Controller address corrected to `0x734266cE1E49b148eF633f2E0358382488064999` with version 1.6.0 added.",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] diff shows removal of Gelato Network (A.3.7.1.4.1) and Keep3r Network (A.3.7.1.4.2) sections, addition of TechOps Services (new A.3.7.1.4.2), and Chainlink Automation renumbered from A.3.7.1.4.3 to A.3.7.1.4.1.",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] diff shows Launch Agent 6 updates: A.2.8.2.6.1.1.2 changes 'Launch Agent 6 Development Company' to 'Stablewatch', new sections A.6.1.1.7.2.1.1.3.1.1.5.1 (Launch Agent 6 Foundation) and A.6.1.1.7.2.1.1.3.1.1.5.2 (Stablewatch).",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] diff shows MaxAmount punctuation fix in A.2.2.9.1.1.1.2.2.1: comma replaced by period ('until it reaches 1,000,000 tokens, at this point' → 'until it reaches 1,000,000 tokens. At this point').",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] diff shows ~15 Instance Routine Protocol references across Skybase/Spark artifacts updated from A.2.2.8.1.2.1.4.3.1 to A.2.2.8.1.2.1.5.3.1 — derivative renumbering from Demand Side Buffer insertion."
+      ],
+      "evidenceLogRefs": [
+        "tool-0002"
+      ]
+    },
+    {
+      "name": "Alignment Assessment",
+      "status": "OK",
+      "details": "All 10 edits align with the Spirit of the Atlas per A.1.10.2.1.1:\n- Organizational updates (Agent Framework) improve governance clarity\n- Financial infrastructure (Demand Side Buffer) improves operational management\n- Prime Agent updates (Keel, Launch Agent 6) are lifecycle management\n- Parameter updates (Grove) are routine operational changes\n- Infrastructure maintenance (keepers, contract versions) ensures protocol reliability\n- Minor corrections (punctuation) are housekeeping\n\nNo Slippery Slope Misalignment concerns. No Universal Alignment violations.",
+      "evidence": [
+        "Tool `read_atlas_section` [tool-0005] with args sectionId='A.1.10.2.1.1' returned: 'Atlas Edits must always adhere to the Spirit of the Atlas and remain within the bounds of Universal Alignment.' — all 10 edits are operational/administrative and consistent with this requirement.",
+        "Tool `read_atlas_section` [tool-0004] with args sectionId='A.1.10.2' confirmed the triggering requirement (A.1.10.2.1.3): poll was triggered by Ranked Delegate Cloaky as stated in the proposal text fetched via tool-0001.",
+        "Tool `fetch_proposal` [tool-0001] confirmed the poll was placed 'on behalf of Ranked Delegate Cloaky' per the canonical proposal text, satisfying A.1.10.2.1.3.",
+        "Tool `read_atlas_section` [tool-0003] with args sectionId='A.1.10.2.2' confirmed: 'The Polls run for three days' — the poll runs March 30 to April 2 (3 days), matching this requirement.",
+        "Tool `fetch_atlas_pr_diff` [tool-0002] confirmed emergency response authority consolidation maintains dual-validation safeguards: 'Two Authorized Representatives from Core GovOps must validate the authenticity of the Standby Spell' — preserving security controls under the new framework."
+      ],
+      "evidenceLogRefs": [
+        "tool-0001",
+        "tool-0002",
+        "tool-0003",
+        "tool-0004",
+        "tool-0005"
+      ]
+    }
+  ],
+  "evidenceTrace": {
+    "file": "analysis.evidence.json",
+    "toolLogCount": 7
+  },
+  "analyzedAt": "2026-03-30T18:24:27.295Z",
+  "atlasVersion": "2026-03-30",
+  "llmUsage": {
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "thinkingLevel": "high",
+    "turns": 7,
+    "toolCalls": 7,
+    "inputTokens": 11,
+    "outputTokens": 12489,
+    "totalTokens": 374360,
+    "cacheReadTokens": 282188,
+    "cacheWriteTokens": 79672,
+    "cost": 0.9513240000000001,
+    "durationMs": 294920
+  }
+}

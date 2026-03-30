@@ -1,0 +1,22 @@
+{
+  "id": "poll-1626",
+  "type": "poll",
+  "poll": {
+    "pollId": 1626,
+    "title": "Atlas Edit Weekly Cycle Proposal - March 30, 2026",
+    "summary": "This Atlas edit proposal 1) updates the Emergency Response Article to the Agent Framework, 2) updates the Emergency Spells and Protego documents to the Agent Framework, 3) establishes a Demand Side Buffer for Distribution Reward and Integration Boost payments, 4) transitions Keel to the Pioneer Incentive Pool and updates its development company, 5) updates the Grove Artifact for the April 9 spell, 6) adds TechOps Services as a keeper provider and removes deactivated networks, 7) adds missing Grove ALM Controller contract versions, 8) adds the missing Centrifuge ACRDX Grove instance on Plume, 9) adds a development company to the Launch Agent 6 Artifact, 10) fixes punctuation in the MaxAmount document.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1774886400,
+    "endDate": 1775145600,
+    "url": "https://vote.sky.money/polling/QmafyxBw",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-03-30-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-03-30/27810",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-03-30T16:48:54.817Z"
+}

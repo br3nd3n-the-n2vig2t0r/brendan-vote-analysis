@@ -1,0 +1,22 @@
+{
+  "id": "poll-1627",
+  "type": "poll",
+  "poll": {
+    "pollId": 1627,
+    "title": "Atlas Edit Weekly Cycle Proposal - April 6, 2026",
+    "summary": "This Atlas edit proposal 1) introduces a three-stage framework governing allocation of Step 4 capital, 2) raises the target Aggregate Backstop Capital, 3) adds documentation for the Avalanche SkyLink Bridge, 4) adds the Solana Instance Configuration Document to Keel's Pioneer Chain Primitive, 5) designates Grove as the Pioneer Prime for Avalanche and adds the relevant documents, 6) adds Grove's Distribution Reward Instance, 7) adds a maximum exposure limit for Maple syrupUSDC, 8) removes obsolete Keel Ecosystem Accord documents, 9) updates Scope Facilitator references, 10) updates SubDAO Proxy references in the Spark Foundation Grant, 11) expands SLL and GLL abbreviations.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1775491200,
+    "endDate": 1775750400,
+    "url": "https://vote.sky.money/polling/QmW61Lnd",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-04-06-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-04-06/27822",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-04-08T09:13:09.462Z"
+}

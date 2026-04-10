@@ -1,0 +1,21 @@
+{
+  "id": "exec-0x70Da14",
+  "type": "exec",
+  "executive": {
+    "address": "0x70Da14478667C08320Ef65506063abba84B6990f",
+    "title": "Launch Avalanche SkyLink, Update Staking Rewards, Grove Genesis Capital Transfer, Safe Harbor Update, Prime Agent Proxy Spells - April 9, 2026",
+    "date": "2026-04-09T00:00:00.000Z",
+    "proposalBlurb": "Launch SkyLink to Avalanche, update LSSKY->SKY staking rewards, transfer Genesis Capital to Grove, update the Safe Harbor agreement to account for the new SkyLink deployment, whitelist proxy spells for Spark and Grove.",
+    "proposalLink": "https://raw.githubusercontent.com/sky-ecosystem/executive-votes/main/2026/executive-vote-2026-04-09-launch-avalanche-skylink-staking-rewards-update.md",
+    "about": "",
+    "content": "",
+    "spellData": {
+      "hasBeenCast": false,
+      "hasBeenScheduled": false,
+      "mkrSupport": "1041841279.564144698121108106",
+      "executiveHash": "0x0f87466f280de3544ae715fb2463152d7959c37902926f2069aaaccf10cef550",
+      "officeHours": true
+    }
+  },
+  "fetchedAt": "2026-04-10T20:02:28.079Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "poll-1628",
+  "type": "poll",
+  "poll": {
+    "pollId": 1628,
+    "title": "Atlas Edit Weekly Cycle Proposal - April 13, 2026",
+    "summary": "This Atlas edit proposal 1) updates Grove Liquidity Layer for April 23 spell, 2) adds Pattern Liquidity Layer documentation, 3) transfers Integrator Program responsibility to Operational GovOps, 4) adds Avalanche Asset Recovery Address to Safe Harbor, 5) adds Solana Bridge Distribution Reward Instance to Keel Artifact, 6) corrects RRC And CRR terminology in Risk Framework.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1776096000,
+    "endDate": 1776355200,
+    "url": "https://vote.sky.money/polling/QmVAKhR6",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-04-13-Atlas-edit-weekly-cycle-proposal.md",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-04-13T18:17:52.867Z"
+}

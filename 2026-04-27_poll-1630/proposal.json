@@ -1,0 +1,22 @@
+{
+  "id": "poll-1630",
+  "type": "poll",
+  "poll": {
+    "pollId": 1630,
+    "title": "Atlas Edit Weekly Cycle Proposal - April 27, 2026",
+    "summary": "This Atlas edit proposal 1) restructures the Treasury Management Function, 2) adds Authorized Forum Accounts requirements, 3) defines the Protocol Security workstream lead role, 4) increases the GSM Pause Delay from 24 hours to 48 hours, 5) clarifies the Genesis Capital Backstop Haircut and Settlement, 6) adds Grove Foundation Grant Authorization for Q2 2026, 7) adds Tokenized Treasury Shared Infrastructure and a JTRSY instance, 8) defers the Plasma SkyLink Bridge deployment date.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1777305600,
+    "endDate": 1777564800,
+    "url": "https://vote.sky.money/polling/QmToMBbA",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-04-27-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-04-27/27864",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-04-27T17:29:33.861Z"
+}

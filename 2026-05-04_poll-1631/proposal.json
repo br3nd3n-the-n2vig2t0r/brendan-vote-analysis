@@ -1,0 +1,22 @@
+{
+  "id": "poll-1631",
+  "type": "poll",
+  "poll": {
+    "pollId": 1631,
+    "title": "Atlas Edit Weekly Cycle Proposal - May 4, 2026",
+    "summary": "This Atlas edit proposal 1) adds Ecosystem Accord 10 between Sky and Grove, 2) documents how to query the Sky Savings Rate current value, 3) updates Governance Facilitator references and removes Sky Ecosystem Liquidity Bootstrapping, 4) simplifies the Pattern Freezer Multisig description, 5) fixes stray spaces in rate limit Solidity identifiers.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1777910400,
+    "endDate": 1778169600,
+    "url": "https://vote.sky.money/polling/QmYeBemY",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-05-04-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-05-04/27886",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-05-04T17:11:19.632Z"
+}

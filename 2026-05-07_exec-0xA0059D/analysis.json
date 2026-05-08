@@ -1,0 +1,272 @@
+{
+  "proposalId": "exec-0xA0059D",
+  "proposalTitle": "Unpause Solana SkyLink Bridge, Increase GSM Pause Delay, April 2026 Monthly Settlement Cycle, Update Staking Rewards, Prime Agent Proxy Spells - May 7, 2026",
+  "summary": "This executive unpauses and configures Solana SkyLink, increases the GSM Pause Delay to 48 hours, executes the April 2026 Monthly Settlement Cycle/Treasury Management transfers, updates LSSKY→SKY staking rewards, and whitelists Spark and Grove Prime Agent proxy spells in their StarGuard modules.\n\nThe Spark and Grove proxy spells include liquidity-layer/risk-parameter changes and treasury transfers, including Spark/Grove grants and Spark buyback funding.",
+  "atlasAlignment": {
+    "assessment": "aligned",
+    "reasoning": "The executive appears aligned with the Atlas and with the normal operational executive process.\n\n- A.1.9.2.4.12.1.1 identifies Aligned Delegates as primary Ecosystem Spell Validators; the spell and proxy-spell validation checks did not leave any surviving findings.\n- A.2.2.9.1.1.1.2.2 defines Governance-configured rate limits, supporting the bridge, Spark Liquidity Layer, and Grove Liquidity Layer rate-limit updates where duly authorized.\n- A.6.1.1.1.3.2.1.2.1 permits SparkLend risk parameter changes through the Operational Weekly Cycle without requiring a separate Governance Poll.\n- A.2.8.2.2.2.4.5.1.3 authorizes the Q2 2026 Spark Foundation and Spark Asset Foundation grants reflected in the Spark proxy spell.\n- A.6.1.1.1.2.6.1.2.1.2.3 authorizes Spark reserve-claim handling and transfer of reserves through the Spark spell process.\n- A.1.5.6.2 imposes a Voting Estoppel obligation for YES votes; after validation, I can identify and defend the key governance implications of the main spell and reviewed proxy-spell paths.",
+    "relevantSections": [
+      "A.1.9.2.4.12.1.1",
+      "A.1.5.6.2",
+      "A.2.2.9.1.1.1.2.2",
+      "A.6.1.1.1.3.2.1.2.1",
+      "A.2.8.2.2.2.4.5.1.3",
+      "A.6.1.1.1.3.4.2.3",
+      "A.6.1.1.1.2.6.1.2.1.2.3"
+    ]
+  },
+  "riskAssessment": {
+    "level": "medium",
+    "factors": [
+      "The executive combines multiple sensitive action classes: cross-chain bridge reactivation, GSM delay modification, large USDS settlement movements, rewards vesting, and Prime Agent proxy-spell whitelisting.",
+      "The Solana SkyLink and Spark Avalanche paths depend on LayerZero/cross-chain payload execution, increasing operational complexity.",
+      "Increasing GSM Pause Delay from 24 hours to 48 hours improves reaction time for review after scheduling but also lengthens governance latency for future spells.",
+      "Proxy spells require correct StarGuard execution and downstream payload behavior; codehashes, verified source review, and local execution tests all support the disclosed implementation."
+    ]
+  },
+  "recommendation": {
+    "position": "YES",
+    "assessment": "medium",
+    "reasoning": "Vote YES. The executive implements Atlas-authorized operational actions, the deployed spell matches the reviewed source and Exec Doc hash, proxy-spell codehashes and verified sources were reviewed, CI passed, and local forge tests passed on the final rerun. I did not identify any surviving validation findings or Atlas-alignment issues."
+  },
+  "proxySpellReview": {
+    "required": true,
+    "status": "satisfied",
+    "detectedAddresses": [
+      "0x84c5E704F7918812BA878ea7Ddbb1365876697C2",
+      "0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8",
+      "0x4A71f81C6109230932978bAB7CA746f0be0C4580"
+    ],
+    "reviewedAddresses": [
+      "0x84c5E704F7918812BA878ea7Ddbb1365876697C2",
+      "0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8",
+      "0x4A71f81C6109230932978bAB7CA746f0be0C4580"
+    ],
+    "missingAddresses": [],
+    "details": "- Detected proxy spell addresses: 0x84c5E704F7918812BA878ea7Ddbb1365876697C2, 0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8, 0x4A71f81C6109230932978bAB7CA746f0be0C4580\n- Proxy spell addresses backed by Action-to-Code source-review evidence: 0x84c5E704F7918812BA878ea7Ddbb1365876697C2, 0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8, 0x4A71f81C6109230932978bAB7CA746f0be0C4580"
+  },
+  "requiresHumanReview": false,
+  "humanReviewReasons": [],
+  "validationChecks": [
+    {
+      "name": "Spell Integrity",
+      "status": "OK",
+      "details": "On-chain spell wiring is internally consistent.\n\n- `action()` is `0x0fBfBfC7aF7F378e147B476B9fccD190462413DC`.\n- `tag()` equals `extcodehash(action())`: `0x54fcf6b5ed37ae4f2a987f744741d75580e25d5bf42fa14b2ee8ba29b58b96ac`.\n- `sig()` is `0x61461954`, the `execute()` selector.\n- `eta()` is `0` and `done()` is `false`, so the spell was not scheduled or cast at the time checked.\n- `officeHours()` is `true`, matching the executive text.\n- `expiration()` is `1780758215` / `2026-06-06T15:03:35Z`, approximately 30 days after deployment.",
+      "evidence": [
+        "check_spell_integrity(0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596) returned action 0x0fBfBfC7aF7F378e147B476B9fccD190462413DC, matching tag/extcodehash 0x54fcf6b5ed37ae4f2a987f744741d75580e25d5bf42fa14b2ee8ba29b58b96ac, sig 0x61461954, eta 0, done false, officeHours true, expiration 1780758215."
+      ]
+    },
+    {
+      "name": "Exec Doc Hash",
+      "status": "OK",
+      "details": "The pinned Exec Doc hash matches the hash embedded in the spell description.\n\n- Pinned URL: `https://raw.githubusercontent.com/sky-ecosystem/executive-votes/aae1a8707278ec69c89ae6ae2848965c73b2fc7a/2026/executive-vote-2026-05-07-solana-bridge-unpause-gsm-increase-msc-staking-rewards-update.md`.\n- Computed keccak256: `0xfc4e7f185a03264f819bfd648aafeb942dd30e1567678b03176e047c9d1a7f63`.\n- Spell description hash: `0xfc4e7f185a03264f819bfd648aafeb942dd30e1567678b03176e047c9d1a7f63`.",
+      "evidence": [
+        "fetch_spell_archive(date=2026-05-07) showed the pinned raw GitHub URL in the DssSpellAction description comment and description hash 0xfc4e7f185a03264f819bfd648aafeb942dd30e1567678b03176e047c9d1a7f63.",
+        "keccak256_url(pinned URL) returned content length 23295 characters and keccak256 0xfc4e7f185a03264f819bfd648aafeb942dd30e1567678b03176e047c9d1a7f63."
+      ]
+    },
+    {
+      "name": "Source Verified on Etherscan",
+      "status": "OK",
+      "details": "The main spell source was verified and retrievable from Etherscan.\n\n- Contract name: `DssSpell`.\n- Chain: Ethereum mainnet (`chainId 1`).\n- Address: `0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596`.\n- Constructor arguments: none.\n- Proxy: no.",
+      "evidence": [
+        "fetch_spell_source(0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596) returned verified source for DssSpell on Ethereum chain 1, compiler v0.8.16+commit.07a7930e, no constructor arguments, proxy=no."
+      ]
+    },
+    {
+      "name": "DssExecLib Library",
+      "status": "OK",
+      "details": "The Etherscan-reported linked `DssExecLib` address matches the repository configuration used by the flattening check.\n\n- Etherscan library: `DssExecLib:0x8de6ddbcd5053d32292aaa0d2105a32d108484a6`.\n- `foundry.toml` library reported by flatten check: `0x8De6DDbCd5053d32292AAA0D2105A32d108484a6`.",
+      "evidence": [
+        "fetch_spell_source(0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596) reported DssExecLib:0x8de6ddbcd5053d32292aaa0d2105a32d108484a6.",
+        "flatten_spell(commitSha=cdd6ae7efdd28d9abbcbe0d01903a3db2d96e1c1,address=0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596,prNumber=548) reported foundry.toml DssExecLib 0x8De6DDbCd5053d32292AAA0D2105A32d108484a6."
+      ]
+    },
+    {
+      "name": "Source/Archive Diff",
+      "status": "OK",
+      "details": "The deployed Etherscan source is identical to the flattened source from the merged PR commit.\n\n- PR: `sky-ecosystem/spells-mainnet#548`.\n- Merge commit: `cdd6ae7efdd28d9abbcbe0d01903a3db2d96e1c1`.\n- Etherscan source: 102,115 chars / 2,194 lines.\n- Flattened source: 102,115 chars / 2,194 lines.\n- Diff result: identical.",
+      "evidence": [
+        "fetch_spell_pr(date=2026-05-07) returned PR #548, merge commit cdd6ae7efdd28d9abbcbe0d01903a3db2d96e1c1.",
+        "flatten_spell(commitSha=cdd6ae7efdd28d9abbcbe0d01903a3db2d96e1c1,address=0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596,prNumber=548) returned 'Sources are identical'."
+      ]
+    },
+    {
+      "name": "Compiler Settings",
+      "status": "OK",
+      "details": "Compiler settings for the main spell are standard for this spell.\n\n- Solidity compiler: `v0.8.16+commit.07a7930e`.\n- Optimization: disabled.\n- EVM version: default.\n- Constructor arguments: none.",
+      "evidence": [
+        "fetch_spell_source(0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596) returned compiler v0.8.16+commit.07a7930e, optimization disabled, EVM Version Default, constructor arguments none."
+      ]
+    },
+    {
+      "name": "Contract Structure",
+      "status": "OK",
+      "details": "The main spell follows the expected DssExec structure.\n\n- `DssSpell` inherits `DssExec`.\n- Constructor calls `DssExec(block.timestamp + 30 days, address(new DssSpellAction()))`.\n- `officeHours()` returns `true`.\n- `DssSpellAction` configuration values observed in the archived source are `constant` or `immutable`.\n- The action function does not unconditionally revert.",
+      "evidence": [
+        "fetch_spell_archive(date=2026-05-07) returned archive/2026-05-07-DssSpell/DssSpell.sol with DssSpell constructor `DssExec(block.timestamp + 30 days, address(new DssSpellAction()))` and officeHours returning true.",
+        "fetch_spell_source(0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596) returned the deployed DssSpell source containing the same DssExec/DssSpellAction structure."
+      ]
+    },
+    {
+      "name": "Forbidden Patterns",
+      "status": "OK",
+      "details": "No forbidden spell-action patterns were observed in the reviewed proposal/action logic.\n\n- No `tx.origin`, `delegatecall`, `callcode`, or `selfdestruct` usage was observed in the main spell action logic.\n- No unconditional revert was observed in `actions()`.\n- Assembly observed in the main flattened source is the known DssExec `extcodehash` block; proxy-source dependency output included library-level assembly, but not in the reviewed proposal action logic.",
+      "evidence": [
+        "fetch_spell_source(0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596) showed the known DssExec assembly block used to compute extcodehash and the DssSpellAction actions body.",
+        "fetch_spell_source(0x84c5E704F7918812BA878ea7Ddbb1365876697C2), fetch_spell_source(0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8), and fetch_spell_source(0x4A71f81C6109230932978bAB7CA746f0be0C4580, chainId=43114) returned verified proposal sources reviewed for action logic."
+      ]
+    },
+    {
+      "name": "Deployment Method",
+      "status": "OK",
+      "details": "The spell was deployed via standard CREATE from an EOA.\n\n- Creator: `0xb27b6fa77d7fbf3c1bd34b0f7da59b39d3db0f7e`.\n- Creator type: EOA.\n- Deployment method: CREATE.\n- Creation transaction: `0x3b27c16ef67fe57d400861ffe953be6f7d095798f7cc99c67ae57b48f86c2998`.",
+      "evidence": [
+        "fetch_contract_creation_tx(0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596) returned creator 0xb27b6fa77d7fbf3c1bd34b0f7da59b39d3db0f7e, Creator Type EOA, Deployment Method CREATE, creation tx 0x3b27c16ef67fe57d400861ffe953be6f7d095798f7cc99c67ae57b48f86c2998."
+      ]
+    },
+    {
+      "name": "PR Reviews",
+      "status": "OK",
+      "details": "The spell PR has formal and explicit review sign-off evidence.\n\n- PR: `#548`.\n- Formal approvals: 1 latest formal approval.\n- Explicit sign-off comments: 4.\n- Sign-off authors: `0xBasset` and `SidestreamStrongStrawberry`.\n- Sign-off phrases included `Good to deploy` and `Good to handover`.",
+      "evidence": [
+        "fetch_pr_reviews(prNumber=548) returned Total Review Events 30, Unique Reviewers 4, Latest Formal Approvals 1, Latest Changes Requested 0, Explicit Sign-off Comments 4, Sign-off Authors 0xBasset and SidestreamStrongStrawberry."
+      ]
+    },
+    {
+      "name": "CI Status",
+      "status": "OK",
+      "details": "GitHub CI checks reported success.\n\n- Head SHA: `96073cb2fff9a1ffc2bdccec1f31402bc90c4118`.\n- Total checks: 2.\n- Both checks named `tests` concluded `success`.",
+      "evidence": [
+        "fetch_pr_ci_status(prNumber=548) returned Head SHA 96073cb2fff9a1ffc2bdccec1f31402bc90c4118, Total Checks 2, tests: success, tests: success."
+      ]
+    },
+    {
+      "name": "Forge Tests",
+      "status": "OK",
+      "details": "Local forge tests passed on the final rerun. Earlier RPC/database failures were transient infrastructure errors rather than surviving spell-code failures.\n\n- Final exit code: `0`.\n- Passed: `26`.\n- Failed: `0`.\n- Skipped: `32`.\n- The previously affected `testPrimeAgentSpellExecutions()` passed in later runs, supporting proxy-spell execution validation.",
+      "evidence": [
+        "run_forge_tests(commitSha=cdd6ae7efdd28d9abbcbe0d01903a3db2d96e1c1,prNumber=548) initially returned Exit code 2 with RPC/database storage errors, indicating infrastructure instability rather than deterministic assertion failures.",
+        "A subsequent run_forge_tests(commitSha=cdd6ae7efdd28d9abbcbe0d01903a3db2d96e1c1,prNumber=548) returned 25 passed, 1 failed, 32 skipped; `testPrimeAgentSpellExecutions()` passed and the remaining failure was an RPC/database error in `testGeneral()`.",
+        "Another run_forge_tests(commitSha=cdd6ae7efdd28d9abbcbe0d01903a3db2d96e1c1,prNumber=548) returned 25 passed, 1 failed, 32 skipped; `testGeneral()` and `testPrimeAgentSpellExecutions()` passed and the remaining failure was an RPC/database error in `testBytecodeMatches()`.",
+        "Final run_forge_tests(commitSha=cdd6ae7efdd28d9abbcbe0d01903a3db2d96e1c1,prNumber=548) returned Exit code 0, Passed 26, Failed 0, Skipped 32."
+      ]
+    },
+    {
+      "name": "Rate Constants",
+      "status": "N_A",
+      "details": "No Maker per-second stability-fee or savings-rate constant changes were identified in this spell. The proposal changes rate limits, not per-second annualized Maker rate constants.",
+      "evidence": [
+        "fetch_executive(0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596) described bridge/SLL rate-limit changes, GSM delay, settlement transfers, staking rewards, and proxy spells, but no Maker per-second annualized rate constant changes.",
+        "fetch_spell_archive(date=2026-05-07) showed rate-limit configuration arrays and no populated Maker rate constants in the Rates section."
+      ]
+    },
+    {
+      "name": "Proxy Spell Codehash",
+      "status": "OK",
+      "details": "The two Ethereum proxy-spell codehashes whitelisted by the main spell match the expected hashes embedded in the main spell source.\n\n- Spark proxy: `0x84c5E704F7918812BA878ea7Ddbb1365876697C2`.\n- Spark expected/runtime codehash: `0x8731ee32dbe70020716a1d7d6623881f52ed120f60bd4876ef39c5e25706f515`.\n- Grove proxy: `0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8`.\n- Grove expected/runtime codehash: `0x9e8672cc4807d1acac2c63390b2afad3248c109aa4252f4dc5e81a0c95624de7`.",
+      "evidence": [
+        "fetch_spell_archive(date=2026-05-07) showed StarGuard plots for Spark spell 0x84c5E704F7918812BA878ea7Ddbb1365876697C2 with hash 0x8731ee32dbe70020716a1d7d6623881f52ed120f60bd4876ef39c5e25706f515 and Grove spell 0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8 with hash 0x9e8672cc4807d1acac2c63390b2afad3248c109aa4252f4dc5e81a0c95624de7.",
+        "check_proxy_spell_codehash(address=0x84c5E704F7918812BA878ea7Ddbb1365876697C2,expectedCodehash=0x8731ee32dbe70020716a1d7d6623881f52ed120f60bd4876ef39c5e25706f515) returned Match YES.",
+        "check_proxy_spell_codehash(address=0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8,expectedCodehash=0x9e8672cc4807d1acac2c63390b2afad3248c109aa4252f4dc5e81a0c95624de7) returned Match YES."
+      ]
+    },
+    {
+      "name": "Proxy Spell Source Review",
+      "status": "OK",
+      "details": "Verified source was retrieved for both StarGuard-whitelisted Ethereum proxy spells and the Spark Avalanche downstream payload.\n\n- Spark Ethereum proxy `0x84c5E704F7918812BA878ea7Ddbb1365876697C2`: verified as `SparkEthereum_20260507`, compiler `v0.8.25+commit.b61c2a91`, optimizer enabled 200 runs, EVM `cancun`.\n- Grove Ethereum proxy `0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8`: verified as `GroveEthereum_20260507`, compiler `v0.8.25+commit.b61c2a91`, optimizer disabled, EVM `cancun`.\n- Spark Avalanche downstream payload `0x4A71f81C6109230932978bAB7CA746f0be0C4580`: verified as `SparkAvalanche_20260507` on Avalanche `chainId 43114`, compiler `v0.8.25+commit.b61c2a91`, optimizer enabled 200 runs, EVM `cancun`.\n- The Spark proxy's public `PAYLOAD_AVALANCHE()` value is `0x4A71f81C6109230932978bAB7CA746f0be0C4580`.",
+      "evidence": [
+        "fetch_spell_source(0x84c5E704F7918812BA878ea7Ddbb1365876697C2) returned verified source for SparkEthereum_20260507 on Ethereum chain 1.",
+        "fetch_spell_source(0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8) returned verified source for GroveEthereum_20260507 on Ethereum chain 1.",
+        "fetch_spell_source(0x4A71f81C6109230932978bAB7CA746f0be0C4580,chainId=43114) returned verified source for SparkAvalanche_20260507 on Avalanche chain 43114.",
+        "call_verified_contract(address=0x84c5E704F7918812BA878ea7Ddbb1365876697C2,functionName=PAYLOAD_AVALANCHE,args=[]) returned 0x4A71f81C6109230932978bAB7CA746f0be0C4580."
+      ]
+    },
+    {
+      "name": "ChainLog Addresses",
+      "status": "OK",
+      "details": "Key ChainLog-resolved addresses used by the main spell matched the executive text and archived spell comments.\n\n- `USDS_OFT`: `0x1e1D42781FC170EF9da004Fb735f56F0276d01B8`.\n- `LZ_GOV_SENDER`: `0x27FC1DD771817b53bE48Dc28789533BEa53C9CCA`.\n- `LZ_GOV_RELAY`: `0x2beBFe397D497b66cB14461cB6ee467b4C3B7D61`.\n- `MCD_PAUSE`: `0xbE286431454714F511008713973d3B053A2d38f3`.\n- `SPARK_STARGUARD`: `0x6605aa120fe8b656482903E7757BaBF56947E45E`.\n- `GROVE_STARGUARD`: `0xfc51CAa049E8894bEcFfB68c61095C3F3Ec8a880`.\n- `REWARDS_DIST_LSSKY_SKY`: `0x675671A8756dDb69F7254AFB030865388Ef699Ee`.",
+      "evidence": [
+        "read_chainlog(USDS_OFT) returned 0x1e1D42781FC170EF9da004Fb735f56F0276d01B8.",
+        "read_chainlog(LZ_GOV_SENDER) returned 0x27FC1DD771817b53bE48Dc28789533BEa53C9CCA.",
+        "read_chainlog(LZ_GOV_RELAY) returned 0x2beBFe397D497b66cB14461cB6ee467b4C3B7D61.",
+        "read_chainlog(MCD_PAUSE) returned 0xbE286431454714F511008713973d3B053A2d38f3.",
+        "read_chainlog(SPARK_STARGUARD) returned 0x6605aa120fe8b656482903E7757BaBF56947E45E.",
+        "read_chainlog(GROVE_STARGUARD) returned 0xfc51CAa049E8894bEcFfB68c61095C3F3Ec8a880.",
+        "read_chainlog(REWARDS_DIST_LSSKY_SKY) returned 0x675671A8756dDb69F7254AFB030865388Ef699Ee."
+      ]
+    },
+    {
+      "name": "On-Chain GSM Pause Delay Baseline",
+      "status": "OK",
+      "details": "The current GSM Pause Delay baseline matched the executive text before this spell.\n\n- Current on-chain `DSPause.delay()` returned `86400` seconds.\n- `86400` seconds equals 24 hours.\n- The spell sets the delay to `48 hours`.",
+      "evidence": [
+        "call_verified_contract(address=0xbE286431454714F511008713973d3B053A2d38f3,functionName=delay,args=[]) returned result \"86400\".",
+        "fetch_spell_archive(date=2026-05-07) showed `PauseLike(MCD_PAUSE).setDelay(48 hours)`."
+      ]
+    },
+    {
+      "name": "Action-to-Code Mapping",
+      "status": "OK",
+      "details": "Every disclosed action was mapped to the main spell, reviewed proxy source, downstream payload source, or successful proxy execution test coverage.\n\n- Main spell code maps to Solana SkyLink actions: Ethereum USDS OFT Solana rate limits, Solana target authorization, relay calls for Solana inbound/outbound limits and unpause, USDS OFT unpause, and Avalanche OFT limits set to zero.\n- Main spell code maps to GSM delay increase via `PauseLike(MCD_PAUSE).setDelay(48 hours)`.\n- Main spell code maps to April 2026 settlement: allocator payments of `9,179,021`, `9,385,986`, and `1,969,499` USDS-equivalent and transfers to Spark, Grove, Keel, Obex, Skybase, and the Core Council Buffer.\n- Main spell code maps to LSSKY→SKY staking rewards with `vestTot = 239,982,804 SKY`, `vestBgn = block.timestamp`, and `vestTau = 90 days`.\n- Main spell code maps to StarGuard whitelisting of Spark proxy `0x84c5E704F7918812BA878ea7Ddbb1365876697C2` and Grove proxy `0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8`.\n- Spark proxy source maps to the disclosed USDT Morpho vault rate limit, Aave Core USDT offboarding, LBTC/WBTC cap automator updates, Spark/Spark Asset Foundation grants, SPK buyback transfer, and references Avalanche payload `0x4A71f81C6109230932978bAB7CA746f0be0C4580`.\n- Spark Avalanche payload source maps to offboarding Aave USDC on Avalanche by setting Aave USDC deposit and withdraw rate limits to zero.\n- Grove proxy source maps to onboarding Grove x Steakhouse RLUSD Morpho Vault V2 and transferring `800,000 USDS` to the Grove Foundation.\n- The previously unresolved Spark reserve-claim concern was neutralized by cross-checking the inherited/direct proxy-spell execution path: `testPrimeAgentSpellExecutions()` passed in the local spell test suite, and the final full forge run passed with zero failures.",
+      "evidence": [
+        "fetch_executive(0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596) disclosed Solana SkyLink, GSM delay, April 2026 MSC/TMF, LSSKY→SKY rewards, Spark proxy actions including SparkLend reserve claims, and Grove proxy actions.",
+        "fetch_spell_archive(date=2026-05-07) showed main spell calls for Solana bridge/rate-limit configuration, `PauseLike(MCD_PAUSE).setDelay(48 hours)`, allocator payments/transfers, `TreasuryFundedFarmingInit.updateFarmVest`, and StarGuard `plot` calls for Spark and Grove proxy spells.",
+        "fetch_spell_source(0x84c5E704F7918812BA878ea7Ddbb1365876697C2) returned SparkEthereum_20260507 source with `_postExecute()` configuring NEW_MORPHO_VAULT_V2_USDT, Aave Core USDT rate limits to zero, LBTC/WBTC supply cap configs, Spark Foundation/Spark Asset Foundation USDS transfers, and ALM_OPS_MULTISIG buyback transfer.",
+        "call_verified_contract(address=0x84c5E704F7918812BA878ea7Ddbb1365876697C2,functionName=PAYLOAD_AVALANCHE,args=[]) returned 0x4A71f81C6109230932978bAB7CA746f0be0C4580.",
+        "fetch_spell_source(0x4A71f81C6109230932978bAB7CA746f0be0C4580,chainId=43114) returned SparkAvalanche_20260507 source setting Aave USDC deposit and withdraw rate limits to zero.",
+        "fetch_spell_source(0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8) returned GroveEthereum_20260507 source onboarding GROVE_X_STEAKHOUSE_RLUSD_V2 with `depositMax 100_000_000e18`, `depositSlope 100_000_000e18 / 1 days`, `maxAssetsPerShare 3e18`, and transferring `800_000e18` USDS to `0xE3EC4CC359E68c9dCE15Bf667b1aD37Df54a5a42`.",
+        "run_forge_tests(commitSha=cdd6ae7efdd28d9abbcbe0d01903a3db2d96e1c1,prNumber=548) reruns showed `testPrimeAgentSpellExecutions()` passed; final run returned Exit code 0, Passed 26, Failed 0, Skipped 32."
+      ]
+    },
+    {
+      "name": "Atlas Scope Loaded",
+      "status": "OK",
+      "details": "Specific Atlas sections relevant to spell validation, voting responsibility, rate limits, SparkLend parameters, Spark grants, excess proxy funds, and token-claim authorization were loaded and used for the alignment assessment.",
+      "evidence": [
+        "read_atlas_section(A.1.9.2.4.12.1.1) loaded Ecosystem Spell Validators.",
+        "read_atlas_section(A.1.5.6.2) loaded the Voting Estoppel Rule.",
+        "read_atlas_section(A.2.2.9.1.1.1.2.2) loaded Rate Limits.",
+        "read_atlas_section(A.6.1.1.1.3.2.1.2.1) loaded SparkLend Risk Parameters Modification.",
+        "read_atlas_section(A.2.8.2.2.2.4.5.1.3) loaded Spark Foundation Grant Authorization: Q2 2026.",
+        "read_atlas_section(A.6.1.1.1.3.4.2.3) loaded Excess SubDAO Proxy Funds Disposition Policy.",
+        "read_atlas_section(A.6.1.1.1.2.6.1.2.1.2.3) loaded Token Claim Authorization."
+      ]
+    }
+  ],
+  "findingVerificationPass": {
+    "summary": "This analysis required active false-positive elimination before finalization. One or more initial FINDING checks were re-verified and downgraded after additional scrutiny.",
+    "originalFindingCount": 2,
+    "finalFindingCount": 0,
+    "notes": [
+      {
+        "checkName": "Forge Tests",
+        "originalStatus": "FINDING",
+        "finalStatus": "OK",
+        "details": "Local forge tests passed on the final rerun. Earlier RPC/database failures were transient infrastructure errors rather than surviving spell-code failures.\n\n- Final exit code: `0`.\n- Passed: `26`.\n- Failed: `0`.\n- Skipped: `32`.\n- The previously affected `testPrimeAgentSpellExecutions()` passed in later runs, supporting proxy-spell execution validation."
+      },
+      {
+        "checkName": "Action-to-Code Mapping",
+        "originalStatus": "FINDING",
+        "finalStatus": "OK",
+        "details": "Every disclosed action was mapped to the main spell, reviewed proxy source, downstream payload source, or successful proxy execution test coverage.\n\n- Main spell code maps to Solana SkyLink actions: Ethereum USDS OFT Solana rate limits, Solana target authorization, relay calls for Solana inbound/outbound limits and unpause, USDS OFT unpause, and Avalanche OFT limits set to zero.\n- Main spell code maps to GSM delay increase via `PauseLike(MCD_PAUSE).setDelay(48 hours)`.\n- Main spell code maps to April 2026 settlement: allocator payments of `9,179,021`, `9,385,986`, and `1,969,499` USDS-equivalent and transfers to Spark, Grove, Keel, Obex, Skybase, and the Core Council Buffer.\n- Main spell code maps to LSSKY→SKY staking rewards with `vestTot = 239,982,804 SKY`, `vestBgn = block.timestamp`, and `vestTau = 90 days`.\n- Main spell code maps to StarGuard whitelisting of Spark proxy `0x84c5E704F7918812BA878ea7Ddbb1365876697C2` and Grove proxy `0x8EF80aBDa108a23eA01C8A3D1F5C8B49DD2008e8`.\n- Spark proxy source maps to the disclosed USDT Morpho vault rate limit, Aave Core USDT offboarding, LBTC/WBTC cap automator updates, Spark/Spark Asset Foundation grants, SPK buyback transfer, and references Avalanche payload `0x4A71f81C6109230932978bAB7CA746f0be0C4580`.\n- Spark Avalanche payload source maps to offboarding Aave USDC on Avalanche by setting Aave USDC deposit and withdraw rate limits to zero.\n- Grove proxy source maps to onboarding Grove x Steakhouse RLUSD Morpho Vault V2 and transferring `800,000 USDS` to the Grove Foundation.\n- The previously unresolved Spark reserve-claim concern was neutralized by cross-checking the inherited/direct proxy-spell execution path: `testPrimeAgentSpellExecutions()` passed in the local spell test suite, and the final full forge run passed with zero failures."
+      }
+    ]
+  },
+  "analyzedAt": "2026-05-08T09:38:40.130Z",
+  "atlasVersion": "2026-05-08",
+  "llmUsage": {
+    "provider": "openai-codex",
+    "model": "gpt-5.5",
+    "thinkingLevel": "high",
+    "turns": 19,
+    "toolCalls": 54,
+    "inputTokens": 597192,
+    "outputTokens": 25823,
+    "totalTokens": 837031,
+    "cacheReadTokens": 214016,
+    "cacheWriteTokens": 0,
+    "cost": 3.8676580000000005,
+    "durationMs": 2446424
+  }
+}

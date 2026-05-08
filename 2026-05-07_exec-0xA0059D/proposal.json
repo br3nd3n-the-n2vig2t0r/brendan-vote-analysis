@@ -1,0 +1,21 @@
+{
+  "id": "exec-0xA0059D",
+  "type": "exec",
+  "executive": {
+    "address": "0xA0059DaDd7Fbdbc81a9bb9d1d17cCB029b6AF596",
+    "title": "Unpause Solana SkyLink Bridge, Increase GSM Pause Delay, April 2026 Monthly Settlement Cycle, Update Staking Rewards, Prime Agent Proxy Spells - May 7, 2026",
+    "date": "2026-05-07T00:00:00.000Z",
+    "proposalBlurb": "Update rate limits and unpause Solana SkyLink Bridge, increase the GSM Pause Delay to 48 hours, execute Monthly Settlement Cycle and Treasury Management Function for April 2026, update LSSKY->SKY staking rewards, whitelist proxy spells for Spark and Grove.",
+    "proposalLink": "https://raw.githubusercontent.com/sky-ecosystem/executive-votes/main/2026/executive-vote-2026-05-07-solana-bridge-unpause-gsm-increase-msc-staking-rewards-update.md",
+    "about": "",
+    "content": "",
+    "spellData": {
+      "hasBeenCast": false,
+      "hasBeenScheduled": false,
+      "mkrSupport": "1119872315.287912100624411279",
+      "executiveHash": "0xfc4e7f185a03264f819bfd648aafeb942dd30e1567678b03176e047c9d1a7f63",
+      "officeHours": true
+    }
+  },
+  "fetchedAt": "2026-05-08T09:38:40.722Z"
+}

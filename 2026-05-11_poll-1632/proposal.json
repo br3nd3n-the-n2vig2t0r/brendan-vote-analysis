@@ -1,0 +1,22 @@
+{
+  "id": "poll-1632",
+  "type": "poll",
+  "poll": {
+    "pollId": 1632,
+    "title": "Atlas Edit Weekly Cycle Proposal - May 11, 2026",
+    "summary": "This Atlas edit proposal 1) specifies the Agent Termination Process in Root Edit Primitive, 2) defines Synome Documents and the Delegated Authority update process, 3) updates Freezer Multisig configuration for Obex, 4) adds Distribution Reward Instance for 1inch to Keel Artifact, 5) fixes incorrect Signer Rotation Registry references, 6) restores Short Term SKY Staking Rewards rate, 7) capitalizes Spell and Spells throughout the Atlas, 8) codifies Prime Spell process, and 9) fixes minor inconsistencies throughout the Atlas.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1778515200,
+    "endDate": 1778774400,
+    "url": "https://vote.sky.money/polling/QmRqCi82",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-05-11-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-05-11/27897",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-05-11T20:45:02.250Z"
+}

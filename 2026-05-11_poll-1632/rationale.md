@@ -1,0 +1,200 @@
+# Analysis: Atlas Edit Weekly Cycle Proposal - May 11, 2026
+
+**Recommendation:** ABSTAIN (Medium assessment)
+**Analyzed:** 2026-05-12T10:59:10.192Z | **Atlas:** 2026-05-12
+
+## Summary
+
+This poll would merge Atlas PR #242 as the May 11, 2026 Atlas Edit Weekly Cycle Proposal. The disclosed changes cover agent termination and delegated-authority process definitions, Obex Freezer Multisig configuration, a 1inch Distribution Reward Instance, signer-rotation reference fixes, restoration of the Short Term SKY Staking Rewards rate, capitalization of defined Spell terms, codification of the Prime Spell process, and minor Atlas consistency fixes.
+
+## Atlas Alignment
+
+**Assessment:** aligned
+
+Based on the portal text, canonical proposal text, PR body, and the Atlas sections available for review, the disclosed edits appear aligned with the Atlas.
+
+- The Atlas permits Weekly Cycle Proposals to amend multiple Atlas components, provided they adhere to the Spirit of the Atlas and Universal Alignment (A.1.10.2.1.1; A.0.1.1.4; A.0.1.1.5).
+- Clarifying agent termination, delegated-authority/Synome document handling, signer-rotation routing, and the Prime Spell process generally strengthens Alignment Artifact clarity and reduces ambiguity, consistent with A.1.1.2 and A.1.2.1.
+- Specifying termination mechanics is consistent with the existing Agent Termination Protocol in A.1.13.5.
+- Capitalizing “Spell” and “Spells” is consistent with the Atlas already treating Executive Votes and spells as distinct governance concepts in A.1.10.1.2.2.
+- The economic and authorization-impacting items are disclosed at the policy/action level in the voting materials. No separate on-chain execution is authorized by this poll; a successful vote triggers a direct Atlas merge under A.1.10.2.2.
+
+Important limitation: the full PR diff was too large for complete line-by-line review through the available tooling. Under the Voting Estoppel Rule in A.1.5.6.2, a YES vote should be cast only after the voter is comfortable with the key governance implications of the complete PR.
+
+**Relevant sections:** A.0.1.1.4, A.0.1.1.5, A.0.1.1.6, A.0.1.1.12, A.1.1.1, A.1.1.2, A.1.2.1, A.1.2.2.1, A.1.5.6.2, A.1.10.1.2.2, A.1.10.2.1.1, A.1.10.2.1.3, A.1.10.2.2, A.1.10.2.4, A.1.13.5
+
+## Risk Assessment
+
+**Level:** medium
+
+- The full Atlas PR diff could not be reviewed line by line because GitHub refused to render the diff for PR #242; the PR reports 2,378 files changed, 15,340 additions, and 14,321 deletions.
+- The proposal includes material governance and authorization changes, including delegated-authority/Synome document handling, Prime Spell process codification, signer-rotation routing, and Obex Freezer Multisig configuration.
+- The proposal includes economic or incentive-related changes, including a 1inch Distribution Reward Instance and restoration of the Short Term SKY Staking Rewards rate.
+- Direct smart-contract risk is low because this poll only merges Atlas text and does not itself execute an on-chain spell.
+
+## Validation Checks
+
+### Poll Metadata
+
+**Status:** OK
+
+Fetched poll 1632 from the voting API.
+
+- Title: Atlas Edit Weekly Cycle Proposal - May 11, 2026.
+- Status: active.
+- Voting period: 2026-05-11 16:00 UTC to 2026-05-14 16:00 UTC.
+- Options: Abstain, Yes, No.
+- Portal URL: https://vote.sky.money/polling/QmRqCi82.
+- Proposal source URL: https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-05-11-Atlas-edit-weekly-cycle-proposal.md.
+- Associated Atlas PR: https://github.com/sky-ecosystem/next-gen-atlas/pull/242.
+
+**Evidence**
+
+- fetch_proposal(pollId=1632) returned title `Atlas Edit Weekly Cycle Proposal - May 11, 2026`, status `active`, start `2026-05-11T16:00:00.000Z`, end `2026-05-14T16:00:00.000Z`, and portal URL `https://vote.sky.money/polling/QmRqCi82`.
+- fetch_proposal(pollId=1632) returned proposal source URL `https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-05-11-Atlas-edit-weekly-cycle-proposal.md` and canonical text linking Atlas Edit Pull Request `https://github.com/sky-ecosystem/next-gen-atlas/pull/242`.
+
+### Atlas Scope Loaded
+
+**Status:** OK
+
+Loaded the Governance Scope and specific Atlas sections relevant to Atlas Edit process, Spirit of the Atlas, document structure, agent termination, spell terminology, voting estoppel, and Minimum Positive Participation.
+
+- A.1 was loaded as the relevant Governance Scope.
+- A.0 definitions for Universal Alignment, Alignment Artifact Strength, and Slippery Slope Misalignment were consulted.
+- A.1.10.2 sections governing Atlas Edit Weekly Cycle proposals were consulted.
+- A.1.13.5 was consulted for Agent Termination Protocol context.
+
+**Evidence**
+
+- read_atlas_scope(scope=A.1) returned `The Governance Scope` and states that it regulates governance processes and balance of power of the Sky Ecosystem.
+- read_atlas_section(sectionId=A.1.10.2.1.1) returned that multiple amendments to multiple Atlas components are allowed in a single Weekly Cycle Proposal and that Atlas Edits must adhere to the Spirit of the Atlas and Universal Alignment.
+- read_atlas_section(sectionId=A.1.10.2.2) returned that Atlas Edit Weekly Cycle polls run for three days and successful polls trigger direct edits to the Atlas.
+- read_atlas_section(sectionId=A.1.10.2.4) returned the required Minimum Positive Participation of 480,000,000 SKY equivalents of Yes votes.
+- read_atlas_section(sectionId=A.1.13.5) returned the current Agent Termination Protocol, including initiation, execution, end, and dispute-resolution provisions.
+
+### Portal Summary vs Canonical Text
+
+**Status:** OK
+
+The portal summary and canonical proposal text are substantively identical.
+
+Both describe the same nine top-level edits:
+
+- Specify the Agent Termination Process in Root Edit Primitive.
+- Define Synome Documents and the Delegated Authority update process.
+- Update Freezer Multisig configuration for Obex.
+- Add a Distribution Reward Instance for 1inch to the Keel Artifact.
+- Fix incorrect Signer Rotation Registry references.
+- Restore the Short Term SKY Staking Rewards rate.
+- Capitalize Spell and Spells throughout the Atlas.
+- Codify the Prime Spell process.
+- Fix minor inconsistencies throughout the Atlas.
+
+**Evidence**
+
+- fetch_proposal(pollId=1632) returned a portal summary beginning `This Atlas edit proposal 1) specifies the Agent Termination Process...` and listing nine actions.
+- fetch_proposal(pollId=1632) returned full canonical text with the same summary line and the same nine italicized Review bullets.
+
+### Canonical Text vs PR Diff
+
+**Status:** ASSUMPTION
+
+The PR body matches the canonical proposal’s nine disclosed top-level edits, but the full PR diff could not be reviewed.
+
+- PR #242 is open and titled `Atlas Edit Proposal — 2026-05-11`.
+- The PR reports 2,378 files changed, 15,340 additions, and 14,321 deletions.
+- GitHub returned `406 Not Acceptable` because the diff exceeded the maximum number of files.
+- This analysis therefore assumes the PR body and canonical proposal text accurately summarize the unreviewed full diff.
+- No material mismatch was identified in the available PR body versus canonical text, but this does not confirm every changed line.
+
+**Evidence**
+
+- fetch_atlas_pr_diff(prNumber=242) returned state `open`, author `adamgfraser`, created `2026-05-09T04:40:42Z`, files changed `2378`, additions `15340`, deletions `14321`.
+- fetch_atlas_pr_diff(prNumber=242) returned `ASSUMPTION: The full Atlas PR diff was not available for complete line-by-line review` and raw response `Sorry, the diff exceeded the maximum number of files (300)` with status `406`.
+- fetch_atlas_pr_diff(prNumber=242) returned a PR body listing the same nine edits as the canonical proposal text from fetch_proposal(pollId=1632).
+
+### On-Chain Address/Parameter Baseline
+
+**Status:** N/A
+
+No on-chain baseline check was applicable from the canonical proposal text.
+
+- This is an Atlas Edit Weekly Cycle poll; a successful outcome merges PR #242 into the Atlas and does not itself execute a spell or transaction.
+- The canonical text does not provide a specific live contract address, ChainLog key, storage slot, Safe address, or staking rewards contract to verify.
+- The Obex Freezer Multisig and Short Term SKY Staking Rewards items are disclosed as Atlas configuration/policy edits in this poll. If the underlying PR contains exact live addresses or contract parameters, those should be checked during full-diff human review.
+
+**Evidence**
+
+- fetch_proposal(pollId=1632) canonical Outcomes section states that if Yes exceeds No and reaches 480,000,000 SKY, `The associated Pull Request will be merged into The Atlas`.
+- fetch_proposal(pollId=1632) canonical text does not include a specific Safe address, contract address, ChainLog key, or storage slot for the Obex or Short Term SKY Staking Rewards items.
+
+### Atlas Edit Process Parameters
+
+**Status:** OK
+
+The poll’s process parameters match the relevant Atlas process requirements visible in the proposal and Atlas sections.
+
+- A.1.10.2.2 says Atlas Edit Weekly Cycle polls run for three days; poll 1632 runs from May 11 to May 14, 2026.
+- A.1.10.2.4 requires at least 480,000,000 SKY equivalents of Yes votes; poll 1632 uses a 480,000,000 SKY Minimum Positive Participation threshold.
+- A.1.10.2.1.1 allows multiple amendments to multiple Atlas components in a single Weekly Cycle Proposal.
+
+**Evidence**
+
+- fetch_proposal(pollId=1632) returned start `2026-05-11T16:00:00.000Z`, end `2026-05-14T16:00:00.000Z`, and victory condition Yes >= `480000000`.
+- read_atlas_section(sectionId=A.1.10.2.2) returned `The Polls run for three days. Successful polls trigger direct edits to the Atlas.`
+- read_atlas_section(sectionId=A.1.10.2.4) returned `Atlas Edit Weekly Cycle Proposals must have at least 480,000,000 SKY equivalents of Yes votes to be accepted.`
+- read_atlas_section(sectionId=A.1.10.2.1.1) returned that multiple amendments to multiple components of the Atlas are allowed in a single Weekly Cycle Proposal.
+
+### Triggering Requirement Context
+
+**Status:** ASSUMPTION
+
+The proposal text states that the Core Facilitators placed the poll into the voting system on behalf of Ranked Delegate Bonapublica. The Atlas assigns responsibility for confirming Ranked Delegate and AD Buffer triggering requirements to the Core Facilitator; this analysis did not independently verify Bonapublica’s Ranked Delegate status or AD Buffer balance at the time of triggering.
+
+**Evidence**
+
+- fetch_proposal(pollId=1632) canonical text states that Core Facilitators placed the proposal into the voting system `on behalf of Ranked Delegate Bonapublica`.
+- read_atlas_section(sectionId=A.1.10.2.1.3) returned that an Atlas Edit Weekly Cycle Proposal can proceed only if triggered by a Ranked Delegate whose AD Buffer contains at least the Triggering Threshold, and that `The Core Facilitator is responsible for confirming that these requirements are met.`
+- read_atlas_section(sectionId=A.1.5.4.4.2.1.1) returned that the Triggering Threshold equals one month of compensation based on the Level 3 Ranked Delegate budget.
+
+### Alignment Assessment
+
+**Status:** OK
+
+No Atlas misalignment was identified in the disclosed proposal text.
+
+- Process clarifications for agent termination, Synome/delegated authority, signer rotation, and Prime Spells appear to reduce ambiguity and improve governance reliability.
+- The existing Atlas already contains an Agent Termination Protocol, making further Root Edit Primitive specification directionally consistent.
+- The proposal discloses its economic and authorization-impacting items at the top level.
+- The full-diff limitation remains a review risk, but the available text does not show a substantive conflict with Universal Alignment or the Spirit of the Atlas.
+
+**Evidence**
+
+- read_atlas_section(sectionId=A.1.1.2) returned that Atlas interpretations should maximize Universal Alignment, mitigate slippery slope misalignment, and set clear precedent to avoid future ambiguities.
+- read_atlas_section(sectionId=A.1.13.5) returned the Agent Termination Protocol, which the proposal would further specify in Root Edit Primitive context.
+- read_atlas_section(sectionId=A.1.10.1.2.2) returned existing definitions distinguishing Executive Votes and spells, supporting the capitalization/defined-term cleanup.
+- fetch_proposal(pollId=1632) and fetch_atlas_pr_diff(prNumber=242) both returned the same nine top-level disclosed actions.
+
+## Recommendation
+
+**Position:** ABSTAIN
+**Assessment:** Medium
+
+I recommend **ABSTAIN** unless a human reviewer has independently inspected the full PR #242 diff.
+
+The disclosed policy changes appear Atlas-aligned and the voting materials consistently describe the same nine top-level actions. However, the PR is too large for the available review path to confirm that the canonical text captures every material change in the actual diff. Because a YES vote carries estoppel for the proposal’s key governance implications, abstaining is the safer position pending full-diff review.
+
+## Human Review Required
+
+- Atlas PR #242 is too large for the available diff tool to review completely; GitHub returned a 406/too_large response and reported 2,378 changed files.
+- The proposal contains substantive governance, authorization, and economic policy changes, so a voter should inspect the full PR locally before relying on a YES recommendation.
+- No specific live contract address or on-chain parameter key was provided in the canonical text for baseline verification; if the PR diff contains exact Safe, reward, or staking contract details, those should be separately checked.
+
+## LLM Usage
+
+- **Provider/Model:** openai-codex / gpt-5.5 (thinking: high)
+- **Turns:** 10 (24 tool calls)
+- **Tokens:** 189,636 in / 9,720 out / 214,204 total
+- **Cache:** 14,848 read / 0 write
+- **Cost:** $1.2472
+- **Duration:** 6.3m

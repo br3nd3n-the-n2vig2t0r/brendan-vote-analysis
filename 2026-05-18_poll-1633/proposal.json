@@ -1,0 +1,22 @@
+{
+  "id": "poll-1633",
+  "type": "poll",
+  "poll": {
+    "pollId": 1633,
+    "title": "Atlas Edit Weekly Cycle Proposal - May 18, 2026",
+    "summary": "This Atlas edit proposal 1) defines the Executive Process Liaison and Strategic Team roles and adds Prime Agents to the Roles in the Executive Process Section, 2) rebrands Launch Agent 6 to Osero across the Atlas, 3) fixes stale cross-reference labels and naming inconsistencies.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1779120000,
+    "endDate": 1779379200,
+    "url": "https://vote.sky.money/polling/QmX9L2Mf",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-05-18-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-05-18/27910",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-05-18T17:35:51.555Z"
+}

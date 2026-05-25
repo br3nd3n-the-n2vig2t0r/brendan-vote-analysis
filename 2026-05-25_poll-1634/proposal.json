@@ -1,0 +1,22 @@
+{
+  "id": "poll-1634",
+  "type": "poll",
+  "poll": {
+    "pollId": 1634,
+    "title": "Atlas Edit Weekly Cycle Proposal - May 25, 2026",
+    "summary": "This Atlas edit proposal 1) introduces Independent Governance standard for Root Edit Primitive Operation, 2) adds spell checklists and reference materials, 3) adds GROVE token transfer to Grove Foundation, 4) specifies Pre-Risk Review timing, 5) adds Grove to current phased-out Genesis Capital, 6) adds Grove Circle CCTP Governance Relay Receivers to Grove Artifact, 7) renames Synome Editor to Archon Tech, 8) replaces Legacy Facilitator terminology, 9) fixes Cross-Reference formatting.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1779724800,
+    "endDate": 1779984000,
+    "url": "https://vote.sky.money/polling/QmeS7Hm2",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-05-25-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-05-25/27933",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-05-25T16:27:08.697Z"
+}

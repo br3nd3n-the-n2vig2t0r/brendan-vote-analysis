@@ -1,0 +1,22 @@
+{
+  "id": "poll-1635",
+  "type": "poll",
+  "poll": {
+    "pollId": 1635,
+    "title": "Atlas Edit Weekly Cycle Proposal - June 1, 2026",
+    "summary": "This Atlas edit proposal 1) unifies reward recipient and sharing across Sky Primitive reward mechanisms, 2) renames Capital Requirement Ratio to Capital Ratio Requirement, 3) removes irrelevant Facilitator Ecosystem exemptions, 4) amends Circle CCTP v2 TokenMessenger contract address documents in Grove Artifact, 5) updates Immunefi bug bounty program URLs.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1780329600,
+    "endDate": 1780588800,
+    "url": "https://vote.sky.money/polling/QmQUKfNW",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-01-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-01/27948",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-06-02T09:37:28.205Z"
+}

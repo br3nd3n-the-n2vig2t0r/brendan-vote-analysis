@@ -1,0 +1,11 @@
+[Atlas Edit Weekly Cycle Proposal - June 1, 2026](https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-01-Atlas-edit-weekly-cycle-proposal.md)
+
+**Summary**
+
+Poll 1635 asks SKY holders to approve Atlas PR #253. The PR would merge a five-part Atlas Edit Weekly Cycle package: unify reward-recipient routing and bilateral sharing rules across five Sky Primitive reward mechanisms; rename Capital Requirement Ratio to Capital Ratio Requirement; remove two obsolete Facilitator Ecosystem exemptions; consolidate duplicate Grove Base Circle CCTP v2 TokenMessenger records and add the missing Avalanche record; and replace outdated Immunefi URLs with Sky-branded destinations. If Yes beats No and reaches 480,000,000 SKY, the PR is merged into the Atlas.
+
+**Decision: YES**
+
+The poll is procedurally framed as an Atlas Edit Weekly Cycle Proposal, uses the correct three-day window and 480,000,000 SKY positive-participation threshold, and consistently discloses the five policy and maintenance actions in the portal summary, canonical proposal, PR body, forum thread, and composed Atlas diff. The key governance implication is understandable: reward routing is standardized so the managing Prime Agent receives payments and negotiates sharing bilaterally, while the other edits remove obsolete rules and correct Atlas terminology or records. Circle's first-party documentation corroborates the Grove TokenMessengerV2 address, and the updated Immunefi destinations are live. The composed PR review covered all 17 batches and all 879 changed Atlas sections, with 3 minted UUIDs, 5 retired UUIDs, and zero dangling references in the PR-head Atlas. I did not find a material disclosure mismatch or Atlas conflict that would justify voting No or Abstain. The recommendation retains a medium assessment because reward routing is a substantive policy consolidation and historical Bonapublica AD Buffer eligibility is accepted only as an explicitly consented assumption.
+
+[Full rationale](https://github.com/br3nd3n-the-n2vig2t0r/brendan-vote-analysis/blob/main/2026-06-01_poll-1635/rationale.md)

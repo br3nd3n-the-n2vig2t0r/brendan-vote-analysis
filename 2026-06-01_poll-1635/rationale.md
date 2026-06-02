@@ -1,0 +1,229 @@
+# Analysis: Atlas Edit Weekly Cycle Proposal - June 1, 2026
+
+**Recommendation:** YES (Medium assessment)
+**Analyzed:** 2026-06-02T09:37:28.209Z | **Atlas:** 2026-06-02
+
+## Summary
+
+Poll 1635 asks SKY holders to approve Atlas PR #253. The PR would merge a five-part Atlas Edit Weekly Cycle package: unify reward-recipient routing and bilateral sharing rules across five Sky Primitive reward mechanisms; rename Capital Requirement Ratio to Capital Ratio Requirement; remove two obsolete Facilitator Ecosystem exemptions; consolidate duplicate Grove Base Circle CCTP v2 TokenMessenger records and add the missing Avalanche record; and replace outdated Immunefi URLs with Sky-branded destinations. If Yes beats No and reaches 480,000,000 SKY, the PR is merged into the Atlas.
+
+## Atlas Alignment
+
+**Assessment:** aligned
+
+The proposal uses the Atlas Edit Weekly Cycle authorized by A.1.11.2.1 and A.1.11.2.2 and applies the 480,000,000 SKY Minimum Positive Participation threshold required by A.1.11.2.4. The five disclosed actions match the composed Atlas diff from pinned PR revisions. The most substantive edit standardizes reward routing across Distribution Reward, Integration Boost, Core Governance Reward, stUSDS Distribution Reward, and srUSDS Distribution Reward: payments go to the Prime Agent managing the Integrator relationship, while sharing is determined bilaterally. The remaining edits are bounded terminology synchronization, obsolete-exemption removal, Grove CCTP address-document cleanup, and bug-bounty URL maintenance. The composed-diff review covered all 879 changed Atlas sections, found no undisclosed material action, and independently confirmed zero dangling references in the PR-head Atlas. The Grove CCTP TokenMessengerV2 address is corroborated by Circle's first-party documentation for both Avalanche and Base. I did not identify a conflict with the AD duty to uphold the Spirit of the Atlas and Universal Alignment under A.0.1.1.18 and A.1.6.
+
+**Relevant sections:** A.0.1.1.18, A.1.6.2.1.1, A.1.6.2.2, A.1.6.4.1.3.2, A.1.6.4.4.2.1.1, A.1.6.6.2, A.1.11.2.1, A.1.11.2.1.3, A.1.11.2.2, A.1.11.2.4, A.2.11.1.1, A.6.1.1.2.2.6.1.2.1.1.1.1.2, A.6.1.1.2.2.6.1.2.1.1.1.1.3
+
+## Risk Assessment
+
+**Level:** medium
+
+- The reward-recipient edit is a substantive policy consolidation: five Sky Primitive reward mechanisms route payments to the Prime Agent managing the Integrator relationship, with any sharing subject to bilateral negotiation rather than a fixed Atlas share.
+- PR #253 changes 1,825 repository files. The trusted composed-Atlas fallback reduced this to 879 changed Atlas sections across 17 bounded review batches, all of which were reviewed. UUID-aware consolidation found 3 minted UUIDs, 5 retired UUIDs, and zero dangling references in the PR-head Atlas.
+- The Grove CCTP edit changes Atlas address records, but Circle's first-party CCTP documentation corroborates TokenMessengerV2 address 0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d for both Avalanche and Base.
+- The Capital Ratio Requirement rename, obsolete-exemption removal, and Immunefi URL replacements are bounded terminology, cleanup, and reference-maintenance edits.
+- Direct smart-contract execution risk is low because this poll authorizes an Atlas PR merge and does not execute an on-chain spell.
+- Public evidence does not expose Bonapublica's historical AD Buffer balance at the trigger timestamp. The user explicitly consented to the named Triggering Delegate Historical Eligibility assumption after reviewing this limitation.
+
+## Validation Checks
+
+### Proposal Fetched
+
+**Status:** OK
+
+- `fetch-proposal 1635` returned poll title `Atlas Edit Weekly Cycle Proposal - June 1, 2026`, status `active`, single-choice options `0: Abstain`, `1: Yes`, `2: No`.
+- Vote window: 2026-06-01T16:00:00.000Z to 2026-06-04T16:00:00.000Z.
+- Portal URL: https://vote.sky.money/polling/QmQUKfNW.
+- Proposal source: https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-01-Atlas-edit-weekly-cycle-proposal.md.
+- Discussion link: https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-01/27948.
+- Associated Atlas PR: https://github.com/sky-ecosystem/next-gen-atlas/pull/253.
+
+**Evidence**
+
+- bun run src/index.ts resolve-target 1635
+- bun run src/index.ts fetch-proposal 1635
+
+### Governance Process And Threshold
+
+**Status:** OK
+
+- `read-atlas-section A.1.11` returned A.1.11.2.1.1 allowing multiple amendments to multiple Atlas components in one Weekly Cycle Proposal while requiring adherence to the Spirit of the Atlas and Universal Alignment.
+- A.1.11.2.2 says the Core Facilitator publishes Atlas Edit Weekly Cycle polls on Monday, polls run for three days, and successful polls trigger direct Atlas edits.
+- A.1.11.2.4 requires at least 480,000,000 SKY equivalents of Yes votes.
+- `fetch-proposal 1635` shows a Monday 2026-06-01 16:00 UTC through Thursday 2026-06-04 16:00 UTC window and victory conditions requiring plurality plus Yes vote-weight >= 480000000.
+
+**Evidence**
+
+- bun run src/index.ts read-atlas-section A.1.11
+- bun run src/index.ts fetch-proposal 1635
+
+### Triggering Delegate Historical Eligibility
+
+**Status:** ASSUMPTION
+
+- The canonical proposal says Core Facilitators placed the poll into the voting system on behalf of Ranked Delegate Bonapublica and links directly to forum post 27948/2.
+- `curl -s https://forum.skyeco.com/t/27948/2.json` returned post 2 by `Bonapublica`, created `2026-05-31T10:54:33.778Z`, stating that `bonapublica_AD` triggers the Atlas Edit Weekly Proposal for the week of 2026-06-01 under `A.1.11.2.1.3 - Triggering Requirement`.
+- `read-atlas-section A.1.11.2.1.3` and `read-atlas-section A.1.6.4.4.2.1.1` require the triggering Ranked Delegate to have the AD Buffer Triggering Threshold at trigger time. `read-atlas-section A.1.6.4.1.3.2` gives the Level 3 annual budget as 48,000 USDS, making the one-month threshold 4,000 USDS.
+- `curl -s https://vote.sky.money/api/delegates` lists Bonapublica as an aligned delegate, but it does not expose historical Ranked Delegate status or AD Buffer balances. No public historical buffer record was found for the trigger timestamp.
+- This analysis assumes Bonapublica was a Ranked Delegate with an AD Buffer of at least 4,000 USDS at `2026-05-31T10:54:33.778Z`, as implied by the Core Facilitator publishing the poll. A.1.11.2.1.3 assigns confirmation of those requirements to the Core Facilitator.
+- The user explicitly consented to this named assumption on `2026-06-02T09:34:51Z` by responding `I consent` after the evidence limitation and exact assumption were presented.
+
+**Evidence**
+
+- bun run src/index.ts fetch-proposal 1635
+- bun run src/index.ts read-atlas-section A.1.11.2.1.3
+- bun run src/index.ts read-atlas-section A.1.6.4.4.2.1.1
+- bun run src/index.ts read-atlas-section A.1.6.4.1.3.2
+- curl -s https://forum.skyeco.com/t/27948/2.json
+- curl -s https://vote.sky.money/api/delegates
+
+### Portal Summary vs Canonical Text
+
+**Status:** OK
+
+- `fetch-proposal 1635` returned the portal summary and canonical proposal text.
+- Both disclose the same five top-level actions: unify reward recipient and sharing across Sky Primitive reward mechanisms; rename Capital Requirement Ratio to Capital Ratio Requirement; remove irrelevant Facilitator Ecosystem exemptions; amend Grove Circle CCTP v2 TokenMessenger address documents; and update Immunefi bug-bounty URLs.
+- The canonical text adds expected process detail: PR #253, discussion thread, binary vote mechanics, the three-day window, and the 480,000,000 SKY Minimum Positive Participation outcome rule.
+- I did not identify a material omission in the shorter portal summary.
+
+**Evidence**
+
+- bun run src/index.ts fetch-proposal 1635
+
+### Canonical Text vs Atlas PR Diff
+
+**Status:** OK
+
+- `fetch-atlas-pr-diff 253` returned PR #253 titled `Atlas Edit Proposal - 2026-06-01`, state `open`, author `adamgfraser`, created `2026-05-29T22:23:49Z`, with 1,825 changed files, 9,801 additions, and 9,849 deletions.
+- GitHub returned `406 Not Acceptable`, so the trusted composed-Atlas fallback composed pinned base SHA `7fa69a61dc52905e589308709e6260095c45bd78` and head SHA `56a6219672cc5b661cf37eef4dcabf1ad53957c7` using the base revision's `sync/compose.py`.
+- The persisted composed artifacts have SHA-256 values: base Atlas `2d8ff05a8f8ec88d6a688fbc4472f2834e6ef245ae46474359f6361c5924cbff`, PR Atlas `a8b0f6dee618d7f35910eb52d553809a7561e162cf3a3f7be1309eaf9a5a433a`, unified diff `59b6df9c2e9b9d93a460caea39a88b299e949ba2dc0b285d8c2638b0e22a0f98`.
+- `read-atlas-pr-diff-batch 253 <batch>` returned all 17/17 bounded review batches successfully. Coverage reconciliation matched all 879 reviewed section views to all 879 manifest changed sections; there were no oversized multi-chunk sections.
+- Independent UUID-set reconciliation found exactly 3 minted UUIDs (`ef3539fe`, `40395562`, `2d54c733`) and 5 retired UUIDs (`6aa88317`, `cb2ae821`, `dc0bc012`, `9a723ca1`, `16efc874`). Independent PR-head reference scanning found zero dangling UUID references and zero references to retired UUIDs.
+- Material review of the composed diff matches the canonical five-item disclosure: the broad footprint is dominated by the expected A.2.2 renumber and reference cascade after inserting `A.2.2.4 - Primitive Reward Infrastructure`; substantive residual edits implement the disclosed reward-routing consolidation, CRR terminology rename, obsolete-exemption removal, Grove TokenMessenger record cleanup, and Immunefi URL maintenance.
+- I did not identify an additional economic, governance, authorization, accessibility, or scope action outside the disclosed package.
+
+**Evidence**
+
+- bun run src/index.ts fetch-atlas-pr-diff 253
+- bun run src/index.ts read-atlas-pr-diff-batch 253 1
+- bun run src/index.ts read-atlas-pr-diff-batch 253 2
+- bun run src/index.ts read-atlas-pr-diff-batch 253 3
+- bun run src/index.ts read-atlas-pr-diff-batch 253 4
+- bun run src/index.ts read-atlas-pr-diff-batch 253 5
+- bun run src/index.ts read-atlas-pr-diff-batch 253 6
+- bun run src/index.ts read-atlas-pr-diff-batch 253 7
+- bun run src/index.ts read-atlas-pr-diff-batch 253 8
+- bun run src/index.ts read-atlas-pr-diff-batch 253 9
+- bun run src/index.ts read-atlas-pr-diff-batch 253 10
+- bun run src/index.ts read-atlas-pr-diff-batch 253 11
+- bun run src/index.ts read-atlas-pr-diff-batch 253 12
+- bun run src/index.ts read-atlas-pr-diff-batch 253 13
+- bun run src/index.ts read-atlas-pr-diff-batch 253 14
+- bun run src/index.ts read-atlas-pr-diff-batch 253 15
+- bun run src/index.ts read-atlas-pr-diff-batch 253 16
+- bun run src/index.ts read-atlas-pr-diff-batch 253 17
+- sha256sum data/cache/atlas-pr-diffs/253/7fa69a61dc52905e589308709e6260095c45bd78-56a6219672cc5b661cf37eef4dcabf1ad53957c7/atlas-base.md data/cache/atlas-pr-diffs/253/7fa69a61dc52905e589308709e6260095c45bd78-56a6219672cc5b661cf37eef4dcabf1ad53957c7/atlas-pr.md data/cache/atlas-pr-diffs/253/7fa69a61dc52905e589308709e6260095c45bd78-56a6219672cc5b661cf37eef4dcabf1ad53957c7/atlas.diff
+- local UUID-set and PR-head dangling-reference reconciliation over composed artifacts
+
+### Reward Infrastructure Impact
+
+**Status:** OK
+
+- The canonical proposal, PR body, and composed diff disclose a unified reward-recipient and sharing rule for Sky Primitive reward mechanisms.
+- Proposed `A.2.2.4.2 - Reward Recipient And Sharing` applies to five mechanisms: Distribution Reward, Integration Boost, Core Governance Reward, stUSDS Distribution Reward, and srUSDS Distribution Reward.
+- The rule sends reward payments to the Prime Agent managing the Integrator relationship, with sharing between Prime and Integrator subject to bilateral negotiation and no contractually required fixed portion.
+- The composed diff updates the individual reward mechanism sections consistently: Distribution Reward and Integration Boost overpayment handling is expressed against the affected Reward Code; Core Governance Reward retains its 1% of Net Revenue pool while routing rewards through the managing Prime Agent; stUSDS retains a total initial reward of 0.1%; srUSDS retains the same fee as the USDS Distribution Reward.
+- This is a substantive but disclosed governance-policy consolidation. I did not identify a hidden rate, cap, or reward-pool amount change.
+
+**Evidence**
+
+- bun run src/index.ts fetch-proposal 1635
+- bun run src/index.ts fetch-atlas-pr-diff 253
+- bun run src/index.ts read-atlas-pr-diff-batch 253 1
+- bun run src/index.ts read-atlas-pr-diff-batch 253 8
+- bun run src/index.ts read-atlas-pr-diff-batch 253 11
+- bun run src/index.ts read-atlas-pr-diff-batch 253 12
+- curl -s https://forum.skyeco.com/t/27948/2.json
+
+### Technical Records And External References
+
+**Status:** OK
+
+- The composed diff preserves Base UUID `5fa11eb9`, renames it to `Circle CCTP v2 TokenMessenger`, retires duplicate Base UUID `16efc874`, and adds Avalanche TokenMessenger UUID `2d54c733`.
+- Both Base and Avalanche records contain address `0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d`.
+- Circle's first-party CCTP contract-address page, https://developers.circle.com/cctp/references/contract-addresses, lists TokenMessengerV2 `0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d` for Avalanche domain 1 and Base domain 6.
+- `curl -s -I` returned `HTTP/2 200` for https://immunefi.com/bug-bounty/sky/scope/ and https://immunefi.com/bug-bounty/sparklend/scope/.
+- `read-atlas-section A.2.11.1.1` shows the active pre-merge Atlas contains legacy MakerDAO-era Immunefi links. The composed diff updates the scope and information references to current Sky and SparkLend destinations.
+
+**Evidence**
+
+- bun run src/index.ts read-atlas-pr-diff-batch 253 13
+- bun run src/index.ts read-atlas-section A.6.1.1.2.2.6.1.2.1.1.1.1.2
+- bun run src/index.ts read-atlas-section A.6.1.1.2.2.6.1.2.1.1.1.1.3
+- curl -s -L https://developers.circle.com/cctp/references/contract-addresses
+- curl -s -I https://immunefi.com/bug-bounty/sky/scope/
+- curl -s -I https://immunefi.com/bug-bounty/sparklend/scope/
+- bun run src/index.ts read-atlas-section A.2.11.1.1
+
+### On-Chain Baseline
+
+**Status:** N/A
+
+- This poll directly authorizes an Atlas PR merge, not an executable spell or on-chain parameter transaction.
+- No live debt ceiling, rate, ChainLog key, storage slot, allowlist, or contract authorization is changed by the poll outcome itself.
+- The Grove TokenMessengerV2 Atlas record was checked against Circle's first-party deployment documentation rather than an Ethereum-mainnet-only ChainLog or storage read.
+
+**Evidence**
+
+- bun run src/index.ts fetch-proposal 1635
+- https://developers.circle.com/cctp/references/contract-addresses
+
+### Atlas Alignment
+
+**Status:** OK
+
+- `read-atlas-section A.0.1.1.18` says ADs must use delegated power to uphold the Spirit of the Atlas and maintain Universal Alignment.
+- `read-atlas-section A.1.11` returned A.1.11.2.1.1 permitting multi-amendment Atlas Edit Weekly Cycle Proposals while requiring adherence to the Spirit of the Atlas and Universal Alignment.
+- The reward-routing consolidation makes the policy consistent across five related mechanisms; the terminology rename aligns Atlas wording with the Laniakea Risk Framework convention; obsolete exemptions are removed; CCTP records are corrected; and stale bug-bounty links are updated.
+- Complete composed-diff coverage did not reveal a hidden governance-power transfer, protocol-solvency parameter change, Atlas conflict, or Slippery Slope Misalignment basis.
+
+**Evidence**
+
+- bun run src/index.ts read-atlas-section A.0.1.1.18
+- bun run src/index.ts read-atlas-section A.1.11
+- bun run src/index.ts fetch-proposal 1635
+- bun run src/index.ts fetch-atlas-pr-diff 253
+- bun run src/index.ts read-atlas-pr-diff-batch 253 <1..17>
+
+### AD Role Compliance
+
+**Status:** OK
+
+- `read-atlas-section A.0.1.1.18` establishes the AD responsibility to uphold the Spirit of the Atlas and maintain Universal Alignment.
+- `read-atlas-section A.1.6.2.1.1` says Abstain should be exceptional and used for conflicts or insufficient expertise; the available evidence supports an accountable Yes rather than a procedural abstention.
+- `read-atlas-section A.1.6.2.2` requires vote explanations to demonstrate understanding of core changes, articulate a reasoned basis, and address a substantive aspect such as risks, implementation, benefits, or alignment.
+- `read-atlas-section A.1.6.6.2` says a Yes vote acknowledges reading and understanding key governance implications.
+- The analysis identifies the key governance implications: standardized reward routing and bilateral sharing across five reward mechanisms, a pure CRR terminology rename, obsolete-exemption removal, Grove CCTP record correction corroborated by Circle, Immunefi-link maintenance, complete composed-diff coverage, and the explicitly consented historical trigger-eligibility limitation. That is sufficient for a substantive AD explanation and voting-estoppel confidence with a medium assessment.
+
+**Evidence**
+
+- bun run src/index.ts read-atlas-section A.0.1.1.18
+- bun run src/index.ts read-atlas-section A.1.6.2.1.1
+- bun run src/index.ts read-atlas-section A.1.6.2.2
+- bun run src/index.ts read-atlas-section A.1.6.6.2
+
+## Assumption Consent Audit
+
+### Triggering Delegate Historical Eligibility
+
+**Consented:** 2026-06-02T09:34:51Z
+
+User explicitly responded: I consent. This followed a request for consent to the named assumption: Bonapublica was a Ranked Delegate with an AD Buffer of at least 4,000 USDS at 2026-05-31T10:54:33.778Z, as implied by the Core Facilitator publishing the poll.
+
+## Recommendation
+
+**Position:** YES
+**Assessment:** Medium
+
+Vote YES. The poll is procedurally framed as an Atlas Edit Weekly Cycle Proposal, uses the correct three-day window and 480,000,000 SKY positive-participation threshold, and consistently discloses the five policy and maintenance actions in the portal summary, canonical proposal, PR body, forum thread, and composed Atlas diff. The key governance implication is understandable: reward routing is standardized so the managing Prime Agent receives payments and negotiates sharing bilaterally, while the other edits remove obsolete rules and correct Atlas terminology or records. Circle's first-party documentation corroborates the Grove TokenMessengerV2 address, and the updated Immunefi destinations are live. The composed PR review covered all 17 batches and all 879 changed Atlas sections, with 3 minted UUIDs, 5 retired UUIDs, and zero dangling references in the PR-head Atlas. I did not find a material disclosure mismatch or Atlas conflict that would justify voting No or Abstain. The recommendation retains a medium assessment because reward routing is a substantive policy consolidation and historical Bonapublica AD Buffer eligibility is accepted only as an explicitly consented assumption.

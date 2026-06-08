@@ -1,0 +1,22 @@
+{
+  "id": "exec-0x0aE337",
+  "type": "exec",
+  "executive": {
+    "address": "0x0aE3371e9C4e37515259D124C685fe6722c5e253",
+    "title": "RWA001-A Offboarding, Keeper Network Adjustments, ALLOCATOR-SPARK-A Parameter Updates, MKR to SKY Delayed Upgrade Penalty Increase, Prime Agent Proxy Spells - June 4, 2026",
+    "date": "2026-06-04T00:00:00.000Z",
+    "proposalBlurb": "Spell 1 actions for offboarding RWA001-A, remove Keeper Networks and update protocol name, update ALLOCATOR-SPARK-A DC-IAM risk parameters, increase the MKR to SKY Delayed Upgrade Penalty by 1 percentage point, whitelist proxy spells for Spark and Grove.",
+    "proposalLink": "https://raw.githubusercontent.com/sky-ecosystem/executive-votes/main/2026/executive-vote-2026-06-04-rwa001-a-offboarding-keeper-adjustments.md",
+    "about": "",
+    "content": "",
+    "spellData": {
+      "hasBeenCast": true,
+      "hasBeenScheduled": true,
+      "mkrSupport": "6523815983.854202060148930511",
+      "executiveHash": "0x308b1dd568cd214b660c3a47caf28e97685b7a3c36c81a8cdd99c885c2caf5c2",
+      "officeHours": true,
+      "dateExecuted": "2026-06-08T14:22:59.000Z"
+    }
+  },
+  "fetchedAt": "2026-06-08T19:31:23.171Z"
+}

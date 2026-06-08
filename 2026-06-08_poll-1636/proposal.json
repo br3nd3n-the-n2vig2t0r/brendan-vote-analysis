@@ -1,0 +1,22 @@
+{
+  "id": "poll-1636",
+  "type": "poll",
+  "poll": {
+    "pollId": 1636,
+    "title": "Atlas Edit Weekly Cycle Proposal - June 8, 2026",
+    "summary": "This Atlas edit proposal 1) adds Audit Process, 2) adds USD Stablecoin to USDS swap authorization for Grove, 3) updates documents to reflect a single Core Facilitator, 4) removes duplicate sentences and fixes a broken cross-reference.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1780934400,
+    "endDate": 1781193600,
+    "url": "https://vote.sky.money/polling/Qme7Pt6e",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-08-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-08/27951",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-06-08T19:49:31.990Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "poll-1637",
+  "type": "poll",
+  "poll": {
+    "pollId": 1637,
+    "title": "Atlas Edit Weekly Cycle Proposal - June 15, 2026",
+    "summary": "This Atlas edit proposal 1) codifies Core Facilitator authority over final Spell inclusion, 2) updates the Ethereum SkyLink Freezer Multisig configuration from 2/4 to 2/5, 3) adds Spark Foundation grant authorization for Q3 2026, 4) adds a second Allocator Vault and Buffer for Grove Prime, 5) adds SKY Price Oracle documentation, 6) corrects the Grove Monad Uniswap AUSD/USDC Instance, 7) fixes Spark Base Aave USDC contract addresses, 8) migrates internal coordination references from Discord to Slack, and 9) adds a Technical Scope Template cross-reference.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1781539200,
+    "endDate": 1781798400,
+    "url": "https://vote.sky.money/polling/QmdYpnYS",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-15-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-15/27965",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-06-15T19:23:46.974Z"
+}

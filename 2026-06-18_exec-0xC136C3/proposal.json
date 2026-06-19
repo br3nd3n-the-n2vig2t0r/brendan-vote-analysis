@@ -1,0 +1,21 @@
+{
+  "id": "exec-0xC136C3",
+  "type": "exec",
+  "executive": {
+    "address": "0xC136C3c419746c2e8c0B95100ac866a747e3e04b",
+    "title": "Onboard ALLOCATOR-GROVE-A Vault, Update LitePSM Parameters, Replace STUSDS_MOM, Monthly Settlement Cycle for May 2026, Staking Rewards Normalization, Update Safe Harbor Agreement, Prime Agent Proxy Spell - June 18, 2026",
+    "date": "2026-06-18T00:00:00.000Z",
+    "proposalBlurb": "Onboard a new ALLOCATOR-GROVE-A vault, increase LitePSM buf and gap parameters, replace the existing STUSDS_MOM with a new version, execute the Monthly Settlement Cycle for May 2026, normalize LSSKY-SKY staking rewards after MSC execution, update the Safe Harbor Agreement with new contracts, whitelist a proxy spell for Spark.",
+    "proposalLink": "https://raw.githubusercontent.com/sky-ecosystem/executive-votes/main/2026/executive-vote-2026-06-18-onboard-allocator-grove-a-update-stusds-mom.md",
+    "about": "",
+    "content": "",
+    "spellData": {
+      "hasBeenCast": false,
+      "hasBeenScheduled": false,
+      "mkrSupport": "1567983981.494724750866506436",
+      "executiveHash": "0xf5380dae78ce04cd57b4ac9be4b0b5dc4b0413dbd138f02bd0dbfc07800ed5d9",
+      "officeHours": true
+    }
+  },
+  "fetchedAt": "2026-06-19T08:31:49.542Z"
+}

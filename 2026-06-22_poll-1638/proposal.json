@@ -1,0 +1,22 @@
+{
+  "id": "poll-1638",
+  "type": "poll",
+  "poll": {
+    "pollId": 1638,
+    "title": "Atlas Edit Weekly Cycle Proposal - June 22, 2026",
+    "summary": "This Atlas edit proposal 1) re-grounds broad discretionary authority in the Core Council, 2) adds Core Council authority to modify the Treasury Allocation, 3) authorizes transfers to the Sky Frontier Foundation from Executor Agents, 4) clarifies repeat-breach timing for Aligned Delegate voting participation, 5) adds Grove Diamond PAU documentation, 6) adds BUIDL and updates JTRSY Tokenized Treasury Basin Instances, 7) clarifies Agent Rate scope, 8) authorizes a July 2026 Grove Foundation grant, 9) authorizes a July 2026 Skybase Foundation grant, 10) documents Distribution Reward Code ranges, 11) clarifies Core Council Risk Advisor real time data responsibilities, and 12) removes Elodin as Keel's Development Company.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1782144000,
+    "endDate": 1782403200,
+    "url": "https://vote.sky.money/polling/QmdXjfm6",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-22-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-22/27983",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-06-22T21:51:02.932Z"
+}

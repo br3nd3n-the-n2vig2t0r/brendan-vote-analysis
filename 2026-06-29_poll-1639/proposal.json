@@ -1,0 +1,22 @@
+{
+  "id": "poll-1639",
+  "type": "poll",
+  "poll": {
+    "pollId": 1639,
+    "title": "Atlas Edit Weekly Cycle Proposal - June 29, 2026",
+    "summary": "This Atlas edit proposal 1) adds a 100% Capital Ratio Requirement for unauthorized exposures, 2) transitions the Galaxy Warehouse out of Interim Deployment, 3) credits Grove for owed Prime revenue, 4) adds a GROVE token reward distribution schedule, 5) converts inline Spell-checklist URLs to cross-references.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1782748800,
+    "endDate": 1783008000,
+    "url": "https://vote.sky.money/polling/Qmd3gCcD",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-29-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-29/27996",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-06-29T19:42:42.833Z"
+}

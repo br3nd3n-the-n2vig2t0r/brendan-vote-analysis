@@ -1,0 +1,7 @@
+[Atlas Edit Weekly Cycle Proposal - June 29, 2026](https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-29-Atlas-edit-weekly-cycle-proposal.md)
+
+**Decision: YES**
+
+The proposal is procedurally coherent enough to support, and the disclosed Atlas diff is understandable and bounded. Substantively, it does five clear things: it applies a 100% exposure-level Capital Ratio Requirement to unauthorized lending-market exposures, graduates Galaxy Warehouse from 100% interim status into a 2% / 500,000,000 USD risk-framework entry, formalizes a 2,528,000 USDS Grove credit toward TRC until the next Monthly Settlement Cycle pays it, specifies a 4,900,000,000 GROVE token reward schedule for USDS users over ten years, and replaces brittle inline checklist URLs with references to the registered checklist source of truth. The main negatives are reduced pre-vote review time, no public PR review evidence, and limited independent process evidence on Cloaky's buffer balance. Those issues justify a medium assessment, but they do not amount to a material disclosure mismatch, Atlas-process failure, or substantive contradiction that would justify NO or ABSTAIN.
+
+[Full rationale](https://github.com/br3nd3n-the-n2vig2t0r/brendan-vote-analysis/blob/main/2026-06-29_poll-1639/rationale.md)

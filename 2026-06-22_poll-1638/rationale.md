@@ -1,213 +1,472 @@
 # Analysis: Atlas Edit Weekly Cycle Proposal - June 22, 2026
 
 **Recommendation:** YES (Medium assessment)
-**Analyzed:** 2026-06-22T21:51:03.154Z | **Atlas:** 2026-06-22
-**Analysis guidance reviewed against Atlas:** 2026-06-19
+**Analyzed:** 2026-06-27T22:07:16.436Z | **Atlas:** 2026-06-27
+**Analysis guidance reviewed against Atlas:** 2026-06-25
 
 ## Summary
 
-This poll asks SKY holders to approve Atlas PR #265, a weekly-cycle Atlas edit with twelve disclosed change groups: Core Council discretionary authority, short-term Treasury Allocation modification authority, standing Sky Frontier Foundation transfer authorizations from specified Executor Agents, AD repeat-breach timing clarification, Grove Diamond PAU documentation, BUIDL/JTRSY Tokenized Treasury Basin documentation, Agent Rate scope clarification, July 2026 Grove and Skybase foundation grants, Distribution Reward Code ranges, Core Council Risk Advisor real-time data scope, and removal of Elodin as Keel's named Development Company.
+This historical poll asked SKY holders to approve Atlas PR #265, an Atlas Edit Weekly Cycle proposal with twelve disclosed change groups covering authority shifts, Treasury Allocation modification authority, standing Sky Frontier Foundation transfer permissions, AD voting-participation clarification, Grove Diamond PAU documentation, BUIDL and JTRSY interim Tokenized Treasury Basin records, Agent Rate scope, July 2026 Grove and Skybase grants, reward code ranges, Core Council Risk Advisor data scope, and Keel development-company cleanup.
 
 ## Atlas Alignment
 
 **Assessment:** aligned
 
-The proposal uses the Atlas Edit Weekly Cycle process, is triggered by Ranked Delegate Bonapublica, and uses the disclosed 480,000,000 SKY minimum positive participation threshold. The material edits are governance-heavy but are presented transparently in the poll text, forum thread, PR body, and composed PR diff. The discretionary-authority and Treasury Allocation changes increase Core Council latitude and therefore deserve medium risk treatment, but they retain public forum-post and confirmation steps and still require Executive Vote execution for implementation. The grants, transfer authorizations, allocator documentation, tokenized treasury records, reward-code records, and Agent Rate clarifications are disclosed in the PR diff and appear bounded to the stated policy or documentation purposes.
+The proposal uses the Atlas Edit Weekly Cycle process, has public origination and trigger evidence on the forum, and discloses the same twelve change groups across the portal summary, canonical proposal text, PR body, and all four composed diff review batches. The most consequential changes are governance-heavy: Core Council supersession authority is expanded, Step 1 through Step 3 Treasury Allocation may later be modified through direct Executive Vote, and certain executor agents gain standing transfer authority to the Sky Frontier Foundation. Those choices justify a medium-risk assessment. But they are explicit rather than hidden, and the BUIDL and JTRSY interim-deployment parameters are concretely bounded. The poll also passed its 480,000,000 SKY threshold by a wide margin. As a current-state note, the linked PR remains open as of 2026-06-27, but that is an execution-state observation rather than evidence that the proposal text was misleading at vote time.
 
-**Relevant sections:** A.0.1.1.18, A.0.1.2.1, A.1.6.2.1.1, A.1.6.2.2, A.1.6.6.2, A.1.11.2.1.3, A.1.11.2.4, A.2.3.1.5, A.2.8.2.5.2.4, A.2.8.2.7.2.2.3.1, A.2.8.2.8.2.2, A.2.8.2.9.2.2, A.3.1.2.3, A.6.1.1.2.2.6.1.2.1.1.1.4, A.6.1.1.2.2.6.1.3.1.14.2
+**Relevant sections:** A.1.11.2.1.1, A.1.11.2.1.2, A.1.11.2.1.3, A.1.11.2.2, A.1.11.2.3, A.1.11.2.4, A.0.1.2.1, A.1.11.1.1, A.1.10.2.3.2.2.2, A.0.1.1.12, A.1.1.2, A.0.1.1.18, A.1.6.2.1.1, A.1.6.2.2, A.1.6.6.1.2, A.1.6.6.2
 
 ## Risk Assessment
 
 **Level:** medium
 
-- The proposal materially shifts some discretionary authority from the Core Facilitator to the Core Council and adds short-term authority for Core Council Treasury Allocation modifications that may proceed directly to an Executive Vote without a prior Governance Poll.
-- The proposal creates standing authorizations for Amatsu, Ozone, and Core Council Executor Agent 1 to transfer funds from Genesis Capital Allocations to the Sky Frontier Foundation without a separate governance decision for each transfer.
-- The July 2026 grants are economically material: 800,000 USDS from Grove's Prime Treasury to the Grove Foundation Multisig and 700,000 USDS from Skybase's SubProxy to the Skybase Foundation Operational Multisig.
-- The Grove Diamond PAU and Tokenized Treasury Basin documentation introduces many contract addresses, role records, rate limits, and operational procedures, but the poll itself merges Atlas documentation and does not execute on-chain changes.
-- The BUIDL/JTRSY interim deployment documentation sets a combined 5 million USDS maximum allocation across the two Tokenized Treasury Basin instances and documents 5 million USDS/day inflow rate limits plus unlimited outflow limits.
-- The AD repeat-breach, Agent Rate, Distribution Reward Code, risk-data scope, and Keel Development Company edits are bounded clarifications or records updates.
+- The proposal shifts Atlas supersession authority from the Core Facilitator alone to the Core Council and preserves a public-post confirmation path through Core GovOps and the Core Council Risk Advisor.
+- The proposal adds `A.2.3.1.5 - Allocation Modification`, allowing future Step 1 and Step 2 reductions or restorations and Step 3 reallocation through a direct Executive Vote without a prior Governance Poll.
+- The proposal creates standing authorizations for Core Council Executor Agent 1, Amatsu, and Ozone to transfer Genesis Capital Allocation funds to the Sky Frontier Foundation without a separate governance decision for each transfer.
+- The proposal authorizes a `800,000 USDS` July 2026 Grove Foundation grant and a `700,000 USDS` July 2026 Skybase Foundation grant.
+- The Grove Diamond PAU and BUIDL/JTRSY Basin records introduce many new addresses, role holders, rate limits, and controller-function documents, although the poll itself edits Atlas text rather than directly executing those later payloads.
+- The BUIDL and JTRSY changes stay bounded as Interim Deployments with `100%` CRR, a combined `$5 million` maximum allocation, `5,000,000 USDS` per day inflow limits, and unlimited outflow limits.
 
 ## Validation Checks
 
-### Analysis Run and Atlas State
+### Atlas Poll Validation
+
+#### A.1.11.2.1.1 - Proposals In General
 
 **Status:** OK
 
-Analysis run marker: brendan-analysis:1638:2026-06-22T21-48-38-556Z:bbf423
-
-- `analysis start 1638` created local proposal directory `2026-06-22_poll-1638` for this rerun.
-- `atlas refresh` reported active Atlas version `2026-06-22`.
-- `atlas current` confirmed active Atlas version `2026-06-22`.
-- The analysis guidance marker in `skills/sky-delegate/references/analyze.md` is `2026-06-19`, so guidance is stale against the active downloaded Atlas.
-- Active `2026-06-22` Atlas reads resolve the A.0/A.1 process and AD sections used by this analysis directly.
+- Active Atlas version: `2026-06-27`.
+- Analysis run marker: `brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Poll routing: Atlas Edit Weekly Cycle Proposal, so the applicable poll-process rules come from `A.1.11.2` and the vote-recommendation rules come from the AD sections listed in `playbook/references/poll-analysis.md`.
+- The proposal uses one Atlas Edit Weekly Cycle poll to amend multiple Atlas components across A.0, A.1, A.2, A.3, and A.6. That is permitted by `A.1.11.2.1.1`.
+- I reviewed PR `#265` through the composed diff manifest and all four bounded review batches. The 168 changed sections map to the twelve disclosed change groups in the canonical proposal text.
+- I did not find an undisclosed independent policy change. The large Grove and Tokenized Treasury subtrees include many renumberings, role-document relocations, and parameter records, but those changes stay tied to the disclosed Grove Diamond PAU and BUIDL/JTRSY Basin updates.
 
 **Evidence**
 
-- Command: `bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-22T21-48-38-556Z:bbf423`.
-- Command: `bun run src/index.ts atlas refresh` returned `Atlas active version: 2026-06-22`.
-- Command: `bun run src/index.ts atlas current` returned `Atlas active version: 2026-06-22`.
-- File check: `skills/sky-delegate/references/analyze.md` records `_Analysis Review State: 2026-06-19_`.
-- Commands: `read-atlas-section A.0.1.1.18`, `read-atlas-section A.1.6.2.2`, `read-atlas-section A.1.6.6.2`, `read-atlas-section A.1.11.2.1.3`, and `read-atlas-section A.1.11.2.4` all resolved from the active `2026-06-22` Atlas.
+- Atlas section loaded: `read-atlas-section A.1.11.2.1.1`.
+- Proposal evidence: `fetch-proposal 1638` returned proposal source URL `https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-22-Atlas-edit-weekly-cycle-proposal.md`, portal URL `https://vote.sky.money/polling/QmdXjfm6`, and discussion link `https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-22/27983`.
+- PR evidence: `fetch-atlas-pr-diff 265` returned PR URL `https://github.com/sky-ecosystem/next-gen-atlas/pull/265`, base SHA `bb4d09838c52adb180dce4023b82c54e7c22f6e1`, head SHA `338a368fad5745ac6f9bb79850e43fc77f33d962`, unified diff SHA-256 `16c92fb9b1f06d123a13b8bfd9e712f10229537cbd3926fdd3bd9badfe5c6423`, 168 changed sections, and 4 review batches.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 1` covered the authority shift, allocation modification, standing transfer authorizations, grants, Agent Rate changes, reward code ranges, risk-advisor scope, and the start of the Grove Diamond PAU subtree.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 2` covered additional Grove Diamond PAU contracts, rate limits, relayer and freezer role hierarchy changes, and tokenized-treasury role hierarchy changes.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 3` covered Diamond PAU controller functions, JTRSY interim-deployment parameters, and the BUIDL interim-deployment configuration document.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 4` completed the BUIDL issuer-specific role-holder section.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
 
-### Proposal Fetched
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.11.2.1.1` and confirm that a single Weekly Cycle Proposal may amend multiple Atlas components.
+2. Run `bun run src/index.ts fetch-proposal 1638` and compare the twelve disclosed change groups against the proposal summary and canonical text.
+3. Run `bun run src/index.ts fetch-atlas-pr-diff 265` plus `read-atlas-pr-diff-batch 265 1`, `2`, `3`, and `4` to verify that the diff content remains within those disclosed groups.
+
+#### A.1.11.2.1.2 - Origination Via Forum Post
 
 **Status:** OK
 
-- `resolve-target 1638` resolved the target as poll ID 1638 and directory `2026-06-22_poll-1638`.
-- `fetch-proposal 1638` returned active poll `Atlas Edit Weekly Cycle Proposal - June 22, 2026`.
-- Voting window: starts `2026-06-22T16:00:00.000Z`, ends `2026-06-25T16:00:00.000Z`.
-- Options are `0: Abstain`, `1: Yes`, `2: No`.
-- Portal URL: `https://vote.sky.money/polling/QmdXjfm6`.
-- Proposal source URL: `https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-22-Atlas-edit-weekly-cycle-proposal.md`.
-- Discussion URL: `https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-22/27983`.
+- `A.1.11.2.1.2` requires the author to post the proposal in the Sky Forum and signal intent to submit it to the Weekly Cycle.
+- Forum topic `27983` post `#1` by `adamfraser` at `2026-06-22T03:16:33.214Z` posts the proposal on behalf of `@atlas-axis` and lists the same twelve change groups as the portal summary and PR body.
+- The discussion link in the canonical proposal text points to that same topic, so the forum origination record and the voting-portal record are consistent.
 
 **Evidence**
 
-- Command: `bun run src/index.ts resolve-target 1638` returned `{ "type": "poll", "pollId": 1638, "dirName": "2026-06-22_poll-1638" }`.
-- Command: `bun run src/index.ts fetch-proposal 1638` returned poll metadata, portal summary, canonical proposal text, proposal source URL, and discussion link.
+- Atlas section loaded: `read-atlas-section A.1.11.2.1.2`.
+- Forum evidence: `curl -s https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-22/27983.json` returned topic `27983` with post `#1` by `adamfraser` at `2026-06-22T03:16:33.214Z`.
+- Portal evidence: `fetch-proposal 1638` returned discussion link `https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-22/27983`.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
 
-### Governance Process and Trigger
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.11.2.1.2`.
+2. Run `curl -s https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-22/27983.json` and inspect post `#1`.
+3. Run `bun run src/index.ts fetch-proposal 1638` and confirm the discussion link points to the same topic.
+
+#### A.1.11.2.1.3 - Triggering Requirement
 
 **Status:** OK
 
-- The canonical proposal says the Core Facilitators placed an Atlas Edit Weekly Cycle Proposal into the voting system on behalf of Ranked Delegate Bonapublica.
-- Forum topic `27983` post #2 by `Bonapublica` at `2026-06-22T09:47:04.401Z` says `bonapublica_AD` triggers the `Atlas_Edit_Weekly_Proposal` for the week of `2026-06-22` under `A.1.11.2.1.3 - Triggering Requirement`.
-- The vote.sky.money delegates API returned Bonapublica with `status: aligned`, `communication: 100%`, `combinedParticipation: 100%`, and `skyDelegated: 1075288126.766152512174361897`.
-- The active `2026-06-22` Atlas identifies Bonapublica as the current Level 2 Ranked Delegate under `A.1.6.4.1.2.3.1`, and `A.1.11.2.1.3` states the Core Facilitator is responsible for confirming the Ranked Delegate and AD Buffer trigger requirements.
-- The active poll's existence and canonical text provide Core Facilitator placement evidence. I did not independently observe a public AD Buffer balance, but the public process evidence is sufficient for this analysis because the Atlas assigns that confirmation duty to the Core Facilitator.
+- Forum topic `27983` post `#2` by `Bonapublica` at `2026-06-22T09:47:04.401Z` explicitly says `bonapublica_AD` triggers the `Atlas_Edit_Weekly_Proposal` for the week of `2026-06-22` under `A.1.11.2.1.3 - Triggering Requirement`.
+- The active Atlas says the current Level 2 Ranked Delegate is Bonapublica under `A.1.6.4.1.2.3.1`. The live delegates API also shows Bonapublica as `aligned` with `100%` communication, `100%` combined participation, and `1077112609.897524586473256355` SKY delegated.
+- The active Triggering Threshold equals one month of the Level 3 Ranked Delegate budget. `A.1.6.4.1.3.2` sets that budget at `48,000 USDS` per year, so the threshold is `4,000 USDS`.
+- The public evidence does not expose Bonapublica current AD Buffer balance. Under `A.1.11.2.1.3`, that confirmation duty sits with the Core Facilitator. The proposal advanced to an actual poll, and I found no contrary evidence that the trigger was invalid.
 
 **Evidence**
 
-- Command: `bun run src/index.ts fetch-proposal 1638` returned canonical text: the poll was placed by Core Facilitators on behalf of Ranked Delegate Bonapublica.
-- Command: `curl https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-22/27983.json` returned post #2 by `Bonapublica` triggering PR #265 under `A.1.11.2.1.3`.
-- Command: `curl https://vote.sky.money/api/delegates` filtered for Bonapublica returned status `aligned`, 100% communication, 100% combined participation, and about 1.075B SKY delegated.
-- Commands: `read-atlas-section A.1.11.2.1.3` and `read-atlas-section A.1.6.4.1.2.3.1` resolved from active Atlas `2026-06-22`; `A.1.6.4.1.2.3.1` names Bonapublica as the current Level 2 Ranked Delegate.
+- Atlas sections loaded: `read-atlas-section A.1.11.2.1.3`, `read-atlas-section A.1.6.4.1.2.3.1`, `read-atlas-section A.1.6.4.1.3.2`, `read-atlas-section A.1.6.4.4.2.1`, and `read-atlas-section A.1.6.4.4.2.1.1`.
+- Forum evidence: `curl -s https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-22/27983.json` returned post `#2` by `Bonapublica` at `2026-06-22T09:47:04.401Z`.
+- Live delegate evidence: `curl -s https://vote.sky.money/api/delegates` returned Bonapublica with status `aligned`, communication `100%`, combinedParticipation `100%`, and skyDelegated `1077112609.897524586473256355`.
+- Proposal evidence: `fetch-proposal 1638` states the Core Facilitators placed the poll on behalf of Ranked Delegate Bonapublica.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
 
-### Governance Process and Threshold
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.11.2.1.3` and confirm the Ranked Delegate trigger rule and Core Facilitator confirmation duty.
+2. Run `bun run src/index.ts read-atlas-section A.1.6.4.1.2.3.1`, `read-atlas-section A.1.6.4.1.3.2`, and `read-atlas-section A.1.6.4.4.2.1.1` to confirm Bonapublica current Ranked Delegate status and the `4,000 USDS` threshold formula.
+3. Run `curl -s https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-06-22/27983.json` and inspect post `#2` for the trigger statement.
+
+#### A.1.11.2.2 - Preparation And Publication of Governance Poll
 
 **Status:** OK
 
-- The poll uses the Atlas Edit Weekly Cycle process and a three-day window from Monday June 22, 2026 at 16:00 UTC to Thursday June 25, 2026 at 16:00 UTC.
-- The canonical text says this is a binary vote and that PR #265 will be merged if Yes exceeds No and Yes is at least 480,000,000 SKY.
-- The active `2026-06-22` Atlas states under `A.1.11.2.4 - Minimum Positive Participation` that Atlas Edit Weekly Cycle Proposals must have at least 480,000,000 SKY equivalents of Yes votes to be accepted.
+- The poll was published to the official Voting Portal and the community GitHub proposal source. The voting window ran from `2026-06-22T16:00:00.000Z` to `2026-06-25T16:00:00.000Z`, which matches the required three-day duration.
+- The canonical proposal text, forum origin post, forum trigger post, and PR body all describe the same twelve change groups, so the published poll materials are consistent with one another.
+- As a current-state check, `getPollTally(1638)` shows option `1` (`Yes`) won with `7017218226.45608472338077736` SKY support from `13` voters, while the GitHub API still shows PR `#265` as `open` and `merged: false` on `2026-06-27`.
+- I treat that open-PR state as post-vote operational follow-through, not as evidence that the poll materials were misleading at vote time. Neither the Atlas section nor the proposal text specifies a merge deadline.
 
 **Evidence**
 
-- Command: `bun run src/index.ts fetch-proposal 1638` returned victory conditions including `comparison >= 480000000` and options Abstain/Yes/No.
-- Command: `read-atlas-section A.1.11.2.4` resolved from active Atlas `2026-06-22` and returned the 480,000,000 SKY threshold.
+- Atlas section loaded: `read-atlas-section A.1.11.2.2`.
+- Publication evidence: `fetch-proposal 1638` returned portal URL `https://vote.sky.money/polling/QmdXjfm6` and proposal source URL `https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-06-22-Atlas-edit-weekly-cycle-proposal.md`.
+- Tally evidence: `bun -e 'import { getPollTally } from "./src/lib/governance-api/client.ts"; ...'` returned winner `1`, total participation `7017218226.45608472338077736`, and `13` voters.
+- Current PR state evidence: `curl -s https://api.github.com/repos/sky-ecosystem/next-gen-atlas/pulls/265` returned `state: open`, `merged: false`, and `mergeable_state: clean`.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
 
-### Portal Summary vs Canonical Text
+**How To Verify**
+
+1. Run `bun run src/index.ts fetch-proposal 1638` and verify the portal URL, proposal source URL, and three-day window.
+2. Run `bun -e 'import { getPollTally } from "./src/lib/governance-api/client.ts"; ...'` to inspect the final tally.
+3. Run `curl -s https://api.github.com/repos/sky-ecosystem/next-gen-atlas/pulls/265` to inspect the current merge state.
+
+#### A.1.11.2.3 - Rejecting A Proposal For Misalignment
 
 **Status:** OK
 
-- The portal summary lists the same twelve change groups as the canonical proposal and forum post.
-- The canonical proposal expands those groups with links to PR #265 and the discussion thread, explains the binary voting format, and states the merge outcome.
-- I did not identify a substantive omission in the portal summary relative to the canonical proposal text.
+- The Core Facilitator did not reject this proposal for misalignment. It advanced to a live Governance Poll.
+- I reviewed the authority shift, direct-to-executive allocation modification path, standing transfer authorizations, grants, Agent Rate scope change, and Grove/BUIDL/JTRSY documentation changes against the proposal summary, forum records, PR body, and composed diff batches.
+- Those changes are material and justify medium risk, but they are disclosed. I did not find a hidden process contradiction or undisclosed policy payload that would have supported a misalignment rejection under `A.1.11.2.3`.
 
 **Evidence**
 
-- Command: `bun run src/index.ts fetch-proposal 1638` returned both the portal summary and full canonical proposal text.
-- The summary and canonical text both enumerate: Core Council discretionary authority, Treasury Allocation modification, Sky Frontier transfers, AD repeat-breach timing, Grove Diamond PAU, BUIDL/JTRSY Tokenized Treasury Basins, Agent Rate scope, Grove grant, Skybase grant, reward-code ranges, Risk Advisor real-time data scope, and Keel/Elodin removal.
+- Atlas section loaded: `read-atlas-section A.1.11.2.3`.
+- Poll evidence: `fetch-proposal 1638` returned a published and completed Governance Poll.
+- PR evidence: `fetch-atlas-pr-diff 265` plus review batches `1` through `4` exposed the full disclosed change set for review.
+- Forum evidence: topic `27983` contains both the author post and the trigger post.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 1` covered the authority shift, allocation modification, standing transfer authorizations, grants, Agent Rate changes, reward code ranges, risk-advisor scope, and the start of the Grove Diamond PAU subtree.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 2` covered additional Grove Diamond PAU contracts, rate limits, relayer and freezer role hierarchy changes, and tokenized-treasury role hierarchy changes.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 3` covered Diamond PAU controller functions, JTRSY interim-deployment parameters, and the BUIDL interim-deployment configuration document.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 4` completed the BUIDL issuer-specific role-holder section.
 
-### Canonical Text vs Atlas PR Diff
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.11.2.3`.
+2. Review the proposal summary, PR body, and diff batches for any independent material change not disclosed in the poll materials.
+
+#### A.1.11.2.4 - Minimum Positive Participation
 
 **Status:** OK
 
-- `fetch-atlas-pr-diff 265` returned PR #265 as open, authored by `adamgfraser`, created `2026-06-22T03:12:23Z`, with 224 files changed, 1,761 additions, and 308 deletions.
-- GitHub's direct diff was too large, so the tool composed a pinned diff from base SHA `bb4d09838c52adb180dce4023b82c54e7c22f6e1` to head SHA `338a368fad5745ac6f9bb79850e43fc77f33d962`.
-- The composed diff has SHA-256 `16c92fb9b1f06d123a13b8bfd9e712f10229537cbd3926fdd3bd9badfe5c6423`, 168 changed Atlas sections, and 4 review batches.
-- I reviewed batches 1/4 through 4/4. The diff matches the twelve disclosed change groups and I did not find an undisclosed independent policy change.
-- The large Grove section contains many supporting renumberings, role-document relocations, and controller/function documentation. These support the disclosed Grove Diamond PAU and Tokenized Treasury Basin changes rather than introducing a separate hidden action.
+- The canonical proposal text states that the poll passes only if Yes exceeds No and Yes is at least `480,000,000 SKY`.
+- The poll metadata encodes the same rule in the returned victory conditions.
+- The final tally shows `7017218226.45608472338077736` SKY for `Yes`, `0` for `No`, and `0` for `Abstain`, so the proposal cleared the Minimum Positive Participation requirement.
 
 **Evidence**
 
-- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned composed diff metadata, artifact paths, PR body, changed-section count, and batch manifest.
-- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 1` covered A.0/A.1/A.2/A.3 changes plus the first Grove Diamond PAU contract sections.
-- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 2` covered Grove Diamond PAU facets, rate limits, role hierarchy, and Tokenized Treasury role hierarchy changes.
-- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 3` covered Diamond PAU role/functions, JTRSY address/rate-limit updates, and most BUIDL instance configuration.
-- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 4` covered the BUIDL Redeemer Role Holder section.
+- Atlas section loaded: `read-atlas-section A.1.11.2.4`.
+- Proposal evidence: `fetch-proposal 1638` returned a `comparison >= 480000000` victory condition and outcome text describing the 480,000,000 SKY threshold.
+- Tally evidence: `bun -e 'import { getPollTally } from "./src/lib/governance-api/client.ts"; ...'` returned `7017218226.45608472338077736` SKY support for option `1`.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
 
-### Governance Authority and Economic Impact
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.11.2.4`.
+2. Run `bun run src/index.ts fetch-proposal 1638` and `bun -e 'import { getPollTally } from "./src/lib/governance-api/client.ts"; ...'` to compare the stated threshold with the actual tally.
+
+#### A.0.1.2.1 - Facilitators’ Broad Discretionary Capacity
 
 **Status:** OK
 
-- PR #265 changes `A.0.1.2.1` from Facilitators' broad discretionary capacity to Core Council's broad discretionary capacity, preserving Core Facilitator interpretive authority while moving Atlas supersession authority to Core Council through a public Forum post confirmed by Core GovOps and the Core Council Risk Advisor.
-- PR #265 adds `A.2.3.1.5 - Allocation Modification`, allowing short-term Core Council reductions/restorations of Step 1 and Step 2 Capital and modifications of Step 3 Capital allocation, proceeding directly to Executive Vote without a prior Governance Poll.
-- PR #265 authorizes Amatsu, Ozone, and Core Council Executor Agent 1 to transfer Genesis Capital Allocation funds to the Sky Frontier Foundation without a separate governance decision per transfer.
-- PR #265 authorizes an 800,000 USDS July 2026 Grove Foundation grant and a 700,000 USDS July 2026 Skybase Foundation grant.
-- These are material governance/economic changes but are disclosed in the poll and remain subject to later execution paths where funds or on-chain state change.
+- The main substantive governance change in PR `#265` is the re-grounding of broad discretionary authority from the Core Facilitator alone to the Core Council, while preserving the Core Facilitator interpretive role.
+- Batch `1/4` shows the section title change, the shift of supersession authority to the Core Council, and the requirement that supersession occur through a public forum post by the Core Facilitator confirmed by Core GovOps and the Core Council Risk Advisor.
+- This is a genuine concentration-of-authority change and one of the reasons the overall risk assessment is medium. But it is explicitly disclosed in the proposal summary, the forum records, the PR body, and the diff itself.
+- I did not find a second hidden override mechanism or an undisclosed authority shift beyond what voters were asked to approve.
 
 **Evidence**
 
-- Command: `read-atlas-pr-diff-batch 265 1` showed changes to `A.0.1.2.1`, new `A.2.3.1.5`, transfer authorizations in `A.2.8.2.5.2.4`, `A.2.8.2.8.2.2`, and `A.2.8.2.9.2.2`, plus Grove and Skybase grant authorization sections.
-- Command: `fetch-proposal 1638` disclosed these same items in the summary and full canonical text.
+- Atlas section loaded: `read-atlas-section A.0.1.2.1` from the active Atlas.
+- PR diff evidence: `read-atlas-pr-diff-batch 265 1` covered section `A.0.1.2.1` and its dependent references.
+- Disclosure evidence: `fetch-proposal 1638`, the forum topic `27983`, and `fetch-atlas-pr-diff 265` all list the broad-discretionary-authority change as the first disclosed item.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
 
-### Technical and Documentation Review
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.0.1.2.1` to inspect the current baseline text.
+2. Run `bun run src/index.ts read-atlas-pr-diff-batch 265 1` to inspect how PR `#265` changes that section and its references.
+
+#### A.1.11.1.1 - Edits To The Atlas
 
 **Status:** OK
 
-- Grove Diamond PAU documentation adds a modular Controller/facet architecture, contract addresses, roles, rate limits, and Controller functions for deposits, withdrawals, USDS mint/burn, and PSM swaps.
-- BUIDL and JTRSY Tokenized Treasury Basin documentation includes contract addresses, role holders, interim deployment status, 5 million USDS combined maximum allocation, 5 million USDS/day inflow limits, and unlimited outflow limits.
-- Agent Rate edits limit rewards to Prime Agent SubProxy balances except Spark PSM balances, avoid double counting, and clarify that Integration Boost or USDS Token Rewards balances do not also earn Agent Rate.
-- Distribution Reward Code ranges, Core Council Risk Advisor data scope, AD repeat-breach timing, and Keel/Elodin edits are documentation/process clarifications.
-- The poll does not itself execute the Grove PAU, Tokenized Treasury, grant, or transfer actions, so direct smart-contract execution risk belongs to later executive or agent spells.
+- `A.1.11.1.1` says the general Operational Weekly Cycle rule is Governance Poll plus Executive Vote, but expressly allows exceptions where a pertinent Atlas document specifically states Governance Poll only or Executive Vote only.
+- PR `#265` explicitly creates future direct-to-Executive pathways in the proposed `A.2.3.1.5 - Allocation Modification` and in the new Sky Frontier transfer authorization sections for Core Council Executor Agent 1, Amatsu, and Ozone.
+- Because those future exceptions are stated directly in the proposed documents and disclosed in the proposal text, the governance-power expansion is explicit rather than hidden.
+- I treat this as a material design choice that raises risk and deserves voter attention, not as an undisclosed process violation.
 
 **Evidence**
 
-- Commands: `read-atlas-pr-diff-batch 265 1`, `265 2`, `265 3`, and `265 4` returned the Grove Diamond PAU and Tokenized Treasury Basin sections.
-- Command: `read-atlas-pr-diff-batch 265 1` returned Agent Rate changes under `A.3.1.2.3`, Reward Code ranges under `A.2.2.9.1.2.1.1.4`, Risk Advisor data scope under `A.3.2.2.5.1.1.1.1`, AD repeat-breach timing under `A.1.6.2.1`, and Keel/Elodin edits under A.2 sections.
+- Atlas section loaded: `read-atlas-section A.1.11.1.1`.
+- PR diff evidence: `read-atlas-pr-diff-batch 265 1` covered new section `A.2.3.1.5` plus the new transfer-authorization sections `A.2.8.2.5.2.4`, `A.2.8.2.8.2.2`, and `A.2.8.2.9.2.2`.
+- Proposal evidence: `fetch-proposal 1638` and the PR body in `fetch-atlas-pr-diff 265` both disclose the direct-to-Executive allocation-modification and transfer-authorization changes.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
 
-### On-Chain Baseline
+**How To Verify**
 
-**Status:** N/A
+1. Run `bun run src/index.ts read-atlas-section A.1.11.1.1`.
+2. Run `bun run src/index.ts read-atlas-pr-diff-batch 265 1` and inspect the new allocation-modification and transfer-authorization sections for their explicit Executive Vote language.
 
-This poll authorizes an Atlas PR merge and does not itself execute on-chain actions. The PR documents many contract and multisig addresses and authorizes later grant/transfer/spell payloads, but those later transactions must be reviewed when they appear in an executive or agent spell. No live on-chain state claim was necessary to validate the poll's immediate action: merging PR #265 if the poll passes.
-
-**Evidence**
-
-- Command: `fetch-proposal 1638` states the action on passing is that the associated Pull Request will be merged into the Atlas.
-- Command: `fetch-atlas-pr-diff 265` shows documentation changes only; no spell execution is part of this poll.
-
-### Atlas Alignment
+#### A.1.10.2.3.2.2.2 - Interim Deployments
 
 **Status:** OK
 
-- The proposal uses the Atlas Edit Weekly Cycle process and the required MPP threshold.
-- The edits are broad but transparent and mainly clarify authority, document agent infrastructure, authorize bounded grants/transfers, and update Atlas records.
-- The largest alignment risk is governance concentration/flexibility: Core Council gains explicit supersession and Treasury Allocation modification authority. The proposal mitigates this by naming confirmation steps and retaining later Executive Vote execution for implementation.
-- I did not find a Slippery Slope Misalignment concern strong enough to recommend NO, because the poll itself asks token holders to ratify these authorities through the recognized Atlas Edit path.
+- The poll documents the BUIDL Basin and updated JTRSY Basin as Interim Deployments with `100%` CRR, matching the constrained-testing framing in `A.1.10.2.3.2.2.2`.
+- Batch `3/4` shows both JTRSY and BUIDL records specify a combined maximum allocation of `$5 million`, `5,000,000 USDS` per day inflow limits, and unlimited outflow limits. BUIDL also records `Max Swap Size: 50,000,000 USD`, `Staleness Threshold: seven (7) days`, `Fees: 0`, `Credit Token Deposits: Disabled`, `Credit Token Withdrawals: Disabled`, and `Stablecoin Swaps: Disabled`.
+- Within the public materials I reviewed, these are bounded testing-parameter records for interim use rather than open-ended deployment authority.
+- I found no evidence in the poll, forum records, or diff batches that the proposal attempts to bypass the interim-deployment constraint model. Instead it records the testing parameters directly in Atlas.
 
 **Evidence**
 
-- Command: `fetch-proposal 1638` returned the canonical proposal text and outcome conditions.
-- Command: `fetch-atlas-pr-diff 265` and review batches 1-4 confirmed the PR contents.
-- Commands: `read-atlas-section A.0.1.1.18`, `read-atlas-section A.1.11.2.1.3`, and `read-atlas-section A.1.11.2.4` resolved from active Atlas `2026-06-22`.
+- Atlas section loaded: `read-atlas-section A.1.10.2.3.2.2.2`.
+- PR diff evidence: `read-atlas-pr-diff-batch 265 3` and `read-atlas-pr-diff-batch 265 4` covered the JTRSY and BUIDL interim-deployment configuration sections.
+- Proposal evidence: `fetch-proposal 1638` discloses that the poll adds BUIDL and updates JTRSY Basin instances with a combined maximum allocation.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 1` covered the authority shift, allocation modification, standing transfer authorizations, grants, Agent Rate changes, reward code ranges, risk-advisor scope, and the start of the Grove Diamond PAU subtree.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 2` covered additional Grove Diamond PAU contracts, rate limits, relayer and freezer role hierarchy changes, and tokenized-treasury role hierarchy changes.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 3` covered Diamond PAU controller functions, JTRSY interim-deployment parameters, and the BUIDL interim-deployment configuration document.
+- Command: `bun run src/index.ts read-atlas-pr-diff-batch 265 4` completed the BUIDL issuer-specific role-holder section.
 
-### AD Role Compliance
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.10.2.3.2.2.2` to inspect the active interim-deployment process requirements.
+2. Run `bun run src/index.ts read-atlas-pr-diff-batch 265 3` and `4` to inspect the JTRSY and BUIDL interim-deployment parameter sections.
+
+#### A.0.1.1.12 - Slippery Slope Misalignment
 
 **Status:** OK
 
-- Voting YES is consistent with active stewardship because the proposal's core mechanisms have been reviewed: process trigger, threshold, authority shifts, economic grants/transfers, Grove PAU/Basin documentation, Agent Rate clarification, and documentation cleanups.
-- Abstention discipline is satisfied because there is no conflict of interest, missing core evidence, or specialized implementation ambiguity that prevents an accountable YES/NO view at the poll level.
-- The recommendation can support a public AD vote explanation under `A.1.6.2.2` because it identifies the material governance discretion risk and explains why disclosure/process evidence still supports YES.
-- Voting-estoppel confidence under `A.1.6.6.2` is met for the poll action: the analysis understands that approval merges PR #265 into the Atlas, while later executive/spell execution still requires separate review.
+- This proposal raises real alignment risk because it expands standing discretion, adds future direct-to-Executive pathways, and authorizes ongoing executor-agent transfers to the Sky Frontier Foundation.
+- Those are exactly the kinds of incremental governance changes that can create slippery-slope risk if they are normalized without scrutiny.
+- I did not keep a finding here because the risky changes are explicit in the proposal summary, forum records, PR body, and diff batches. The poll asks token holders to approve them directly rather than hiding them behind unrelated cleanup.
+- The right conclusion is medium risk and close voter attention, not a process-level misalignment finding on the current evidence.
 
 **Evidence**
 
-- Commands: `read-atlas-section A.0.1.1.18`, `read-atlas-section A.1.6.2.1.1`, `read-atlas-section A.1.6.2.2`, and `read-atlas-section A.1.6.6.2` resolved from active Atlas `2026-06-22`.
-- Commands: `fetch-proposal 1638`, `fetch-atlas-pr-diff 265`, and `read-atlas-pr-diff-batch 265 1-4` provide the substantive evidence needed for an AD explanation.
+- Atlas section loaded: `read-atlas-section A.0.1.1.12`.
+- Proposal evidence: `fetch-proposal 1638` discloses the authority shift, direct allocation-modification path, standing transfer authorizations, and grants.
+- PR evidence: `fetch-atlas-pr-diff 265` and diff batches `1` through `4` expose those same changes in the underlying Atlas text.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
+
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.0.1.1.12`.
+2. Compare the most consequential governance changes in the proposal summary against the corresponding sections in the diff batches to see whether anything material was hidden.
+
+#### A.1.1.2 - Interpretation Of The Spirit Of The Atlas
+
+**Status:** OK
+
+- Several changes in PR `#265` are interpretive or clarifying rather than purely allocative: the AD repeat-breach timing addition, Agent Rate scope and no-double-counting rule, reward-code range records, risk-advisor data scope clarification, and the Keel development-company cleanup.
+- The proposal also introduces extensive Grove Diamond PAU and Tokenized Treasury operational records with explicit addresses, roles, rate limits, and controller-function descriptions.
+- That matters under `A.1.1.2` because an Atlas interpretation or clarification should be documented clearly enough to create precedent instead of relying on unstated inference.
+- The poll, forum records, PR body, and diff batches give a sufficiently explicit trail for the intended precedent at poll-review level. I did not find a hidden interpretive leap that forced an assumption.
+
+**Evidence**
+
+- Atlas section loaded: `read-atlas-section A.1.1.2`.
+- PR diff evidence: `read-atlas-pr-diff-batch 265 1`, `2`, and `3` covered the clarifying AD, Agent Rate, reward-code, risk-advisor, and Grove/BUIDL/JTRSY documentation changes.
+- Proposal evidence: `fetch-proposal 1638` describes those same clarification and documentation items in the canonical poll text.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
+
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.1.2`.
+2. Inspect the clarifying changes in `read-atlas-pr-diff-batch 265 1`, `2`, and `3` and compare them with the canonical proposal text to confirm the precedent is documented rather than implied.
+
+### Atlas Vote Recommendation
+
+#### A.0.1.1.18 - Aligned Delegate (AD)
+
+**Status:** OK
+
+- Active stewardship for this poll required understanding more than the headline. The substantive governance implications are the authority shift to the Core Council, direct future Executive-Vote pathways, standing Sky Frontier transfer authorizations, the July 2026 grants, and the interim-deployment Basin records.
+- I reviewed the process evidence, the forum provenance, the PR body, the final tally, and all four diff batches with those implications in mind.
+- On that basis, a `YES` recommendation is supportable, but the assessment should stay `medium` because the proposal expands discretion and future implementation latitude even though the poll itself only edits Atlas text.
+
+**Evidence**
+
+- Atlas section loaded: `read-atlas-section A.0.1.1.18`.
+- Substantive evidence: `fetch-proposal 1638`, `fetch-atlas-pr-diff 265`, and diff batches `1` through `4`.
+- Trigger and process evidence: forum topic `27983`, `read-atlas-section A.1.11.2.1.3`, `A.1.11.2.2`, and `A.1.11.2.4`.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
+
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.0.1.1.18`.
+2. Check whether the recommendation addresses the poll main governance implications instead of treating the proposal as routine documentation.
+
+#### A.1.6.2.1.1 - Excessive Abstention
+
+**Status:** OK
+
+- I did not find a conflict of interest or an evidence gap large enough to justify abstention.
+- The public evidence package is sufficient to take an accountable position on the poll immediate action: whether PR `#265` should be merged into Atlas if approved.
+- That supports a yes-or-no recommendation instead of using abstention to avoid responsibility for a high-impact governance design choice.
+
+**Evidence**
+
+- Atlas section loaded: `read-atlas-section A.1.6.2.1.1`.
+- Evidence sufficiency comes from `fetch-proposal 1638`, `fetch-atlas-pr-diff 265`, diff batches `1` through `4`, the forum topic JSON, and the active Atlas process sections.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
+
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.6.2.1.1`.
+2. Review whether any unresolved missing fact in the current evidence package would force an abstention. This draft does not rely on one.
+
+#### A.1.6.2.2 - Aligned Delegate Communication Responsibilities
+
+**Status:** OK
+
+- The recommendation reasoning explains the core mechanism of the proposal: Atlas Edit Weekly Cycle ratification of PR `#265` through a three-day Governance Poll with a `480,000,000 SKY` minimum positive participation requirement.
+- It states a reasoned basis for `YES`: the trigger and threshold evidence are consistent, the twelve change groups remain consistent across the portal, forum, PR body, and diff batches, and I found no surviving hidden policy payload or Atlas-process contradiction.
+- It addresses substantive risk rather than ignoring it. The reasoning explicitly calls out the authority expansion, direct future Executive-Vote paths, standing transfer authorizations, grants, and interim-deployment Basin records as medium-risk items.
+
+**Evidence**
+
+- Atlas section loaded: `read-atlas-section A.1.6.2.2`.
+- Recommendation basis uses `fetch-proposal 1638`, `fetch-atlas-pr-diff 265`, diff batches `1` through `4`, the forum topic JSON, and the tally endpoint.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
+
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.6.2.2`.
+2. Read the Recommendation section in `rationale.md` and confirm it demonstrates understanding, gives a reasoned basis, and addresses at least one substantive risk or benefit.
+
+#### A.1.6.6.1.2 - Tier 2 (Integrity) Breaches
+
+**Status:** OK
+
+- A careless positive vote on a materially misunderstood proposal would create integrity risk for an AD, especially where the proposal expands governance discretion and future implementation latitude.
+- Here, the recommendation rests on a disclosed proposal text, an attributable forum trigger and discussion record, the full PR body, the composed diff metadata, and all four diff review batches.
+- I did not find evidence that the poll text was materially misleading at vote time. That makes a reasoned `YES` recommendation compatible with the integrity expectations in `A.1.6.6.1.2`.
+
+**Evidence**
+
+- Atlas section loaded: `read-atlas-section A.1.6.6.1.2`.
+- Evidence package: `fetch-proposal 1638`, forum topic `27983`, `fetch-atlas-pr-diff 265`, and diff batches `1` through `4`.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
+
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.6.6.1.2`.
+2. Check whether the recommendation rests on enough disclosed evidence that a later claim of not understanding the vote would be implausible.
+
+#### A.1.6.6.2 - Voting Estoppel Rule
+
+**Status:** OK
+
+- A `YES` vote on this poll would estop an AD from later claiming they did not understand the proposal key governance implications.
+- The recommendation reasoning therefore had to cover the major consequences: the Weekly Cycle route, the `480,000,000 SKY` threshold, the Core Council authority shift, the explicit future Executive-Vote-only exceptions, the standing Sky Frontier transfer authorizations, the July 2026 grants, and the BUIDL/JTRSY interim-deployment limits.
+- On the evidence reviewed, the positive recommendation is supportable and sufficiently specific for estoppel purposes.
+
+**Evidence**
+
+- Atlas section loaded: `read-atlas-section A.1.6.6.2`.
+- Key implications reviewed through `fetch-proposal 1638`, `fetch-atlas-pr-diff 265`, diff batches `1` through `4`, and the relevant active Atlas sections.
+- Command: `bun run src/index.ts atlas current` returned active Atlas version `2026-06-27`.
+- Command: `bun run src/index.ts atlas refresh` returned active Atlas version `2026-06-27`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts analysis start 1638` returned marker `Analysis run marker: brendan-analysis:1638:2026-06-27T21-56-27-870Z:3f1827`.
+- Command: `DATABASE_PATH=/home/maciejka/projects/brendan/tmp/full-poll-analysis-1638-20260627/db bun run src/index.ts resolve-target 1638` resolved poll `1638`.
+- Command: `bun run src/index.ts fetch-proposal 1638` returned the portal metadata, canonical proposal text, proposal source URL, and discussion link.
+- Command: `bun run src/index.ts fetch-atlas-pr-diff 265` returned PR metadata, composed diff metadata, and four review batches.
+
+**How To Verify**
+
+1. Run `bun run src/index.ts read-atlas-section A.1.6.6.2`.
+2. Verify that the final rationale names the main governance consequences that a `YES` voter would be deemed to understand.
 
 ## Recommendation
 
 **Position:** YES
 **Assessment:** Medium
 
-Vote YES. The poll is procedurally framed as an Atlas Edit Weekly Cycle Proposal, has public trigger evidence from Bonapublica, uses the expected 480,000,000 SKY minimum positive participation threshold, and discloses the same twelve change groups across the portal summary, canonical proposal text, forum thread, PR body, and all four composed Atlas PR diff review batches. The proposal is not routine: it expands standing discretion and future direct-to-executive pathways for Core Council/Treasury Allocation and Executor Agent transfers, so risk is medium. But the changes are explicit, bounded by named actors and process steps, and remain subject to later Executive Vote execution where funds or contracts are moved. I found no material disclosure mismatch, unresolved implementation contradiction, or Atlas-process conflict that would justify NO or ABSTAIN.
+Recommend YES. The poll meets the Atlas Edit Weekly Cycle process requirements, the public forum evidence supports origination and trigger provenance, and the `480,000,000 SKY` minimum positive participation requirement is clearly stated and was ultimately exceeded. More importantly, the substantive content of PR #265 is not hiding behind generic prose: the authority shift to the Core Council, the future direct-to-Executive allocation-modification path, the standing Sky Frontier transfer authorizations, the July 2026 grants, the Agent Rate clarification, and the Grove and Tokenized Treasury documentation all appear in the canonical proposal text, forum records, PR body, and the four diff review batches. The proposal is not routine, and risk is medium because it expands discretion and future implementation latitude. But the design choices are explicit and bounded, and I found no surviving Atlas-process conflict, misleading disclosure, or hidden independent policy change that would justify NO or ABSTAIN.
 
 ## LLM Usage
 
-- **Provider/Model:** openai / gpt-5.5
-- **Tokens:** 3,243,466 in / 5,601 out / 555 reasoning / 3,249,622 total
-- **Cache:** 3,196,544 read / 0 write
-- **Cost:** $2.0176 USD estimated
-- **Pricing:** openai-api-pricing-2026-06-10-standard-short-context
+- **Provider/Model:** openai / gpt-5.4, gpt-5.5
+- **Tokens:** 1,761,242 in / 27,392 out / 15,148 reasoning / 1,803,782 total
+- **Cache:** 1,610,112 read / 0 write

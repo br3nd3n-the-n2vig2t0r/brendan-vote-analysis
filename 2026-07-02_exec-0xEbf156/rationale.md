@@ -1,0 +1,539 @@
+# Analysis: Initialize GROVE Token Rewards, Whitelist New Grove ALMProxy on LitePSM, Add PAU Beacon to Chainlog, Transfer USDS from Amatsu SubProxy to SFF, Update Safe Harbor Agreement, Prime Agent Proxy Spells - July 2, 2026
+
+**Recommendation:** YES (Medium assessment)
+**Analyzed:** 2026-07-04T18:01:39.495Z | **Atlas:** 2026-07-03
+**Analysis guidance reviewed against Atlas:** 2026-06-25
+
+## Summary
+
+Analysis run marker: brendan-analysis:2026-07-02_exec-0xEbf156:2026-07-03T09-29-25-057Z:52bbfb
+
+Using active Atlas 2026-07-03, this executive routes through the standard spell-validation tree plus the conditional paths for new contract and module onboarding, novel item handling for the `SUBPROXY_METHODS` helper, Agent spell execution through StarGuard, and A.2/A.6 scope authorization. The core spell source is verified on Ethereum, flattens identically to the merged `spells-mainnet` source at PR #556 commit `b63704aaa2adaac5a0b9703539e0415e9d1ab522`, and its proxy spell references for Spark, Grove, and Skybase all resolve to the documented codehashes and verified source. A later public clarification from `ldr` states that `SubProxyMethods` followed the `A.1.10.2.3.3 - Novel Items` process, where the implementation proposal may use external audits or other processes instead of a mandatory formal audit. On that clarified record, the prior audit-trigger concern does not survive. The original proposal materials did not make that routing explicit, but that is a transparency gap rather than an Atlas validation failure. The analysis guidance review marker recorded in `playbook/workflows/analyze.md` is 2026-06-25, so the guidance is stale relative to the active Atlas 2026-07-03.
+
+## Atlas Alignment
+
+**Assessment:** aligned
+
+The disclosed actions are technically coherent and map cleanly to Atlas scope authorizations or governance poll approvals: Sky-retained GROVE rewards are initialized through audited farming helpers, the Grove Diamond PAU ALM Proxy whitelisting matches the Grove Artifact, Spark reserve claims and USDC IRM changes match active Spark authorization sections, and Safe Harbor maintenance is explicitly required when new contracts are added. The only prior alignment concern was the unaudited `SUBPROXY_METHODS` helper, but the later public clarification that it followed the `A.1.10.2.3.3 - Novel Items` process resolves that issue on the current record.
+
+**Relevant sections:** A.1.10.2.3.3, A.1.10.2.3.2.3, A.1.10.2.5.1.2.1.1, A.1.10.2.5.2.2.1, A.1.10.2.7.1, A.2.3.1.2.2.2, A.2.8.2.2.2.1.2.2, A.2.11.1.2.3, A.6.1.1.1.3.2.1.2.1, A.6.1.1.1.2.6.1.2.1.2.3, A.6.1.1.2.2.6.1.2.1.1.4.2
+
+## Risk Assessment
+
+**Level:** medium
+
+- The spell bundles one core spell with three proxy spells plus multiple pre-deployed contracts and cross-team technical scopes, so review surface is materially broader than a routine weekly executive.
+- The `SUBPROXY_METHODS` helper ultimately appears Atlas-compliant via the Novel Items path, but the original public materials did not make that routing explicit, which created review ambiguity for outside validators.
+- The technical and on-chain evidence for the main spell and proxy spells is otherwise strong: deployed source, codehashes, PR reviews, CI, technical-scope deployment records, and the later Novel Items clarification are all publicly available.
+
+## Finding Verification Pass
+
+This analysis included active false-positive elimination before finalization. One or more initial FINDING checks were re-verified and downgraded after additional scrutiny.
+
+- **Original findings:** 1
+- **Remaining findings after verification:** 0
+
+### Eliminated Or Downgraded Findings
+
+#### Atlas Executive Validation
+
+##### A.1.10.2.7.1 - Audit Triggers
+
+- **Original status:** FINDING
+- **Final status:** OK
+
+The executive introduces the new `SUBPROXY_METHODS` contract at `0x5162489F4FEa651b76c75193387d08aAAC9CB52C`, but the later public clarification states that this item followed `A.1.10.2.3.3 - Novel Items`. Because `A.1.10.2.3.3.2.3` allows the implementation proposal for a novel spell item to use external audits or other processes, the absence of a formal external audit is not treated as a failed audit trigger on the current clarified record.
+
+## Validation Checks
+
+### Required Spell Validation Checks
+
+#### A.1.10.2.4.12.3.1.1 - Spell Validators Must Ensure Tests Pass
+
+**Status:** OK
+
+Repository CI passed and the full local Forge validation run completed successfully against the reviewed merge commit.
+
+**Evidence**
+
+- fetch-pr-ci-status 556: both `tests` checks succeeded for head `e5d00bdfca0bd9aa80ecdc91d656d10ca63f180b`.
+- run-forge-tests b63704aaa2adaac5a0b9703539e0415e9d1ab522 --pr 556: exit code `0`; `25 passed, 0 failed, 34 skipped` across `59` total tests.
+
+#### A.1.10.2.4.12.3.1.2 - Spell Validators Must Verify Spell On Etherscan
+
+**Status:** OK
+
+The main `DssSpell` at `0xEbf156fB6C87cBE0a962944eC254b519c1441A51` is verified on Ethereum and returned full verified source.
+
+**Evidence**
+
+- fetch-spell-source 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: Ethereum chain 1, contract `DssSpell`, verified source returned.
+
+#### A.1.10.2.4.12.3.1.3 - Spell Validators Must Validate DssExecLib Library
+
+**Status:** OK
+
+The linked `DssExecLib` address on the deployed spell matches the library address used by the reviewed repository build.
+
+**Evidence**
+
+- fetch-spell-source 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: linked `DssExecLib` is `0x8de6ddbcd5053d32292aaa0d2105a32d108484a6`.
+- flatten-spell b63704aaa2adaac5a0b9703539e0415e9d1ab522 0xEbf156fB6C87cBE0a962944eC254b519c1441A51 --pr 556: foundry library address `0x8De6DDbCd5053d32292AAA0D2105A32d108484a6`.
+
+#### A.1.10.2.4.12.3.1.4 - Spell Validators Must Check Deployed Spell Code
+
+**Status:** OK
+
+The deployed main spell source is byte-for-byte identical to the flattened source from merged PR #556.
+
+**Evidence**
+
+- flatten-spell b63704aaa2adaac5a0b9703539e0415e9d1ab522 0xEbf156fB6C87cBE0a962944eC254b519c1441A51 --pr 556: Etherscan source and flattened source are both `99854` characters and `1893` lines; sources are identical.
+
+#### A.1.10.2.4.12.3.1.5 - Spell Validators Must Check Deployed Spell Is Not A DarkSpell
+
+**Status:** OK
+
+The deployed spell uses the standard self-contained constructor path and the action execute path does not dispatch to an externally supplied action address.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: `contract DssSpell is DssExec { constructor() DssExec(block.timestamp + 30 days, address(new DssSpellAction())) {} }`.
+- fetch-spell-archive 2026-07-02: `DssAction.execute()` only calls `actions()` under the office-hours limiter.
+
+#### A.1.10.2.4.12.3.1.6 - Spell Validators Must Check Deployed Spell Was Not Deployed Using CREATE2
+
+**Status:** OK
+
+Both the main spell and its action contract were deployed through standard CREATE from the same EOA creation transaction.
+
+**Evidence**
+
+- fetch-contract-creation 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: creator `0x34dbf275e1df79d1fc7bf6a37fec56a8b1057490`, deployment method `CREATE`.
+- fetch-contract-creation 0x09dac1B2c904df0a4e8beF42d8511edD4046dC89: same creator, same creation tx `0x0804c084abc2691a04e8b77e89005c07e1e3800bbfad40b9141f55c53f44492a`, deployment method `CREATE`.
+
+#### A.1.10.2.4.12.3.1.7 - Spell Validators Must Check Deployed Spell Optimization Settings
+
+**Status:** OK
+
+The deployed core spell uses the standard unoptimized Solidity configuration for Sky core spells.
+
+**Evidence**
+
+- fetch-spell-source 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: optimization `disabled`.
+
+#### A.1.10.2.4.12.3.1.8 - Spell Validators Must Check Deployed Spell EVM Version
+
+**Status:** OK
+
+The verified Etherscan metadata reports the expected default EVM version for Solidity 0.8.16.
+
+**Evidence**
+
+- fetch-spell-source 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: compiler `v0.8.16+commit.07a7930e`, EVM version `Default`.
+
+#### A.1.10.2.4.12.3.1.9 - Spell Validators Must Perform Basic Spell Code Validation
+
+**Status:** OK
+
+The reviewed spell source maps to the disclosed executive actions, including GROVE rewards initialization, Grove Diamond PAU whitelisting, PAU beacon chainlog addition, the Amatsu SubProxy transfer, Safe Harbor update, and three StarGuard plots with documented codehashes. No undisclosed action or unbound proxy spell remained after source and codehash review.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: archived source contains the disclosed `TreasuryFundedFarmingInit.initFarm`, `DssLitePsmLike(...).kiss(GROVE_ALM_PROXY)`, `setChangelogAddress("PAU_BEACON", ...)`, `SubProxyLike(AMATSU_SUBPROXY).exec(...)`, Safe Harbor call bundle, and `StarGuardLike(...).plot(...)` calls for Spark, Grove, and Skybase.
+- check-proxy-spell-codehash 0xcc7529473B850103524905D3914470898aDe8747 0xf952ba1ea1df8c42217cecd3c4e88abcde2864fbf1e4465b1a13af0bf05e00f0: match yes.
+- check-proxy-spell-codehash 0xa21d2E301D50AfF797143deb5a7C400482E9122C 0xb3377dba77dfd8bce7c272e7c4c445ab48b3d0ec3fd0a52f512a39974f059a0f: match yes.
+- check-proxy-spell-codehash 0xd3e4e16ED515Be794fd181D7d2cEB0447A6f2cb5 0x09c387eed3e4373a4cc91fc28686e103cfc704335279f65f2f7308f474c002d9: match yes.
+- fetch-spell-source for all three proxy spell addresses returned verified source.
+
+### Recommended Spell Validation Checks
+
+#### A.1.10.2.4.12.3.2.1 - Spell Validators Must Check Deployed Spell License
+
+**Status:** OK
+
+The reviewed spell source declares AGPL-3.0-or-later.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: source header contains `SPDX-License-Identifier: AGPL-3.0-or-later`.
+
+#### A.1.10.2.4.12.3.2.2 - Spell Validators Must Check Compiler Version
+
+**Status:** OK
+
+The deployed compiler version matches the reviewed source pragma.
+
+**Evidence**
+
+- fetch-spell-source 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: compiler `v0.8.16+commit.07a7930e`.
+- fetch-spell-archive 2026-07-02: `pragma solidity 0.8.16;`.
+
+### Additional Community Developed Spell Validation Checks
+
+#### A.1.10.2.4.12.3.3.1 - Spell Validators Should Validate Executive Document
+
+**Status:** OK
+
+The executive document hash embedded in the deployed spell matches the pinned raw executive-votes document referenced in the archive.
+
+**Evidence**
+
+- check-spell-integrity 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: description hash `0x3c88d3da8f44bcbb1d449941c61b25391083df9b0d078ca1a7b52182a57eb39c`.
+- keccak256-url https://raw.githubusercontent.com/sky-ecosystem/executive-votes/c15b52b50f9ae7106bb91f8cfc34c9418f02fb79/2026/executive-vote-2026-07-02-grove-token-rewards.md: hash `0x3c88d3da8f44bcbb1d449941c61b25391083df9b0d078ca1a7b52182a57eb39c`.
+- fetch-executive 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: final proposal text matches the same action list and spell address.
+
+#### A.1.10.2.4.12.3.3.2 - Spell Validators Should Review Spell Constructor
+
+**Status:** OK
+
+The constructor follows the standard `DssExec(block.timestamp + 30 days, address(new DssSpellAction()))` pattern and the live spell integrity data matches that structure.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: constructor uses `block.timestamp + 30 days` and `address(new DssSpellAction())`.
+- check-spell-integrity 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: action address `0x09dac1B2c904df0a4e8beF42d8511edD4046dC89`, `tag == extcodehash` yes, expiration `2026-08-01T12:38:23.000Z`.
+
+#### A.1.10.2.4.12.3.3.3 - Spell Validators Should Review Spell Actions
+
+**Status:** OK
+
+The spell actions use constants and immutable chainlog-derived addresses with no hidden runtime mutation of the documented targets or amounts.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: fixed constants cover proxy spell addresses, codehashes, PAU beacon, vest/rewards contracts, and transfer amounts; chainlog lookups are assigned to immutable variables in `DssSpellAction`.
+
+#### A.1.10.2.4.12.3.3.4 - Spell Validators Should Review Office Hours Function
+
+**Status:** OK
+
+Office hours are enabled in source, on-chain state, and the executive document. The spell also enforces a custom earliest execution date of July 6, 2026 18:00 UTC.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: `officeHours()` returns `true` and `nextCastTime` enforces `JUL_06_2026_18_00_UTC`.
+- check-spell-integrity 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: `officeHours(): true`.
+- fetch-executive 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: document states office-hours execution and earliest execution date Monday, July 6, 2026 at 18:00 UTC.
+
+#### A.1.10.2.4.12.3.3.5 - Spell Validators Should Review Chainlog
+
+**Status:** OK
+
+The spell's chainlog lookups resolve to live addresses and the source bumps the chainlog patch version to `1.20.17` while adding the new disclosed keys.
+
+**Evidence**
+
+- read-chainlog USDS -> `0xdC035D45d973E3EC169d2276DDab16f1e407384F`.
+- read-chainlog MCD_LITE_PSM_USDC_A -> `0xf6e72Db5454dd049d0788e411b06CfAF16853042`.
+- read-chainlog AMATSU_SUBPROXY -> `0xF33B14329e7115dD0B40DBb2985E1A0Df10E3fAa`.
+- read-chainlog SPARK_STARGUARD -> `0x6605aa120fe8b656482903E7757BaBF56947E45E`, GROVE_STARGUARD -> `0xfc51CAa049E8894bEcFfB68c61095C3F3Ec8a880`, SKYBASE_STARGUARD -> `0xA170086AeF9b3b81dD73897A0dF56B55e4C2a1F7`.
+- read-chainlog CRON_REWARDS_DIST_JOB -> `0x6464C34A02DD155dd0c630CE233DD6e21C24F9A5`, SAFE_HARBOR_AGREEMENT -> `0xf17bB418B4EC251f300Aa3517Cb37349f17697A1`.
+- fetch-spell-archive 2026-07-02: `DssExecLib.setChangelogVersion("1.20.17")` and new keys `PAU_BEACON`, `SUBPROXY_METHODS`, `MCD_VEST_GROVE_TREASURY`, and `GROVE`.
+
+#### A.1.10.2.4.12.3.3.6 - Spell Validators Should Review Oracle Address
+
+**Status:** N/A
+
+This executive does not introduce or modify a median-style oracle path in the core spell source, so the active Atlas oracle-address review step is not applicable to the spell itself.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: the action source does not call oracle methods or reference a chainlog oracle key such as `PIP_*`.
+
+#### A.1.10.2.4.12.3.3.7 - Spell Validators Should Review Constants
+
+**Status:** OK
+
+Numeric units and constants are internally consistent: token amounts use WAD or token-native decimals as documented, the earliest execution timestamp is an explicit Unix second value, and durations are expressed with Solidity time units.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: `WAD = 10 ** 18`, `MILLION = 10 ** 6`, `vestTot = 2_450_000_000 * WAD`, USDC PSM swap amount and codehash constants are explicit, and proxy spell codehashes match the document.
+
+#### A.1.10.2.4.12.3.3.8 - Spell Validators Should Review Timestamps
+
+**Status:** OK
+
+The spell uses explicit and documented timestamps and durations for expiry, earliest execution, reward-distribution interval, and vesting duration.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: `JUL_06_2026_18_00_UTC = 1783360800`, constructor expiry `block.timestamp + 30 days`, `distJobInterval: 7 days - 1 hours`, `vestTau: 730 days`, and `vestBgn: block.timestamp - 7 days`.
+- check-spell-integrity 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: expiration `2026-08-01T12:38:23.000Z`.
+
+#### A.1.10.2.4.12.3.3.9 - Spell Validators Should Review Require Statements
+
+**Status:** OK
+
+The require statements are standard execution guards and post-call sanity checks rather than hidden functional blockers.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: source uses `require(DssExecLib.canCast(...))`, `require(block.timestamp >= JUL_06_2026_18_00_UTC, ...)`, and `require(success, "updateSafeHarbor/safe-harbor-update-failed")`.
+
+#### A.1.10.2.4.12.3.3.10 - Spell Validators Should Review Contract For Unusual Elements
+
+**Status:** OK
+
+The spell contains one deliberate low-level call sequence for Safe Harbor maintenance, but it is bounded to precomputed calldata and checked for success. No unexpected `delegatecall`, `tx.origin`, or selfdestruct pattern appears in the archived spell source.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: `_updateSafeHarbor` loops over prebuilt calldata and requires `success`; proxy spell execution is delegated to StarGuard plots rather than arbitrary low-level dispatch.
+
+#### A.1.10.2.4.12.3.3.11 - Spell Validators Should Do Spell Tests And Repository Validation
+
+**Status:** OK
+
+The repository branch and merge commit are identified, CI succeeded, and the full local Forge validation run passed against the reviewed spell commit.
+
+**Evidence**
+
+- fetch-spell-pr 2026-07-02: PR #556 `Mainnet spell 2026-07-02`, merge commit `b63704aaa2adaac5a0b9703539e0415e9d1ab522`, head SHA `e5d00bdfca0bd9aa80ecdc91d656d10ca63f180b`.
+- fetch-pr-ci-status 556: both `tests` checks succeeded.
+- run-forge-tests b63704aaa2adaac5a0b9703539e0415e9d1ab522 --pr 556: exit code `0`; `25 passed, 0 failed, 34 skipped` across `59` total tests.
+
+#### A.1.10.2.4.12.3.3.12 - Spell Validators Should Verify The Contract ABI
+
+**Status:** OK
+
+The verified source and flattened repository source are identical, so the contract ABI is deterministically derived from the same source and compiler configuration that Etherscan uses for the deployed spell.
+
+**Evidence**
+
+- fetch-spell-source 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: verified source metadata includes the full standard-json source bundle and output selection including `abi`.
+- flatten-spell b63704aaa2adaac5a0b9703539e0415e9d1ab522 0xEbf156fB6C87cBE0a962944eC254b519c1441A51 --pr 556: source is identical to the deployed verified source.
+
+#### A.1.10.2.4.12.3.3.13 - Spell Validators Should Check For Hidden Or Unverified Contracts
+
+**Status:** OK
+
+The spell's linked contracts and proxy spell payloads are disclosed and source-verified, and the relevant technical scopes for new pre-deployed contracts publish source, bytecode-verification, and checklist evidence.
+
+**Evidence**
+
+- fetch-spell-source for Spark, Grove, and Skybase proxy spell addresses returned verified source.
+- Technical Scope: Grove Farm, Diamond PAU and Beacon Launch, and the Grove upcoming-spell technical scope each publish verified source links, audited commits, and deployment evidence for the new preparation contracts and PAU components.
+
+### Atlas Executive Validation
+
+#### A.1.10.2.3.2.3 - Execution Of Agent Spells
+
+**Status:** OK
+
+All three Agent spells are routed through StarGuard rather than direct execution, and the executive discloses the address, codehash, and non-direct execution mode for each proxy payload.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: core spell calls `StarGuardLike(...).plot(...)` for Spark, Grove, and Skybase and documents `direct execution: No`.
+- check-proxy-spell-codehash for all three proxy spell addresses: each runtime codehash matches the executive document.
+- fetch-pr-reviews for `sparkdotfi/spark-spells` PR #170, `grove-labs/grove-spells` PR #61, and `skybase-foundation/skybase-spells` PR #1: handover/deploy review evidence cites the same spell addresses and codehashes.
+
+#### A.1.10.2.5.1.2.1.1 - Agent Spell Reviewer Checklist
+
+**Status:** OK
+
+Each Agent spell PR contains public handover and deploy review evidence that records the spell address, codehash, and reviewer approval before handover.
+
+**Evidence**
+
+- fetch-pr-reviews --repo sparkdotfi/spark-spells 170: formal approval cites deployed spell `0xcc7529473B850103524905D3914470898aDe8747`, matching codehash, and linked reviewer checklist gist.
+- fetch-pr-reviews --repo grove-labs/grove-spells 61: multiple deploy and handover checklist comments confirm spell `0xa21d2E301D50AfF797143deb5a7C400482E9122C` and matching codehash.
+- fetch-pr-reviews --repo skybase-foundation/skybase-spells 1: deploy and handover checklist comments confirm spell `0xd3e4e16ED515Be794fd181D7d2cEB0447A6f2cb5` and matching codehash.
+
+#### A.1.10.2.3.3 - Novel Items
+
+**Status:** OK
+
+The later public clarification from `ldr` states that `SubProxyMethods` followed the `A.1.10.2.3.3 - Novel Items` process. Under `A.1.10.2.3.3.2.3`, the implementation proposal for a novel spell item may include external audits or other processes. On that clarified record, using internal review rather than a formal external audit for this reusable helper is consistent with the specific Novel Items path. The original proposal materials did not make that routing explicit, but Atlas does not require the novelty determination itself to be disclosed in the public technical scope.
+
+**Evidence**
+
+- read-atlas-section A.1.10.2.3.3: novel spell items follow a specialized process and `A.1.10.2.3.3.2.3` says the implementation proposal `may include external audits ... or other processes`.
+- Forum clarification thread `Clarification Request: Is SubProxyMethods Atlas-Compliant Despite No Formal Audit?` post #2 by `ldr`: `This item followed the process for Novel items which does not require audit.`
+- The same clarification adds that `SubProxyMethods` is functionally equivalent to a reusable proxy spell for token transfer from a subproxy.
+
+#### A.1.10.2.5.2.2.1 - Deployment Checklist Submission Requirements
+
+**Status:** OK
+
+The relevant technical scope posts publicly attach deployment-checklist evidence for the newly deployed contracts and pre-deployed supporting artifacts used by this executive.
+
+**Evidence**
+
+- Technical Scope: Grove Farm: inline deployment checklist covers `MCD_VEST_GROVE_TREASURY`, `REWARDS_USDS_GROVE`, and `REWARDS_DIST_USDS_GROVE` with audit, source-verification, constructor, and privilege checks.
+- Grove July 2 technical scope: pre-deployed contracts and deployment-checklist evidence are published for the new Grove allocator instance, Diamond PAU stack, and Basin instances.
+- Skybase July 2 technical scope: no new deployment is required and the post explains that no pre-deployed contracts are needed for the one-time USDS transfer.
+
+#### A.1.10.2.7.1 - Audit Triggers
+
+**Status:** OK
+
+The executive introduces the new `SUBPROXY_METHODS` contract at `0x5162489F4FEa651b76c75193387d08aAAC9CB52C`, but the later public clarification states that this item followed `A.1.10.2.3.3 - Novel Items`. Because `A.1.10.2.3.3.2.3` allows the implementation proposal for a novel spell item to use external audits or other processes, the absence of a formal external audit is not treated as a failed audit trigger on the current clarified record.
+
+**Evidence**
+
+- fetch-spell-archive 2026-07-02: the spell adds `SUBPROXY_METHODS` to the chainlog and calls it through `AMATSU_SUBPROXY` to transfer 14 million USDS.
+- fetch-spell-source 0x5162489F4FEa651b76c75193387d08aAAC9CB52C: verified Ethereum source returns standalone contract `SubProxyMethods` compiled with Solidity `0.8.34`; it exposes `transfer(address token, address to, uint256 amount)` for delegatecalled token movement.
+- Technical scope for transferring funds from the SubProxy: `No relevant audits. The new SubProxyMethods contract wasn’t audited as it acts as a SubProxy spell and was reviewed by the two Sky Core teams.`
+- read-atlas-section A.1.10.2.7.1: new smart contract code normally triggers an audit requirement.
+- read-atlas-section A.1.10.2.3.3: novel spell items may proceed through a specialized implementation proposal that `may include external audits ... or other processes`.
+- Forum clarification thread post #2 by `ldr`: `This item followed the process for Novel items which does not require audit.`
+
+#### A.1.10.2.7.6 - Audit Recordkeeping
+
+**Status:** OK
+
+For the audited artifacts in this executive, the technical scopes publish final audit links, audited commits, and deployment-verification notes in public forum records.
+
+**Evidence**
+
+- Technical Scope: Grove Farm lists final audit links and exact commits for `dss-vest` and `endgame-toolkit`.
+- Grove July 2 technical scope lists audited commits and report links for `dss-allocator`, `diamond-pau`, `pau-assemblers`, `grove-basin`, and the Grove user-action wrapper.
+- Diamond PAU and Beacon Launch lists final audit reports and exact commits for `diamond-pau` and `diamond-pau-deploy`.
+
+#### A.2.3.1.2.2.2 - Core Council Allocation
+
+**Status:** OK
+
+The 14 million USDS transfer from Amatsu's SubProxy to the Sky Frontier Foundation matches the Atlas language that Core Council Allocation funds may be directed to grants for the Sky Frontier Foundation.
+
+**Evidence**
+
+- read-atlas-section A.2.3.1.2.2.2: Core Council Allocation funds grants to the Sky Frontier Foundation and `The Core Council is authorized to direct grants from this allocation to the Sky Frontier Foundation without a separate governance decision for each grant.`
+- fetch-executive 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: executive transfers `14 million USDS` from `AMATSU_SUBPROXY` to `0xca5183FB9997046fbd9bA8113139bf5a5Af122A0`.
+
+#### A.2.8.2.2.2.1.2.2 - Sky Retained Tokens And Reward Pools
+
+**Status:** OK
+
+Initializing the USDS-to-GROVE farm uses Sky-retained GROVE token inventory in the way the Atlas contemplates: Sky-retained GROVE is distributed over time as token rewards determined by Sky Governance.
+
+**Evidence**
+
+- read-atlas-section A.2.8.2.2.2.1.2.2: `Sky retains 7,000,000,000 GROVE tokens ... distributed as token rewards over time as determined by Sky Governance.`
+- fetch-executive 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: executive initializes a `2.45 billion GROVE` USDS rewards farm using `MCD_VEST_GROVE_TREASURY`, `REWARDS_USDS_GROVE`, and `REWARDS_DIST_USDS_GROVE`.
+
+#### A.2.11.1.2.3 - Maintenance
+
+**Status:** OK
+
+The spell updates Safe Harbor in the same executive that adds new contracts and chainlog entries, matching the Atlas maintenance requirement.
+
+**Evidence**
+
+- read-atlas-section A.2.11.1.2.3: Safe Harbor must be updated when new contracts are added.
+- fetch-spell-archive 2026-07-02: spell builds Safe Harbor calldata and calls `_updateSafeHarbor(calldatas)` after adding new contracts and before plotting Agent spells.
+
+#### A.6.1.1.1.3.2.1.2.1 - SparkLend Risk Parameters Modification
+
+**Status:** OK
+
+The Spark proxy spell's USDC IRM change matches the Atlas section that lets SparkLend parameter modifications be effected via Executive Vote.
+
+**Evidence**
+
+- read-atlas-section A.6.1.1.1.3.2.1.2.1: SparkLend parameter modifications may be recommended and `effected directly via an Executive Vote`.
+- fetch-executive 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: Spark proxy spell deploys a new `RateTargetKinkInterestRateStrategy` and repoints the USDC reserve.
+
+#### A.6.1.1.1.2.6.1.2.1.2.3 - Token Claim Authorization
+
+**Status:** OK
+
+The recurring Spark reserve-claim item matches the Atlas authorization that allows Phoenix Labs to propose reserve transfers in a Spark Spell without a token holder vote.
+
+**Evidence**
+
+- read-atlas-section A.6.1.1.1.2.6.1.2.1.2.3: Phoenix Labs is authorized to propose transfers of accrued treasury and collector revenues to the Spark ALM Proxy or Spark Operations Multisig in a Spark Spell without token holder vote.
+- fetch-executive 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: recurring Spark item claims all SparkLend reserves, routing USD stablecoins to the ALM Proxy and other assets to the Spark Operations Multisig.
+
+#### A.6.1.1.2.2.6.1.2.1.1.4.2 - Whitelisting Of ALM Proxy
+
+**Status:** OK
+
+The Grove ALM Proxy whitelisting on the LitePSM is directly contemplated by the Grove Artifact.
+
+**Evidence**
+
+- read-atlas-section A.6.1.1.2.2.6.1.2.1.1.4.2: `The ALM Proxy for the Grove Diamond PAU will be whitelisted on the litePSM in an upcoming spell.`
+- fetch-executive 0xEbf156fB6C87cBE0a962944eC254b519c1441A51: core spell whitelists `0x0DcD9298e163dFD3c0B5b00F0d9093C36e40A153` on `MCD_LITE_PSM_USDC_A`.
+
+### Atlas Vote Recommendation
+
+#### A.0.1.1.18 - Aligned Delegate (AD)
+
+**Status:** OK
+
+The recommendation reflects active stewardship rather than disengagement: the spell mechanics, proxy payloads, scope authorizations, technical scopes, CI, local tests, and the later Novel Items clarification were all reviewed before concluding that the executive is supportable on the current record.
+
+**Evidence**
+
+- Analysis evidence covers the core spell source, proxy spell source and codehashes, technical scopes, PR reviews, CI, chainlog resolution, the Novel Items clarification thread, and active Atlas sections.
+
+#### A.1.6.2.1.1 - Excessive Abstention
+
+**Status:** OK
+
+The recommendation is YES rather than ABSTAIN, so there is no excessive-abstention concern on this executive.
+
+**Evidence**
+
+- Recommendation position: YES.
+
+#### A.1.6.2.2 - Aligned Delegate Communication Responsibilities
+
+**Status:** OK
+
+The recommendation reasoning demonstrates understanding of the proposal's core mechanics, states a reasoned basis for supporting it, and addresses the main review issue: the clarified Novel Items path for `SUBPROXY_METHODS` and the remaining transparency concern.
+
+**Evidence**
+
+- Recommendation reasoning explains the GROVE rewards initialization, Grove LitePSM whitelisting, Safe Harbor update, StarGuard proxy spell routing, and why the later Novel Items clarification resolves the prior audit concern.
+
+#### A.1.6.6.1.2 - Tier 2 (Integrity) Breaches
+
+**Status:** OK
+
+There is no integrity conflict in supporting this executive because the prior audit-trigger concern was resolved by the later Novel Items clarification and no validation finding survives in the revised review.
+
+**Evidence**
+
+- read-atlas-section A.1.6.6.1.2: the Tier 2 breach risk attaches to voting in favor of an Executive Vote that only contains Atlas-approved content and does not fail Spell validation.
+- Recommendation position: YES.
+- Atlas Executive Validation / A.1.10.2.7.1 is OK on the clarified record.
+
+#### A.1.6.6.2 - Voting Estoppel Rule
+
+**Status:** OK
+
+A YES recommendation does trigger estoppel concerns, so it is appropriate only because the revised review no longer treats `SUBPROXY_METHODS` as a surviving Atlas validation failure.
+
+**Evidence**
+
+- read-atlas-section A.1.6.6.2: the estoppel rule applies only to votes cast in favor.
+- Recommendation position: YES.
+- No validation finding survives in the revised draft.
+
+## Recommendation
+
+**Position:** YES
+**Assessment:** Medium
+
+YES. The core spell and all three proxy spell references are technically coherent, the deployed main spell source matches the reviewed repository source, local Forge validation passed, and the disclosed actions map cleanly to the relevant Atlas and governance authorizations. The only prior blocker was the unaudited `SUBPROXY_METHODS` helper, but the later public clarification from `ldr` states that this item followed `A.1.10.2.3.3 - Novel Items`, whose implementation proposal may use external audits or other processes instead of a mandatory formal audit. On the current public record, that resolves the prior audit-trigger concern. The remaining issue is proposal-material transparency, not an Atlas validation failure.
+
+## Proxy Spell Review
+
+**Required:** yes
+**Status:** satisfied
+
+- Detected proxy spell addresses: 0xcc7529473B850103524905D3914470898aDe8747, 0xa21d2E301D50AfF797143deb5a7C400482E9122C, 0xd3e4e16ED515Be794fd181D7d2cEB0447A6f2cb5
+- Proxy spell addresses backed by Action-to-Code source-review evidence: 0xcc7529473B850103524905D3914470898aDe8747, 0xa21d2E301D50AfF797143deb5a7C400482E9122C, 0xd3e4e16ED515Be794fd181D7d2cEB0447A6f2cb5
+
+## LLM Usage
+
+- **Provider/Model:** openai / gpt-5.4
+- **Tokens:** 16,272,118 in / 81,264 out / 26,537 reasoning / 16,379,919 total
+- **Cache:** 15,175,808 read / 0 write
+- **Cost:** $8.1517 USD estimated
+- **Pricing:** openai-api-pricing-2026-06-10-standard-short-context

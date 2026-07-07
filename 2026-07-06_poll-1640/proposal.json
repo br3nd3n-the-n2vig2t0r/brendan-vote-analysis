@@ -1,0 +1,22 @@
+{
+  "id": "poll-1640",
+  "type": "poll",
+  "poll": {
+    "pollId": 1640,
+    "title": "Atlas Edit Weekly Cycle Proposal - July 6, 2026",
+    "summary": "This Atlas edit proposal 1) adds the Shared Diamond PAU Framework, 2) prepares the Osero Artifact for the July 16 Spell, 3) prepares the Grove Artifact for the July 16 Spell, 4) clarifies the Peg Defense Obligation calculation basis, 5) terminates the Boosted Distribution Reward Rate, 6) transfers Maple syrupUSDC allocation from Grove to Spark, 7) adds definitions for Sky Frontier Foundation and Fortification Foundation, 8) expands Agent Creation Primitive inputs, 9) removes the duplicate Monad AUSD Morpho Instance, 10) clarifies that each Agent Spell Reviewer must attach their own Reviewer Checklist, 11) standardizes rate-limit formatting in Grove and Spark Artifacts, and 12) standardizes cross-chain Rate-Limit document names.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1783353600,
+    "endDate": 1783612800,
+    "url": "https://vote.sky.money/polling/QmUnVyGg",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-07-06-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-07-06/28028",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-07-07T15:46:12.037Z"
+}

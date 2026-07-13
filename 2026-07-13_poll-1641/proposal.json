@@ -1,0 +1,22 @@
+{
+  "id": "poll-1641",
+  "type": "poll",
+  "poll": {
+    "pollId": 1641,
+    "title": "Atlas Edit Weekly Cycle Proposal - July 13, 2026",
+    "summary": "This Atlas edit proposal 1) updates the Monthly Settlement Cycle Process, 2) adds a timeliness requirement to Aligned Delegate voting participation, 3) clarifies that Genesis Capital phase-out is not a repayment to Sky, 4) adds the canonical Sky Frontier Foundation multisig address, 5) reduces the Instance Financial CRR for JAAA on Avalanche, 6) adds off-chain parameters to the Osero SparkLend USDS Instance, 7) updates Spell validation and TechOps communications to the Sky Forum and Slack, 8) generalizes the Junior Risk Capital Rental Primitive into the Risk Capital Rental Primitive, 9) updates stale URLs, and 10) moves SkyLink Bridges from Governance Scope to Protocol Scope.",
+    "options": {
+      "0": "Abstain",
+      "1": "Yes",
+      "2": "No"
+    },
+    "startDate": 1783958400,
+    "endDate": 1784217600,
+    "url": "https://vote.sky.money/polling/Qmd3yk9L",
+    "proposalUrl": "https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-07-13-Atlas-edit-weekly-cycle-proposal.md",
+    "discussionLink": "https://forum.skyeco.com/t/atlas-edit-weekly-cycle-proposal-week-of-2026-07-13/28043",
+    "voteType": "single-choice",
+    "status": "active"
+  },
+  "fetchedAt": "2026-07-13T17:21:50.203Z"
+}

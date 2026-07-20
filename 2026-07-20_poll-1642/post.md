@@ -1,0 +1,7 @@
+[Atlas Edit Weekly Cycle Proposal - July 20, 2026](https://raw.githubusercontent.com/sky-ecosystem/polls/refs/heads/main/2026/2026-07-20-Atlas-edit-weekly-cycle-proposal.md)
+
+**Decision: YES**
+
+The complete diff implements all six disclosed edits without changing Agent associations or Paxos transfer parameters. Moving the Sky Spread to an explicit 0% parameter makes the Base Rate, Agent Rate, Sky Savings Rate, and Distribution Reward Fee relationship clearer; SOFR replaces Treasury Bill Rate consistently in the subsidized-borrowing and Actively Stabilizing Collateral formulas. The remaining changes normalize Agent metadata, correct a ratio label, standardize PEJRC and Via-Paxos terminology, and repair operational-reference links. The principal review risks are the breadth of the 85-file edit and reliance on the explicitly accepted trigger-state assumption; neither reveals a substantive implementation mismatch. A forum comment notes pre-existing base_rate/Base_Rate notation inconsistency, but PR #280 does not introduce or alter that variable and it can be handled separately.
+
+[Full rationale](https://github.com/br3nd3n-the-n2vig2t0r/brendan-vote-analysis/blob/main/2026-07-20_poll-1642/rationale.md)

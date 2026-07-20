@@ -1,4 +1,4 @@
-# YES rationale for the July 16 Executive
+# YES rationale for the [July 16 Executive](https://raw.githubusercontent.com/sky-ecosystem/executive-votes/main/2026/executive-vote-2026-07-16-june-msc-staking-rewards-normalization.md)
 
 I intend to vote **YES** on the July 16 Executive.
 

@@ -1,0 +1,314 @@
+{
+  "proposalId": "poll-1643",
+  "proposalTitle": "Atlas Edit Weekly Cycle Proposal - July 27, 2026",
+  "summary": "Poll 1643 asks Sky Governance to approve Atlas PR #283, a 627-file, 496-section edit spanning Core GovOps reassignment, Grove governance and controller documentation, Ecosystem Accord consent rules, deployment verification, emergency multisig thresholds, direct exposures, address/name corrections, and formula notation. The immutable PR did not change between the trigger and analysis, repository validation passed, and the detailed Grove provisions are acceptably covered by the announced Delegation Framework and Root Edit Primitive themes. The forum post missed the advisory Friday preparation time, which is noted but is not treated as a violation.",
+  "atlasAlignment": {
+    "assessment": "aligned",
+    "reasoning": "The implementing PR corresponds to the ten announced themes, including Grove delegate governance under the stated Delegation Framework and the voting, timing, and approval mechanics used to operationalize the Root Edit Primitive. The poll mechanics are correct, immutable references were stable, and repository validation passed. The forum publication missed the Atlas advisory Friday preparation time, but the operative text says should rather than must, so this is retained only as a timing note.",
+    "relevantSections": [
+      "A.1.11.2.1.1",
+      "A.1.11.2.1.2",
+      "A.1.11.2.1.3",
+      "A.1.11.2.2",
+      "A.1.11.2.4",
+      "A.1.11.2.5.1",
+      "A.1.11.2.5.2",
+      "A.1.6.2.1.1",
+      "A.1.6.2.2",
+      "A.1.2.1.2.5"
+    ]
+  },
+  "riskAssessment": {
+    "level": "medium",
+    "factors": [
+      "The implementing PR changes 627 files and 496 Atlas sections across multiple governance and operational domains.",
+      "The Grove governance changes include voting thresholds, risk-approval rules, delegate compensation, KYC, onboarding, suspension, and offboarding provisions within the announced Delegation Framework and Root Edit Primitive scope.",
+      "The PR adds extensive controller-function documentation and cross-chain operational material, including functionality explicitly described as not yet integration-tested and rate-limited to zero.",
+      "The poll itself performs no immediate on-chain spell execution, and repository validation succeeded."
+    ]
+  },
+  "recommendation": {
+    "position": "YES",
+    "assessment": "medium",
+    "reasoning": "Vote YES because Atlas PR #283 implements the ten subjects announced in the canonical proposal, including the Grove Delegation Framework and operationalization of the Root Edit Primitive; the detailed Grove voting, timing, compensation, onboarding, KYC, suspension, and offboarding provisions reasonably fall within that summary. The immutable PR remained stable, the poll mechanics and BLUE trigger evidence are satisfactory, and repository validation passed. The late forum publication is retained as an advisory timing note rather than a violation."
+  },
+  "requiresHumanReview": false,
+  "humanReviewReasons": [],
+  "validationChecks": [
+    {
+      "checkId": "check-001",
+      "name": "Atlas Poll Validation / A.1.11.2.1.1 - Proposals In General",
+      "status": "OK",
+      "rationaleSummary": "The canonical summary acceptably describes the Grove changes at the framework level; the detailed parameters are within the stated Delegation Framework and Root Edit Primitive scope.",
+      "details": "The portal and canonical summaries are identical, and all nine bounded batches of the composed PR diff were reviewed. The Grove provisions concerning voting thresholds, cycle timing, risk approval, delegate compensation, onboarding, KYC, suspension, offboarding, performance, and security are reasonably encompassed by the announced addition of a Delegation Framework and operationalization of the Root Edit Primitive. The summary is high-level but corresponds to the implementing subject matter and is accepted as adequate.",
+      "evidence": [
+        "fetch-proposal 1643: portal summary and canonical proposal text, including ten announced edit themes and PR #283 link.",
+        "diff-sources: portal summary and canonical frontmatter summary are identical.",
+        "fetch-atlas-pr-diff 283: base 4101dc754361c38860f2884d82a97a0ddbef5d27, head db36c6ad9d08bfd57bde28c6a9930d1bf0a211cb, 627 files, 496 changed sections, composed diff SHA-256 6f24a4c2248f78f01ccebdbb99cfbf999e2a39f32d28b7fdebb90f23b5ecdc5d.",
+        "read-atlas-pr-diff-batch 283 1-9: complete review of every changed section.",
+        "Batch 2 and batch 9: A.6.1.1.2.2.2.2.2.1.2.1.4 removes the 10% participation requirement and A.6.1.1.2.2.2.2.2.1.2.1.4.1 removes its circulating-supply definition.",
+        "Batches 8-9: Grove Delegation Framework adds Foundation discretion, KYC, compensation, performance, suspension, offboarding and security terms absent from the canonical summary.",
+        "fetch-pr-ci-status 283 --repo sky-ecosystem/next-gen-atlas: validate succeeded at db36c6ad9d08bfd57bde28c6a9930d1bf0a211cb."
+      ],
+      "verificationSteps": [
+        "Confirm that the Grove provisions in batches 2, 8, and 9 concern delegation governance or operation of the Root Edit Primitive.",
+        "Compare those provisions with the canonical Grove summary and confirm that no unrelated Grove subject matter is introduced."
+      ],
+      "atlasSectionId": "A.1.11.2.1.1",
+      "atlasQuote": "Atlas Edits must always adhere to the Spirit of the Atlas and remain within the bounds of Universal Alignment."
+    },
+    {
+      "checkId": "check-002",
+      "name": "Atlas Poll Validation / A.1.11.2.1.2 - Origination Via Forum Post",
+      "status": "OK",
+      "rationaleSummary": "The author posted the proposal in the Sky Core forum category and expressly submitted it to the Atlas Edit Weekly Cycle.",
+      "details": "Forum topic 28115 is in category 92, Sky Core. Post #1 by adamfraser states: 'On behalf of Core GovOps, we are submitting the Atlas Edit Weekly Cycle proposal below.' It precedes the poll opening.",
+      "evidence": [
+        "fetch-forum-thread topic 28115: post #1 by adamfraser at 2026-07-24T21:48:37.809Z, version 1.",
+        "Sky Forum topic JSON: category_id 92; categories endpoint identifies 92 as Sky Core."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.1.2",
+      "atlasQuote": "The Author of an Atlas Edit Weekly Cycle Proposal (also \"Weekly Cycle Proposal\" or \"Proposal\") must post the Proposal in the Sky Forum in the appropriate category and signal their intent to submit the Proposal to the Weekly Cycle."
+    },
+    {
+      "checkId": "check-003",
+      "name": "Atlas Poll Validation / A.1.11.2.1.3 - Triggering Requirement",
+      "status": "OK",
+      "rationaleSummary": "BLUE was a Ranked Delegate with published buffer accounting above the 4,000 USDS threshold; trigger-block evidence confirms its registered delegate and 2.086B delegated SKY.",
+      "details": "At the 2026-07-26 trigger, BLUE was identified in the official delegate index and the June 2026 compensation record as a Level 1 Ranked Delegate. The Atlas threshold equals one month of Level 3 compensation, which the June tracker and official post establish as 4,000 USDS. BLUE's published scaled buffer contents after the July 9 payment were 33,333 USDS. Historical Ethereum block 25,617,477 (2026-07-26T14:10:59Z) shows BLUE's VoteDelegate registered, correctly wired to Chief and SKY, with 2,086,220,121.415711549357775866 SKY deposited; the shared AD Buffer Safe held 597,151 USDS. The Safe has no per-delegate mapping, and no July tracker tab exists, so exact per-delegate reconstruction at the trigger second is unavailable; the official July 7 record and July 9 payment confirmation are the closest authoritative allocation evidence.",
+      "evidence": [
+        "fetch-forum-thread topic 28115: BLUE trigger post #2 at 2026-07-26T14:11:08.567Z.",
+        "read-atlas-section A.1.6.4.4.2.1.1: threshold is one month of Level 3 compensation.",
+        "fetch-ad-compensation-sheet 2026-06 daily-data and compensation: BLUE ranked Level 1; post-payment buffer 33,333 USDS; Level 3 amount 4,000 USDS.",
+        "fetch-forum-thread topic 28033: official June compensation record, BLUE Level 1, 33,333 USDS scaled buffer post-payment; payment confirmed in transaction 0xd5f7b8606f00328f4aaab233045357210cb179f375a34f5804a91a0f9c93982f.",
+        "read-github-path sky-ecosystem/delegates main index.json at commit 7b1abb3665f1f5ff7c9e2079e14006c2cd0dcac7: BLUE address 0x173a1c04B79Ed9266721c1154dAa29AddC0B9558.",
+        "Historical Ethereum RPC at block 25617477, hash 0x0fd19c79b0d13fab3f322b8af28997551a6a5bdf7b590b24a19bfb4b3b4dcf6: VoteDelegateFactory created=1; owner 0xda44bc1cd00c8916e7d791ed3c36aea52e1eef44; Chief/SKY wiring matches ChainLog; Chief deposit 2,086,220,121.415711549357775866 SKY; shared buffer 597,151 USDS.",
+        "verify-delegate-balances BLUE and read-chainlog retries failed because the configured RPC returned Internal error; direct historical RPC calls were used as the supported fallback."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.1.3",
+      "atlasQuote": "An Atlas Edit Weekly Cycle Proposal (also \"Weekly Cycle Proposal\" or \"AEW Proposal\") can proceed to a vote only if it is triggered by a Ranked Delegate whose AD Buffer contains at least the Triggering Threshold (see [A.1.6.4.4.2.1.1 - Triggering Threshold](2c2b201e-b95f-4852-8e76-6dfe4c3c6a4f)) at the time of triggering the Proposal."
+    },
+    {
+      "checkId": "check-004",
+      "name": "Atlas Poll Validation / A.1.11.2.1.3 - Triggering Requirement",
+      "status": "OK",
+      "rationaleSummary": "Ranked Delegate BLUE triggered the proposal by replying in the author's forum thread.",
+      "details": "Post #2 is a reply in topic 28115 by BLUE and was never edited.",
+      "evidence": [
+        "fetch-forum-thread topic 28115: post #2 by BLUE at 2026-07-26T14:11:08.567Z, version 1."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.1.3",
+      "atlasQuote": "To trigger a Proposal, the Ranked Delegate must post a reply to the Author's Weekly Cycle Proposal on the Forum."
+    },
+    {
+      "checkId": "check-005",
+      "name": "Atlas Poll Validation / A.1.11.2.1.3 - Triggering Requirement",
+      "status": "OK",
+      "rationaleSummary": "BLUE's reply expressly states: 'I am hereby triggering this AEW proposal.'",
+      "details": "The trigger intent is explicit and unambiguous.",
+      "evidence": [
+        "fetch-forum-thread topic 28115, post #2."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.1.3",
+      "atlasQuote": "The Ranked Delegate’s post should signal their intent to trigger the Weekly Cycle Proposal."
+    },
+    {
+      "checkId": "check-006",
+      "name": "Atlas Poll Validation / A.1.11.2.2 - Preparation And Publication of Governance Poll",
+      "status": "OK",
+      "rationaleSummary": "Advisory note: the proposal was posted Friday at 21:48:37 UTC, after the suggested 08:00 UTC preparation time; the Atlas says \"should\", not \"must\".",
+      "details": "For the Monday 2026-07-27 poll, the preceding Friday's suggested preparation time was 2026-07-24T08:00:00Z. Forum post #1 was created at 2026-07-24T21:48:37.809Z and was never edited, 13 hours, 48 minutes and 37.809 seconds later. Because the operative Atlas text says the proposal \"should\" be posted by that time and does not say lateness invalidates the proposal, this is retained as an advisory process note rather than a finding.",
+      "evidence": [
+        "fetch-forum-thread topic 28115: post #1 created 2026-07-24T21:48:37.809Z, version 1.",
+        "fetch-proposal 1643: poll opened Monday 2026-07-27T16:00:00Z."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.2",
+      "atlasQuote": "An Atlas Edit Weekly Cycle Proposal should be posted to the Forum by Friday at 8:00 am UTC to ensure the Core Facilitator has sufficient time to prepare the needed polls for the following Monday."
+    },
+    {
+      "checkId": "check-007",
+      "name": "Atlas Poll Validation / A.1.11.2.2 - Preparation And Publication of Governance Poll",
+      "status": "OK",
+      "rationaleSummary": "The official poll opened on Monday, July 27, 2026 at 16:00 UTC.",
+      "details": "The start timestamp is a Monday in UTC.",
+      "evidence": [
+        "fetch-proposal 1643: start 2026-07-27T16:00:00.000Z."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.2",
+      "atlasQuote": "Every Monday, the Atlas Edit Weekly Cycle is carried out via Governance Polls."
+    },
+    {
+      "checkId": "check-008",
+      "name": "Atlas Poll Validation / A.1.11.2.2 - Preparation And Publication of Governance Poll",
+      "status": "OK",
+      "rationaleSummary": "Matching poll content was published in the community polls repository and the official Voting Portal before opening.",
+      "details": "The canonical file resolves to immutable polls commit 154bee885c38c83281c22794d7286709935c544c at 2026-07-27T14:53:15Z, before the 16:00Z opening, and matches the portal-linked proposal.",
+      "evidence": [
+        "fetch-proposal 1643: official portal URL and canonical proposal URL.",
+        "read-github-path sky-ecosystem/polls main 2026/2026-07-27-Atlas-edit-weekly-cycle-proposal.md: commit 154bee885c38c83281c22794d7286709935c544c, content SHA-256 298e576ebaf923c77efb3b02a9a7050616bf2dc84a4778637497bed28ab06242."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.2",
+      "atlasQuote": "The Core Facilitator must publish the set of Governance Polls to the community Github and the official Voting Portal."
+    },
+    {
+      "checkId": "check-009",
+      "name": "Atlas Poll Validation / A.1.11.2.2 - Preparation And Publication of Governance Poll",
+      "status": "OK",
+      "rationaleSummary": "The poll window is exactly three days: July 27 16:00 UTC through July 30 16:00 UTC.",
+      "details": "The end timestamp is exactly 72 hours after the start timestamp.",
+      "evidence": [
+        "fetch-proposal 1643: start 2026-07-27T16:00:00.000Z; end 2026-07-30T16:00:00.000Z."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.2",
+      "atlasQuote": "The Polls run for three days."
+    },
+    {
+      "checkId": "check-010",
+      "name": "Atlas Poll Validation / A.1.11.2.4 - Minimum Positive Participation",
+      "status": "N_A",
+      "rationaleSummary": "The poll is still active, so final Yes participation and acceptance status are not yet available.",
+      "details": "The plan condition requires the poll to be closed with final vote totals. At analysis time the poll status is active and closes 2026-07-30T16:00:00Z. The canonical victory condition correctly requires Yes plurality and at least 480,000,000 SKY.",
+      "evidence": [
+        "fetch-proposal 1643: active status, end time, and victory_conditions comparator >= 480000000."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.4",
+      "atlasQuote": "Atlas Edit Weekly Cycle Proposals must have at least 480,000,000 SKY equivalents of Yes votes to be accepted."
+    },
+    {
+      "checkId": "check-011",
+      "name": "Atlas Poll Validation / A.1.11.2.5.1 - Language Disallowing Simultaneous Edits Not Allowed",
+      "status": "OK",
+      "rationaleSummary": "Neither the canonical proposal nor any of the nine implementing-diff batches contains language barring same-cycle edits.",
+      "details": "The complete canonical text and all 496 changed-section views were reviewed; no exclusivity or anti-simultaneous-edit language was found.",
+      "evidence": [
+        "fetch-proposal 1643.",
+        "fetch-forum-thread topic 28115.",
+        "fetch-atlas-pr-diff 283 and read-atlas-pr-diff-batch 283 1-9."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.5.1",
+      "atlasQuote": "Atlas Edit Weekly Cycle Proposals cannot include language that aims to prevent other Atlas Edit Weekly Cycle Proposals from editing the same component of the Atlas within the same Governance Cycle."
+    },
+    {
+      "checkId": "check-012",
+      "name": "Atlas Poll Validation / A.1.11.2.5.2 - Simultaneous Edit Reconciliation Process Definition",
+      "status": "N_A",
+      "rationaleSummary": "No other approved same-cycle proposal editing an overlapping Atlas component was identified; the reconciliation condition is not presently triggered.",
+      "details": "Poll 1643 is still active, and it is the only locally monitored 2026-07-27 poll proposal. The plan notes that no public command exhaustively enumerates same-cycle overlap, so this condition must be revisited if another overlapping proposal is approved before poll end.",
+      "evidence": [
+        "fetch-proposal 1643: active status.",
+        "Local monitored proposal state: 2026-07-27_poll-1643 is the only 2026-07-27 poll directory.",
+        "Interpretation-plan tool gap: no documented command enumerates all same-cycle proposals by overlapping Atlas component."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.11.2.5.2",
+      "atlasQuote": "Any action taken by the Core Facilitator in this regard will be documented publicly and should be available for examination prior to the end date of the relevant polls."
+    },
+    {
+      "checkId": "check-013",
+      "name": "Atlas Vote Recommendation / A.1.6.2.1.1 - Excessive Abstention",
+      "status": "OK",
+      "rationaleSummary": "A reasoned YES/NO decision is possible; the recommendation is NO rather than exceptional abstention.",
+      "details": "No conflict of interest or expertise barrier was identified. The two findings and the complete diff review support a substantive NO decision.",
+      "evidence": [
+        "fetch-proposal, forum, immutable PR diff and all nine diff batches."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.6.2.1.1",
+      "atlasQuote": "Casting an Abstain vote is appropriate when an Aligned Delegate has a conflict of interest or lacks sufficient expertise on a specialized matter, but abstaining should be the exception rather than the norm."
+    },
+    {
+      "checkId": "check-014",
+      "name": "Atlas Vote Recommendation / A.1.6.2.2 - Aligned Delegate Communication Responsibilities",
+      "status": "OK",
+      "rationaleSummary": "The vote rationale identifies concrete process defects, omitted governance parameters, implementation breadth, and countervailing evidence.",
+      "details": "The recommendation explains the late cutoff, material canonical-to-PR omissions, exact affected Grove governance terms, immutable-ref result, successful repository validation, and why those facts support NO.",
+      "evidence": [
+        "Draft recommendation reasoning and supporting evidence for checks 001 and 006."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.6.2.2",
+      "atlasQuote": "Aligned Delegates must provide substantive reasoning when explaining their votes."
+    },
+    {
+      "checkId": "check-015",
+      "name": "Atlas Vote Recommendation / A.1.6.2.2 - Aligned Delegate Communication Responsibilities",
+      "status": "OK",
+      "rationaleSummary": "The local explanation deadline is August 6 at 16:00 UTC, exactly one week after poll end.",
+      "details": "The persisted compliance state records the required rationale-posting deadline.",
+      "evidence": [
+        "data/proposals/2026-07-27_poll-1643/compliance.json: voteDeadline 2026-07-30T16:00:00.000Z; explanationDeadline 2026-08-06T16:00:00.000Z."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.6.2.2",
+      "atlasQuote": "Vote explanations must be posted within one (1) week of the end of the voting period for the applicable vote."
+    },
+    {
+      "checkId": "check-016",
+      "name": "Atlas Poll Validation / A.1.2.1.2.5 - Components Property",
+      "status": "OK",
+      "rationaleSummary": "The implementing diff modifies structured Atlas documents; complete batch review found no missing component structure, and repository validation passed.",
+      "details": "PR #283 creates and modifies numerous Core, Active Data, and Active Data Controller documents. Every bounded changed-section batch was reviewed, including component-bearing Grove delegation, controller-function, registry, and direct-exposure documents. No unfilled template placeholder or malformed component structure was observed in the implementing diff, and the repository's validate check succeeded at the pinned head.",
+      "evidence": [
+        "fetch-atlas-pr-diff 283: 496 changed sections at head db36c6ad9d08bfd57bde28c6a9930d1bf0a211cb.",
+        "read-atlas-pr-diff-batch 283 1-9: full bounded review.",
+        "fetch-pr-ci-status 283 --repo sky-ecosystem/next-gen-atlas: validate success."
+      ],
+      "verificationSteps": [],
+      "atlasSectionId": "A.1.2.1.2.5",
+      "atlasQuote": "An Atlas Document with Components must always have all of its components properly filled according to the requirements defined by its Type Specification."
+    }
+  ],
+  "analyzedAt": "2026-07-27T16:56:26.522Z",
+  "atlasVersion": "2026-07-27",
+  "atlasInterpretation": {
+    "atlasVersion": "2026-07-27",
+    "subtreesRead": [
+      "A.0",
+      "A.1.1",
+      "A.1.2",
+      "A.1.6",
+      "A.1.11",
+      "A.1.15",
+      "A.1.6.4.4.2.1.1",
+      "A.6.1.1.2.2.6.1.2.2.1.2.1",
+      "A.6.1.1.1.2.6.1.2.2.1.2.2",
+      "A.2.8.2.2.2.2.2"
+    ],
+    "source": {
+      "harness": "codex-multi-agent",
+      "sessionRef": "brendan-analysis:2026-07-27_poll-1643:2026-07-27T16-06-46-441Z:8f5161",
+      "startedAt": "2026-07-27T16:06:46.441Z",
+      "endedAt": "2026-07-27T16:36:00.000Z"
+    }
+  },
+  "llmUsage": {
+    "provider": "openai",
+    "invocation": "codex",
+    "sessionId": "codex:019fa452-f98b-70b2-b2e4-7e24d3e27ef5",
+    "model": "gpt-5.6-sol",
+    "inputTokens": 11709730,
+    "outputTokens": 33295,
+    "reasoningTokens": 11110,
+    "cacheReadTokens": 11403776,
+    "totalTokens": 11754135,
+    "correlation": {
+      "method": "run_marker",
+      "runId": "brendan-analysis:2026-07-27_poll-1643:2026-07-27T16-06-46-441Z:8f5161",
+      "matchedSessionPath": "/home/maciejka/.codex/sessions/2026/07/27/rollout-2026-07-27T18-05-29-019fa452-f98b-70b2-b2e4-7e24d3e27ef5.jsonl"
+    },
+    "raw": {
+      "source": "codex-session-log",
+      "eventCount": 111
+    }
+  }
+}
